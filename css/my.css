@@ -1,1 +1,45 @@
 /* Here is your custom css styles. */
+
+.post-back-button {
+    position: fixed;
+    left: 24px;
+    top: 96px;
+    z-index: 998;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    color: #fff;
+    background: linear-gradient(135deg, #42b983, #2196f3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.post-back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.26);
+}
+
+.post-back-button:focus {
+    outline: 2px solid rgba(33, 150, 243, 0.35);
+    outline-offset: 3px;
+}
+
+.post-back-button i {
+    font-size: 1.15rem;
+    line-height: 44px;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-back-button {
+        left: 14px;
+        top: 76px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .post-back-button i {
+        line-height: 40px;
+    }
+}

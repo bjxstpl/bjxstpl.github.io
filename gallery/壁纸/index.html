@@ -45,8 +45,6 @@
 
 
     
-        <link rel="stylesheet" type="text/css" href="/css/reward.css">
-    
 
 
 
@@ -240,39 +238,53 @@
     </script>
 
 
-<!-- <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                 
-                
-            </div>
 
-            <div class="description center-align">
-                
-                    
-                
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- 
-<script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
-</script>
- -->
+<button type="button" id="postBackButton" class="post-back-button" aria-label="返回上一页" title="返回上一页">
+    <i class="fas fa-arrow-left"></i>
+</button>
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    (function () {
+        var backButton = document.getElementById('postBackButton');
+        if (!backButton) return;
+
+        var backTargetKey = 'materyPostBackTarget';
+        var restoreKey = 'materyPostBackRestore';
+
+        function cleanUrl(url) {
+            return String(url || '').split('#')[0];
+        }
+
+        function getBackTarget() {
+            try {
+                return JSON.parse(sessionStorage.getItem(backTargetKey) || 'null');
+            } catch (error) {
+                return null;
+            }
+        }
+
+        backButton.addEventListener('click', function () {
+            var target = getBackTarget();
+            var currentUrl = cleanUrl(window.location.href);
+
+            if (target && target.url && cleanUrl(target.url) !== currentUrl) {
+                sessionStorage.setItem(restoreKey, JSON.stringify(target));
+                sessionStorage.removeItem(backTargetKey);
+                window.location.href = target.url;
+                return;
+            }
+
+            if (window.history.length > 1) {
+                window.history.back();
+                return;
+            }
+
+            window.location.href = '/';
+        });
+    })();
 </script>
 
-
-    </div>
-</div> -->
 
 <link rel="stylesheet" href="/libs/MyGallery/baguetteBox.css">
 <!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
@@ -303,7 +315,7 @@
     .miaoshus {
         padding: 20px;
         border: 1px dashed #e6e6e6;
-        color: #969696;
+        color: #4c4c4e;
         position: relative;
         display: inline-block;
         width: 75%;
@@ -316,6 +328,10 @@
     body.dark .miaoshus {
         background: 0 0;
         border: 1px dashed #888;
+        color: #4c4c4e !important;
+    }
+    body.DarkMode .miaoshus {
+        color: #4c4c4e !important;
     }
     body {
         overflow: visible!important;
@@ -398,211 +414,211 @@
                 
                 
                                        
-                        <a href="/my_photos/壁纸/01.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/01.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/01.png" alt="img"+0 >
                             <!-- <img class="mat" src="/my_photos/壁纸/01.png"  alt="img"+0 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/02.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/02.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/02.png" alt="img"+1 >
                             <!-- <img class="mat" src="/my_photos/壁纸/02.png"  alt="img"+1 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/03.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/03.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/03.png" alt="img"+2 >
                             <!-- <img class="mat" src="/my_photos/壁纸/03.png"  alt="img"+2 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/04.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/04.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/04.png" alt="img"+3 >
                             <!-- <img class="mat" src="/my_photos/壁纸/04.png"  alt="img"+3 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/05.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/05.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/05.png" alt="img"+4 >
                             <!-- <img class="mat" src="/my_photos/壁纸/05.png"  alt="img"+4 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/06.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/06.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/06.png" alt="img"+5 >
                             <!-- <img class="mat" src="/my_photos/壁纸/06.png"  alt="img"+5 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/07.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/07.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/07.png" alt="img"+6 >
                             <!-- <img class="mat" src="/my_photos/壁纸/07.png"  alt="img"+6 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/08.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/08.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/08.png" alt="img"+7 >
                             <!-- <img class="mat" src="/my_photos/壁纸/08.png"  alt="img"+7 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/09.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/09.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/09.png" alt="img"+8 >
                             <!-- <img class="mat" src="/my_photos/壁纸/09.png"  alt="img"+8 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/10.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/10.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/10.png" alt="img"+9 >
                             <!-- <img class="mat" src="/my_photos/壁纸/10.png"  alt="img"+9 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/11.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/11.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/11.png" alt="img"+10 >
                             <!-- <img class="mat" src="/my_photos/壁纸/11.png"  alt="img"+10 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/12.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/12.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/12.png" alt="img"+11 >
                             <!-- <img class="mat" src="/my_photos/壁纸/12.png"  alt="img"+11 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/13.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/13.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/13.png" alt="img"+12 >
                             <!-- <img class="mat" src="/my_photos/壁纸/13.png"  alt="img"+12 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/14.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/14.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/14.png" alt="img"+13 >
                             <!-- <img class="mat" src="/my_photos/壁纸/14.png"  alt="img"+13 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/15.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/15.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/15.png" alt="img"+14 >
                             <!-- <img class="mat" src="/my_photos/壁纸/15.png"  alt="img"+14 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/16.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/16.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/16.png" alt="img"+15 >
                             <!-- <img class="mat" src="/my_photos/壁纸/16.png"  alt="img"+15 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/17.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/17.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/17.png" alt="img"+16 >
                             <!-- <img class="mat" src="/my_photos/壁纸/17.png"  alt="img"+16 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/18.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/18.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/18.png" alt="img"+17 >
                             <!-- <img class="mat" src="/my_photos/壁纸/18.png"  alt="img"+17 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/19.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/19.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/19.png" alt="img"+18 >
                             <!-- <img class="mat" src="/my_photos/壁纸/19.png"  alt="img"+18 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/20.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/20.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/20.png" alt="img"+19 >
                             <!-- <img class="mat" src="/my_photos/壁纸/20.png"  alt="img"+19 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/21.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/21.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/21.png" alt="img"+20 >
                             <!-- <img class="mat" src="/my_photos/壁纸/21.png"  alt="img"+20 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/22.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/22.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/22.png" alt="img"+21 >
                             <!-- <img class="mat" src="/my_photos/壁纸/22.png"  alt="img"+21 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/23.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/23.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/23.png" alt="img"+22 >
                             <!-- <img class="mat" src="/my_photos/壁纸/23.png"  alt="img"+22 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/24.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/24.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/24.png" alt="img"+23 >
                             <!-- <img class="mat" src="/my_photos/壁纸/24.png"  alt="img"+23 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/25.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/25.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/25.png" alt="img"+24 >
                             <!-- <img class="mat" src="/my_photos/壁纸/25.png"  alt="img"+24 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/26.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/26.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/26.png" alt="img"+25 >
                             <!-- <img class="mat" src="/my_photos/壁纸/26.png"  alt="img"+25 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/27.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/27.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/27.png" alt="img"+26 >
                             <!-- <img class="mat" src="/my_photos/壁纸/27.png"  alt="img"+26 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/28.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/28.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/28.png" alt="img"+27 >
                             <!-- <img class="mat" src="/my_photos/壁纸/28.png"  alt="img"+27 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/29.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/29.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/29.png" alt="img"+28 >
                             <!-- <img class="mat" src="/my_photos/壁纸/29.png"  alt="img"+28 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/30.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/30.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/30.png" alt="img"+29 >
                             <!-- <img class="mat" src="/my_photos/壁纸/30.png"  alt="img"+29 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/31.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/31.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/31.png" alt="img"+30 >
                             <!-- <img class="mat" src="/my_photos/壁纸/31.png"  alt="img"+30 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/32.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/32.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/32.png" alt="img"+31 >
                             <!-- <img class="mat" src="/my_photos/壁纸/32.png"  alt="img"+31 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/33.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/33.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/33.png" alt="img"+32 >
                             <!-- <img class="mat" src="/my_photos/壁纸/33.png"  alt="img"+32 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/34.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/34.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/34.png" alt="img"+33 >
                             <!-- <img class="mat" src="/my_photos/壁纸/34.png"  alt="img"+33 > -->
                         </a>                   
                 
                                        
-                        <a href="/my_photos/壁纸/35.png" data-caption="壁纸">
+                        <a class="gallery-page-item" href="/my_photos/壁纸/35.png" data-caption="壁纸">
                             <img class="mat" src="/medias/loading.svg" data-src="/my_photos/壁纸/35.png" alt="img"+34 >
                             <!-- <img class="mat" src="/my_photos/壁纸/35.png"  alt="img"+34 > -->
                         </a>                   
@@ -613,8 +629,72 @@
     </div>
 </section>
 
+<div id="galleryPaging" class="container paging" style="display: none;">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            <a id="galleryPrevPage" href="javascript:void(0);"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-left"></i>
+            </a>
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div id="galleryPageInfo" class="center-align b-text-gray"></div>
+        </div>
+        <div class="col s6 m4 l4">
+            <a id="galleryNextPage" href="javascript:void(0);"
+               class="right btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
 
 <script>
+    var galleryPageSize = 9;
+    var galleryCurrentPage = 1;
+    var galleryItems = $('.gallery-page-item');
+    var galleryTotalPage = Math.ceil(galleryItems.length / galleryPageSize);
+
+    function updateGalleryPage(pageNumber) {
+        galleryCurrentPage = Math.min(Math.max(pageNumber, 1), galleryTotalPage);
+
+        var startIndex = (galleryCurrentPage - 1) * galleryPageSize;
+        var endIndex = startIndex + galleryPageSize;
+
+        galleryItems.hide().slice(startIndex, endIndex).show();
+        $('#galleryPageInfo').text(galleryCurrentPage + ' / ' + galleryTotalPage);
+
+        $('#galleryPrevPage')
+            .toggleClass('disabled', galleryCurrentPage === 1)
+            .toggleClass('waves-effect waves-light bg-color', galleryCurrentPage !== 1);
+
+        $('#galleryNextPage')
+            .toggleClass('disabled', galleryCurrentPage === galleryTotalPage)
+            .toggleClass('waves-effect waves-light bg-color', galleryCurrentPage !== galleryTotalPage);
+
+        start();
+    }
+
+    if (galleryTotalPage > 1) {
+        $('#galleryPaging').show();
+    }
+    updateGalleryPage(1);
+
+    $('#galleryPrevPage').on('click', function() {
+        if (galleryCurrentPage > 1) {
+            updateGalleryPage(galleryCurrentPage - 1);
+            $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
+        }
+    });
+
+    $('#galleryNextPage').on('click', function() {
+        if (galleryCurrentPage < galleryTotalPage) {
+            updateGalleryPage(galleryCurrentPage + 1);
+            $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
+        }
+    });
+
     baguetteBox.run('.gallery', {
         // 配置参数
         buttons:Boolean,//是否显示导航按钮。
@@ -630,7 +710,7 @@
 
     function start(){
           //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
-        $('.gallery img').not('[data-isLoaded]').each(function(){
+        $('.gallery img:visible').not('[data-isLoaded]').each(function(){
             var $node = $(this)
             if( isShow($node) ){
                 loadImg($node);
@@ -654,58 +734,13 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="7676422571"
-                   fixed='true'
-                   autoplay='false'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='false'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="/libs/aplayer/Meting.min.js"></script>
-
-    
 
     <div class="container row center-align"
          style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2022</span>
+                <span id="year">2022-2026</span>
             
             &nbsp;
             北极熊说它怕冷
@@ -956,6 +991,68 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script>
+        (function () {
+            var backTargetKey = 'materyPostBackTarget';
+            var restoreKey = 'materyPostBackRestore';
+
+            function cleanUrl(url) {
+                return String(url || '').split('#')[0];
+            }
+
+            function isTrackedDetailLink(anchor) {
+                if (!anchor || !anchor.href || anchor.target === '_blank') return false;
+
+                var linkUrl = new URL(anchor.href, window.location.href);
+                if (linkUrl.origin !== window.location.origin) return false;
+                if (linkUrl.hash && cleanUrl(linkUrl.href) === cleanUrl(window.location.href)) return false;
+
+                return /^\/\d{4}\/\d{2}\/\d{2}\//.test(linkUrl.pathname)
+                    || /^\/gallery\/[^/]+\/?$/.test(linkUrl.pathname);
+            }
+
+            document.addEventListener('click', function (event) {
+                if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+                    return;
+                }
+
+                var target = event.target;
+                if (target && target.nodeType === 3) {
+                    target = target.parentElement;
+                }
+
+                var anchor = target && target.closest && target.closest('a');
+                if (!isTrackedDetailLink(anchor)) return;
+
+                sessionStorage.setItem(backTargetKey, JSON.stringify({
+                    url: cleanUrl(window.location.href),
+                    scrollY: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+                    createdAt: Date.now()
+                }));
+            }, true);
+
+            var restore = null;
+            try {
+                restore = JSON.parse(sessionStorage.getItem(restoreKey) || 'null');
+            } catch (error) {
+                restore = null;
+            }
+
+            if (restore && cleanUrl(window.location.href) === cleanUrl(restore.url)) {
+                sessionStorage.removeItem(restoreKey);
+
+                var scrollY = Number(restore.scrollY) || 0;
+                var restoreScroll = function () {
+                    window.scrollTo(0, scrollY);
+                };
+
+                restoreScroll();
+                requestAnimationFrame(restoreScroll);
+                setTimeout(restoreScroll, 120);
+                setTimeout(restoreScroll, 500);
+            }
+        })();
+    </script>
 
     
 
@@ -965,6 +1062,14 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
     
 
     
@@ -1001,11 +1106,6 @@ $(function () {
     <!--腾讯兔小巢-->
     
     
-    <script type="text/javascript" color="0,0,0"
-        pointColor="0,0,0" opacity='0.7'
-        zIndex="-1" count="99"
-        src="/libs/background/canvas-nest.js"></script>
-    
 
     
 
@@ -1015,6 +1115,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300,"hOffset":30,"vOffset":60},"mobile":{"show":false},"react":{"opacity":0.9},"log":false});</script></body>
+</body>
 
 </html>

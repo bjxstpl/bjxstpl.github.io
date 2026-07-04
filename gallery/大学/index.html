@@ -238,8 +238,39 @@
     </script>
 
 
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                 
+                
+            </div>
+
+            <div class="description center-align">
+                
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+<script>
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+</script>
+ -->
+
+<script>
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+</script>
 
 
+    </div>
+</div>
 <button type="button" id="postBackButton" class="post-back-button" aria-label="返回上一页" title="返回上一页">
     <i class="fas fa-arrow-left"></i>
 </button>
@@ -287,30 +318,55 @@
 
 
 <link rel="stylesheet" href="/libs/MyGallery/baguetteBox.css">
-<!-- 该主题自带的lightGallery.js在图片多的时候会很卡，所以弃用，使用了一个我在网上找的baguetteBox，很轻量级，就是功能少了点 -->
 <script src="/libs/MyGallery/baguetteBox.js"></script>
-<script src="/libs/jquery/jquery-3.6.0.min.js"></script>
-<script>
-    $(function(){
-        baguetteBox.run('.gallery');
-    });
- </script>
-<style>    
-    #sma {
-        bottom: 150px;
+
+<style>
+    .photo {
+        padding: 0 40px !important;
+        display: inline-block;
+        position: relative;
+        transition: all .6s;
+    }
+    .photo:nth-child(odd) {
+        transform: rotateZ(-5deg);
+    }
+    .photo:nth-child(even) {
+        transform: rotateZ(5deg);
+    }
+    .biaotiss {
+        padding: 8px 10px;
+        color: #4c4c4e;
+        text-align: center;
+        font-family: MV Boli;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .img-item {
+        padding: .2rem;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 1px 2px 2px 0 #aaa;
+        transition: all .4s cubic-bezier(.63,.15,.03,1.12);
+        margin-bottom: 20px;
+    }
+    .img-item a {
+        display: block;
+    }
+    .img-item a img {
+        opacity: 1;
+        transition: all .4s ease-out;
+    }
+    .img-item a:hover img {
+        opacity: .8;
     }
     .my-gallery .photo img {
-        transition: all 0.6s ease-in-out; 
-    }     
-    .my-gallery .photo:hover img {
-        opacity: 0.6;
-        transform: scale(1.05);
-    }      
-    .my-gallery {
-        margin: 20px auto;
-    }   
-    .miaoshus .title {
-        font-family: MV Boli;
+        border-radius: 10px;
+        height: 240px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card .card-content {
+        padding: 24px 24px 24px 24px;
     }
     .miaoshus {
         padding: 20px;
@@ -318,12 +374,15 @@
         color: #4c4c4e;
         position: relative;
         display: inline-block;
-        width: 75%;
+        width: 95%;
         background: #fbfbfb50;
         border-radius: 10px;
         font-size: 16px;
-        margin: 24px auto 12px;
-        
+        margin: 12px auto;
+    }
+    .miaoshus .title {
+        color: #4c4c4e !important;
+        font-family: MV Boli;
     }
     body.dark .miaoshus {
         background: 0 0;
@@ -333,253 +392,280 @@
     body.DarkMode .miaoshus {
         color: #4c4c4e !important;
     }
-    body {
-        overflow: visible!important;
+    body.DarkMode .miaoshus > strong {
+        filter: none !important;
     }
-    .box {
-            position: relative;
-            max-width: 1064px;
-        }
-    .box img {
-        width: 350px;
-        height: 350px;
-        vertical-align: top;
-        padding: 8px;
-        border-radius: 20px;
-        transition: all 0.5s;
+    .gallery-page-item {
+        display: block;
     }
-    .box img:hover {
-        transform: scale(1.05);
-    }
-    .page-footer {
-        display: none
-    }
-    body {
-        overflow-y: visible!important;
-    }
-    header {
-        background-color: #000;
-    }
-    .biaotiss {
-            font-family: MV Boli;
-        }   
-    canvas {
-        opacity: 0.3!important;
-    }
-    @media only screen and (max-width: 1058px) {
-        .box {
-            margin-left: 145px;
-        }
-    }
-    @media only screen and (max-width: 770px) {
-        .box {
-            margin-left: 15px;
-        }
+    .gallery-empty {
+        padding: 40px 0;
+        color: #777;
+        text-align: center;
     }
     @media only screen and (max-width: 500px) {
-        #previous-button, #next-button {
-            display: none;
+        .photo {
+            padding: 0 24px !important;
         }
-    }
-    @media only screen and (max-width: 380px) {
-        .box {
-            margin-left: -5px;
-        }
-    }
-    @media only screen and (max-width: 323px) {
-        .box img {
-            width: 296px;
-            left: 0;
+        .my-gallery .photo img {
+            height: 186px;
         }
     }
 </style>
 
-<div class="tag-title center-align">
-    <div class="miaoshus">
-        <div class="title center-align">
-            “ 
-                <span><strong>大学</strong></span>
-             ”
-        </div>
-        <span><strong>“ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸 ” </strong></span> 
-    </div>
-</div>
+<main class="content">
+    <div class="container chip-container">
+        <div class="card bgi">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <div class="miaoshus">
+                        <strong>
+                            <div class="title center-align">“ 大学 ”</div>
+                        </strong>
+                        <span><strong>“ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸 ” </strong></span>
+                    </div>
+                </div>
 
-<!-- 相册 -->
-<section class="gallery">
-    <div id="myGallery" class="my-gallery">
-        <div class="row">
-            <div class="box">
-            
-                
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/01.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/01.png" alt="img"+0 >
-                            <!-- <img class="mat" src="/my_photos/大学/01.png"  alt="img"+0 > -->
-                        </a>                   
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/02.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/02.png" alt="img"+1 >
-                            <!-- <img class="mat" src="/my_photos/大学/02.png"  alt="img"+1 > -->
-                        </a>                   
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/03.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/03.png" alt="img"+2 >
-                            <!-- <img class="mat" src="/my_photos/大学/03.png"  alt="img"+2 > -->
-                        </a>                   
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/04.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/04.png" alt="img"+3 >
-                            <!-- <img class="mat" src="/my_photos/大学/04.png"  alt="img"+3 > -->
-                        </a>                   
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/05.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/05.png" alt="img"+4 >
-                            <!-- <img class="mat" src="/my_photos/大学/05.png"  alt="img"+4 > -->
-                        </a>                   
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/06.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/06.png" alt="img"+5 >
-                            <!-- <img class="mat" src="/my_photos/大学/06.png"  alt="img"+5 > -->
-                        </a>                   
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/07.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/07.png" alt="img"+6 >
-                            <!-- <img class="mat" src="/my_photos/大学/07.png"  alt="img"+6 > -->
-                        </a>                   
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/08.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/08.png" alt="img"+7 >
-                            <!-- <img class="mat" src="/my_photos/大学/08.png"  alt="img"+7 > -->
-                        </a>                   
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/09.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/09.png" alt="img"+8 >
-                            <!-- <img class="mat" src="/my_photos/大学/09.png"  alt="img"+8 > -->
-                        </a>                   
-                
-                                       
-                        <a class="gallery-page-item" href="/my_photos/大学/10.png" data-caption="大学">
-                            <img class="mat" src="/medias/loading.svg" data-src="/my_photos/大学/10.png" alt="img"+9 >
-                            <!-- <img class="mat" src="/my_photos/大学/10.png"  alt="img"+9 > -->
-                        </a>                   
-                
-            
+                <section class="gallery">
+                    <div id="myGallery" class="my-gallery">
+                        <div class="row">
+                            
+                                
+
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/01.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/01.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/02.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/02.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/03.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/03.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/04.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/04.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/05.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/05.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/06.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/06.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/07.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/07.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/08.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/08.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/09.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/09.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                                    
+                                    
+                                        <div class="photo col s12 m6 l4">
+                                            <div class="img-item">
+                                                <a class="gallery-page-item" href="/my_photos/大学/10.png" data-caption="大学">
+                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/10.png" class="responsive-img" alt="大学">
+                                                    <div class="biaotiss">“ 大学 ”</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                
+                            
+                        </div>
+
+                        <div id="galleryEmpty" class="gallery-empty" style="display: none;">暂无图片</div>
+                    </div>
+                </section>
+
+                <div id="galleryPaging" class="container paging" style="display: none;">
+                    <div class="row">
+                        <div class="col s6 m4 l4">
+                            <a id="galleryPrevPage" href="javascript:void(0);"
+                               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                        </div>
+                        <div class="page-info col m4 l4 hide-on-small-only">
+                            <div id="galleryPageInfo" class="center-align b-text-gray"></div>
+                        </div>
+                        <div class="col s6 m4 l4">
+                            <a id="galleryNextPage" href="javascript:void(0);"
+                               class="right btn-floating btn-large waves-effect waves-light bg-color">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
 
-<div id="galleryPaging" class="container paging" style="display: none;">
-    <div class="row">
-        <div class="col s6 m4 l4">
-            <a id="galleryPrevPage" href="javascript:void(0);"
-               class="left btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-left"></i>
-            </a>
-        </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div id="galleryPageInfo" class="center-align b-text-gray"></div>
-        </div>
-        <div class="col s6 m4 l4">
-            <a id="galleryNextPage" href="javascript:void(0);"
-               class="right btn-floating btn-large waves-effect waves-light bg-color">
-                <i class="fas fa-angle-right"></i>
-            </a>
-        </div>
-    </div>
-</div>
+    <script>
+        $('.bg-cover').css('background-image', 'url(/medias/banner/3.jpg)');
 
+        var galleryPageSize = 9;
+        var galleryCurrentPage = 1;
+        var galleryItems = $('.gallery-page-item').closest('.photo');
+        var galleryTotalPage = Math.ceil(galleryItems.length / galleryPageSize);
 
-<script>
-    var galleryPageSize = 9;
-    var galleryCurrentPage = 1;
-    var galleryItems = $('.gallery-page-item');
-    var galleryTotalPage = Math.ceil(galleryItems.length / galleryPageSize);
+        function updateGalleryPage(pageNumber) {
+            if (galleryTotalPage < 1) {
+                $('#galleryEmpty').show();
+                return;
+            }
 
-    function updateGalleryPage(pageNumber) {
-        galleryCurrentPage = Math.min(Math.max(pageNumber, 1), galleryTotalPage);
+            galleryCurrentPage = Math.min(Math.max(pageNumber, 1), galleryTotalPage);
 
-        var startIndex = (galleryCurrentPage - 1) * galleryPageSize;
-        var endIndex = startIndex + galleryPageSize;
+            var startIndex = (galleryCurrentPage - 1) * galleryPageSize;
+            var endIndex = startIndex + galleryPageSize;
 
-        galleryItems.hide().slice(startIndex, endIndex).show();
-        $('#galleryPageInfo').text(galleryCurrentPage + ' / ' + galleryTotalPage);
+            galleryItems.hide().slice(startIndex, endIndex).show();
+            $('#galleryPageInfo').text(galleryCurrentPage + ' / ' + galleryTotalPage);
 
-        $('#galleryPrevPage')
-            .toggleClass('disabled', galleryCurrentPage === 1)
-            .toggleClass('waves-effect waves-light bg-color', galleryCurrentPage !== 1);
+            $('#galleryPrevPage')
+                .toggleClass('disabled', galleryCurrentPage === 1)
+                .toggleClass('waves-effect waves-light bg-color', galleryCurrentPage !== 1);
 
-        $('#galleryNextPage')
-            .toggleClass('disabled', galleryCurrentPage === galleryTotalPage)
-            .toggleClass('waves-effect waves-light bg-color', galleryCurrentPage !== galleryTotalPage);
+            $('#galleryNextPage')
+                .toggleClass('disabled', galleryCurrentPage === galleryTotalPage)
+                .toggleClass('waves-effect waves-light bg-color', galleryCurrentPage !== galleryTotalPage);
 
-        start();
-    }
-
-    if (galleryTotalPage > 1) {
-        $('#galleryPaging').show();
-    }
-    updateGalleryPage(1);
-
-    $('#galleryPrevPage').on('click', function() {
-        if (galleryCurrentPage > 1) {
-            updateGalleryPage(galleryCurrentPage - 1);
-            $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
+            start();
         }
-    });
 
-    $('#galleryNextPage').on('click', function() {
-        if (galleryCurrentPage < galleryTotalPage) {
-            updateGalleryPage(galleryCurrentPage + 1);
-            $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
+        if (galleryTotalPage > 1) {
+            $('#galleryPaging').show();
         }
-    });
+        updateGalleryPage(1);
 
-    baguetteBox.run('.gallery', {
-        // 配置参数
-        buttons:Boolean,//是否显示导航按钮。
-        noScrollbars:true,//是否在显示时隐藏滚动条。
-        titleTag:true,//是否使用图片上的title属性作为图片标题
-        async:true,//是否异步加载文件。
-    });
-
-    start()
-        $(window).on('scroll', function(){
-         start();
-    })
-
-    function start(){
-          //.not('[data-isLoaded]')选中已加载的图片不需要重新加载
-        $('.gallery img:visible').not('[data-isLoaded]').each(function(){
-            var $node = $(this)
-            if( isShow($node) ){
-                loadImg($node);
+        $('#galleryPrevPage').on('click', function() {
+            if (galleryCurrentPage > 1) {
+                updateGalleryPage(galleryCurrentPage - 1);
+                $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
             }
         });
-     }
 
-    //判断一个元素是不是出现在窗口(视野)
-    function isShow($node){
-        return $node.offset().top <= $(window).height() + $(window).scrollTop();
-    }
-    //加载图片
-    function loadImg($img){
-    //.attr(值)
-    //.attr(属性名称,值)
-        $img.attr('src', $img.attr('data-src')); //把data-src的值 赋值给src
-        $img.attr('data-isLoaded', 1);//已加载的图片做标记
-    }
-</script>
+        $('#galleryNextPage').on('click', function() {
+            if (galleryCurrentPage < galleryTotalPage) {
+                updateGalleryPage(galleryCurrentPage + 1);
+                $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
+            }
+        });
+
+        baguetteBox.run('.gallery', {
+            buttons: true,
+            noScrollbars: true,
+            titleTag: true,
+            async: true
+        });
+
+        start();
+        $(window).on('scroll', function() {
+            start();
+        });
+
+        function start() {
+            $('.gallery img:visible').not('[data-isLoaded]').each(function() {
+                var $node = $(this);
+                if (isShow($node)) {
+                    loadImg($node);
+                }
+            });
+        }
+
+        function isShow($node) {
+            return $node.offset().top <= $(window).height() + $(window).scrollTop();
+        }
+
+        function loadImg($img) {
+            $img.attr('src', $img.attr('data-src'));
+            $img.attr('data-isLoaded', 1);
+        }
+    </script>
+</main>
 
 
     <footer class="page-footer bg-color">

@@ -230,7 +230,7 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -338,7 +338,7 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-07-03
+                    2026-07-04
                 </div>
                 
 
@@ -367,9 +367,7 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
+        <link rel="stylesheet" href="/css/codeblock-fix.css">
 
         
 
@@ -387,18 +385,18 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 <li><p>Code Spell Checker ，这个是拼写检查，帮你找错别字的，这个是支持英文，需要中文的话可以使用Spell Right   </p>
 </li>
 <li><p>Markdown Preview Enhanced ，这个提供侧边PDF预览 </p>
-<p>   <img src="/../images/9701d06429dd699a467fc402a2170e342cdf1e033393e7270835dc7162572a34.png" alt="图 1">  </p>
+<p>   <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/9701d06429dd699a467fc402a2170e342cdf1e033393e7270835dc7162572a34.png">  </p>
 </li>
 <li><p>VSCode Markdown Mind Map Preview ，这个提供侧边思维导图预览 </p>
-<p>   <img src="/../images/39da9d46e13f8f47e6a3b43ec74c38a36e6ba97e139b063ba114e191838854aa.png" alt="图 2">  </p>
+<p>   <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/39da9d46e13f8f47e6a3b43ec74c38a36e6ba97e139b063ba114e191838854aa.png">  </p>
 </li>
 <li><p>Markdown Table（要下载2个）</p>
 <ul>
 <li><p>这个可以把选中的文字制作成表格</p>
-<p> <img src="/../images/16220988c08e72265207398c35e8597010baa0ad7bb9966a9afc7d5a19368950.png" alt="图 2"> </p>
+<p> <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/16220988c08e72265207398c35e8597010baa0ad7bb9966a9afc7d5a19368950.png"> </p>
 </li>
 <li><p>这个可以对表格中的文字进行居中居中居右操作</p>
-<p> <img src="/../images/d11aa2543e1a2ad4160c2e787746ab490ee1df6606cc3d3666a653f056aa62dd.png" alt="图 1"></p>
+<p> <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/d11aa2543e1a2ad4160c2e787746ab490ee1df6606cc3d3666a653f056aa62dd.png"></p>
 </li>
 </ul>
 </li>
@@ -409,12 +407,14 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 <li><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推 </p>
 </li>
 <li><p>使用方法如下</p>
-  <pre class="line-numbers language-none"><code class="language-none"># 1级标题
+<pre><code># 1级标题
 ## 2级标题
 ### 3级标题
 #### 4级标题
 ##### 5级标题
-###### 6级标题<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+###### 6级标题
+</code></pre>
+</li>
 </ul>
 <h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><ul>
 <li>换行：两个空格+回车</li>
@@ -430,9 +430,10 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 <li><p>粗斜体：两边各三个*，快捷键：（ctrl+i）+（ctrl+b），先后顺序无所谓 </p>
 </li>
 <li><p>使用方法如下</p>
- <pre class="line-numbers language-none"><code class="language-none">*斜体文本*   
+<pre><code>*斜体文本*   
 **粗体文本**   
-***粗斜体文本*** <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+***粗斜体文本*** 
+</code></pre>
 </li>
 <li><p>显示效果如下</p>
 <p> <em>斜体文本</em><br> <strong>粗体文本</strong><br> <em><strong>粗斜体文本</strong></em></p>
@@ -444,25 +445,30 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 </li>
 <li><p>显示效果如下</p>
 <p> <font size="3" color="red">我是一段文字</font></p>
- <pre class="line-numbers language-none"><code class="language-none">size的取值为：1~7
-颜色可以用关键词也可以用十六进制<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<pre><code>size的取值为：1~7
+颜色可以用关键词也可以用十六进制
+</code></pre>
+</li>
 </ul>
 <h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><ul>
 <li>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，快捷键：Alt+s</li>
 </ul>
 <ul>
 <li><p>使用方法如下</p>
- <pre class="line-numbers language-none"><code class="language-none">~~床前明月光~~
+<pre><code>~~床前明月光~~
 ~~疑是地上霜~~
 ~~举头望明月~~
-~~低头思故乡~~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+~~低头思故乡~~
+</code></pre>
+</li>
 <li><p>显示效果如下 </p>
 <p> <del>床前明月光</del><br> <del>疑是地上霜</del><br> <del>举头望明月</del><br> <del>低头思故乡</del></p>
 </li>
 </ul>
 <h3 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h3><ul>
 <li><p>使用方法如下</p>
- <pre class="line-numbers language-none"><code class="language-none">&lt;u&gt;好好学习天天向上&lt;&#x2F;u&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>&lt;u&gt;好好学习天天向上&lt;/u&gt;
+</code></pre>
 </li>
 <li><p>显示效果如下 </p>
 <p> <u>好好学习天天向上</u></p>
@@ -473,14 +479,15 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 </ul>
 <ul>
 <li><p>使用方法如下</p>
-  <pre class="line-numbers language-none"><code class="language-none">床前明月光
+<pre><code>床前明月光
 ***
 疑是地上霜
 * * *
 举头望明月
 ****
 低头思故乡
-- - -<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+- - -
+</code></pre>
 </li>
 <li><p>显示效果如下   </p>
 <p> 床前明月光   </p>
@@ -498,7 +505,7 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 </ul>
 <ul>
 <li><p>使用方法如下</p>
- <pre class="line-numbers language-none"><code class="language-none">* 第一项
+<pre><code>* 第一项
 * 第二项
 * 第三项
 
@@ -508,7 +515,8 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 
 - 第一项
 - 第二项
-- 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+- 第三项
+</code></pre>
 </li>
 <li><p>显示效果如下</p>
 <ul>
@@ -533,9 +541,10 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 </ul>
 <ul>
 <li><p>使用方法如下</p>
- <pre class="line-numbers language-none"><code class="language-none">1. 第一项
+<pre><code>1. 第一项
 2. 第二项
-3. 第三项<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+3. 第三项
+</code></pre>
 </li>
 <li><p>显示效果如下</p>
 <ol>
@@ -547,19 +556,21 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 </ul>
 <h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><ul>
 <li><p>要添加图像，使用感叹号 !，然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本</p>
-  <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token operator">!</span><span class="token punctuation">[</span>图片alt<span class="token punctuation">]</span><span class="token punctuation">(</span>图片链接 <span class="token string">"图片title"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="c">  ![图片alt](图片链接 &quot;图片title&quot;)
+</code></pre>
 </li>
 <li><p>快捷方法：复制图片然后右键点击粘贴图片，快捷键：shift+alt+v</p>
-<p> <img src="/../images/67bf26b90257ff3aff3ec85d7ca8541c60723bbe5eea7c7538cbd798fd32556a.png" alt="图 3"></p>
+<p> <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/67bf26b90257ff3aff3ec85d7ca8541c60723bbe5eea7c7538cbd798fd32556a.png"></p>
 </li>
 </ul>
 <h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><ul>
 <li><p>使用方法如下</p>
- <pre class="line-numbers language-none"><code class="language-none">[链接名称](链接地址)
+<pre><code>[链接名称](链接地址)
 
 或者
 
-&lt;链接地址&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&lt;链接地址&gt;
+</code></pre>
 </li>
 <li><p>显示效果如下</p>
 <ol>
@@ -576,23 +587,26 @@ Markdown PDF ，这个可以把Markdown渲染成PDF或">
 </ul>
 <ul>
 <li><p>使用方法如下</p>
-<p>  <img src="/../images/c0909cdd4df01d7056c5cf4dc2c343497eefa9cb68eb7cc996739b672c11c31a.png" alt="图 1">  </p>
+<p>  <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/c0909cdd4df01d7056c5cf4dc2c343497eefa9cb68eb7cc996739b672c11c31a.png">  </p>
 </li>
 <li><p>显示效果如下</p>
 <ul>
 <li>单行：<code>printf(&quot;%d\n&quot;,a);</code></li>
-<li>多行：<pre class="line-numbers language-c&#123;.line-numbers&#125;" data-language="c&#123;.line-numbers&#125;"><code class="language-c&#123;.line-numbers&#125;">int a;
-a&#x3D;10;
-printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li>多行：<pre><code class="c&#123;.line-numbers&#125;">int a;
+a=10;
+printf(&quot;%d\n&quot;,a);
+</code></pre>
+</li>
 </ul>
 </li>
 </ul>
 <h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><ul>
 <li><p>使用方法如下</p>
- <pre class="line-numbers language-none"><code class="language-none">表头1   | 表头2  
+<pre><code>表头1   | 表头2  
 ----  | ----  
 单元格a1  | 单元格b1 
-单元格a1  | 单元格b2 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+单元格a1  | 单元格b2 
+</code></pre>
 </li>
 <li><p>显示效果如下</p>
 </li>
@@ -616,10 +630,10 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
 <ul>
 <li>快捷方法<ul>
 <li><p>将文字排好，选中文字右键点击Convert to table，快捷键：选中文字然后按Shift + ctrl + F</p>
-<p>  <img src="/../images/f4ea7e50dabdfd01f695dc883d7ec4ef526cb41f1072b02863ee24db0cd435ed.png" alt="图 3">  </p>
+<p>  <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/f4ea7e50dabdfd01f695dc883d7ec4ef526cb41f1072b02863ee24db0cd435ed.png">  </p>
 </li>
 <li><p>对表格文字进行居中居左居右操作</p>
-<p>  <img src="/../images/8341dd21d5891479f4c878e21875f45150680d0f473652087ec1e58e66b0ead2.png" alt="图 4"></p>
+<p>  <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/8341dd21d5891479f4c878e21875f45150680d0f473652087ec1e58e66b0ead2.png"></p>
 </li>
 </ul>
 </li>
@@ -629,9 +643,10 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
 </ul>
 <ul>
 <li><p>使用方法如下</p>
-  <pre class="line-numbers language-none"><code class="language-none">&gt; 床前明月光，疑是地上霜；举头望明月，低头思故乡
+<pre><code>&gt; 床前明月光，疑是地上霜；举头望明月，低头思故乡
 &gt; 好好学习天天向上
-&gt; 笨鸟先飞<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+&gt; 笨鸟先飞
+</code></pre>
 </li>
 <li><p>显示效果如下  </p>
 <blockquote>
@@ -643,27 +658,27 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
 <li><p>按Ctrl+Shift+p打开命令框→搜索content，然后选择创建目录</p>
 </li>
 <li><p>目录会自动更新不用担心</p>
-<p> <img src="/../images/4c15007cd63007b616f7a511d6d7ef67db5d409e013dd1b0ae13e3b05bfbc5c4.png" alt="图 7"></p>
+<p> <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/4c15007cd63007b616f7a511d6d7ef67db5d409e013dd1b0ae13e3b05bfbc5c4.png"></p>
 </li>
 </ul>
 <h2 id="3-Markdown-输出"><a href="#3-Markdown-输出" class="headerlink" title="3 Markdown 输出"></a>3 Markdown 输出</h2><h3 id="输出为PDF格式"><a href="#输出为PDF格式" class="headerlink" title="输出为PDF格式"></a>输出为PDF格式</h3><ul>
 <li><p>第一种方法是在VScode中下MarkdownPDF插件，然后在.md界面下右键即可选择，但是这种方法输出的PDF不带书签，我建议用第二种方法 </p>
-<p> <img src="/../images/1.png"></p>
+<p> <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/1.png"></p>
 </li>
 <li><p>第二种方法是电脑上安装<a target="_blank" rel="noopener" href="https://www.princexml.com/download/">Prince</a>，然后在预览界面右键选择PDF(prince)即可导出</p>
 <ul>
 <li><p>进入prince官网，点击电脑版本对应的链接进行下载并安装，下载完成并安装，默认安装位置应该是C:\Program Files (x86)\Prince，也可以自主选择，我建议默认即可  </p>
-<p><img src="/../images/2.png"></p>
+<p><img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/2.png"></p>
 </li>
 </ul>
 </li>
 <li><p>关于第二种方法出现问题的解决方案<br>错误：princexml is required to be installed<br>解决方法：</p>
 <ol>
 <li><p>选择右键我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;系统变量-&gt;Path-&gt;编辑  </p>
-<p>   <img src="/../images/3.png"></p>
+<p>   <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/3.png"></p>
 </li>
 <li><p>把你的安装路径\engine\bin这一路径添加到新建Path环境变量即可。默认路径即为C:\Program Files (x86)\Prince\engine\bin   </p>
-<p>   <img src="/../images/4.png">  </p>
+<p>   <img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/4.png">  </p>
 </li>
 <li><p>重启VScode即可</p>
 </li>
@@ -676,7 +691,7 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
 <li><p>在电脑上安装<a target="_blank" rel="noopener" href="https://pandoc.org/installing.html">Pandoc</a>这个软件  </p>
 </li>
 <li><p>按下ctrl+shift+p，在命令框中输入pandoc render即可</p>
-<p><img src="/../images/5.png"></p>
+<p><img src="/../../images/10-Markdown%E8%AF%AD%E6%B3%95/5.png"></p>
 </li>
 </ul>
 
@@ -745,7 +760,7 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Github/Gitee+hexo搭建个人博客">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Github/Gitee+hexo搭建个人博客">
                         
                         <span class="card-title">Github/Gitee+hexo搭建个人博客</span>
                     </div>
@@ -794,7 +809,7 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpeg" class="responsive-img" alt="VScode中上传到Gitee或Github">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="VScode中上传到Gitee或Github">
                         
                         <span class="card-title">VScode中上传到Gitee或Github</span>
                     </div>
@@ -851,9 +866,6 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->

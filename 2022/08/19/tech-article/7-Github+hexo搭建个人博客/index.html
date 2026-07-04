@@ -8,8 +8,12 @@
     <meta name="description" content="1 环境安装
 下载安装：node.js
 安装 hexo npm install -g hexo-cli
+
+
 在一个空文件夹里初始化hexo hexo init
-本地预览 hexo 使用以下命令，浏览器打开 http://localhost:40">
+
+
+本地预览 hexo 使用以下命令，浏览器打开 http://localhos">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -229,7 +233,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -337,7 +341,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-07-03
+                    2026-07-04
                 </div>
                 
 
@@ -366,9 +370,7 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
+        <link rel="stylesheet" href="/css/codeblock-fix.css">
 
         
 
@@ -376,81 +378,99 @@
             <div id="articleContent">
                 <h2 id="1-环境安装"><a href="#1-环境安装" class="headerlink" title="1 环境安装"></a>1 环境安装</h2><ol>
 <li>下载安装：<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">node.js</a></li>
-<li>安装 hexo <pre class="line-numbers language-none"><code class="language-none">npm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>在一个空文件夹里初始化hexo <pre class="line-numbers language-none"><code class="language-none">hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>本地预览 hexo 使用以下命令，浏览器打开 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 就可以看到hexo的初始界面了 <pre class="line-numbers language-none"><code class="language-none">hexo s      #本地预览<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>安装 hexo<pre><code> npm install -g hexo-cli
+</code></pre>
+</li>
+<li>在一个空文件夹里初始化hexo<pre><code> hexo init
+</code></pre>
+</li>
+<li>本地预览 hexo 使用以下命令，浏览器打开 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> 就可以看到hexo的初始界面了<pre><code> hexo s      #本地预览
+</code></pre>
+</li>
 </ol>
 <h2 id="2-主题安装"><a href="#2-主题安装" class="headerlink" title="2 主题安装"></a>2 主题安装</h2><ol>
-<li>安装 ayer 主题（如果想要安装其他主题到 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">hexo官方主题库</a> 寻找即可） <pre class="line-numbers language-none"><code class="language-none">npm i hexo-theme-ayer -S<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>安装 ayer 主题（如果想要安装其他主题到 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">hexo官方主题库</a> 寻找即可）<pre><code> npm i hexo-theme-ayer -S
+</code></pre>
+</li>
 <li>将博客根目录下的 <code>_config.yml</code> 里的 <code>theme</code> 值修改成 <code>ayer</code></li>
 <li>主题配置：找到 <code>ayer</code> 主题目录下的 <code>_config.yml</code> 文件自行配置</li>
 </ol>
-<h2 id="3-插件安装"><a href="#3-插件安装" class="headerlink" title="3 插件安装"></a>3 插件安装</h2><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><pre class="line-numbers language-none"><code class="language-none">npm install hexo-generator-searchdb --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="3-插件安装"><a href="#3-插件安装" class="headerlink" title="3 插件安装"></a>3 插件安装</h2><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><pre><code>npm install hexo-generator-searchdb --save
+</code></pre>
 <p>安装完成后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是 <code>ayer</code> 目录下的）:</p>
-<pre class="line-numbers language-none"><code class="language-none"># hexo-generator-searchdb
+<pre><code># hexo-generator-searchdb
 search:
 path: search.xml
 field: post
-format: html<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><pre class="line-numbers language-none"><code class="language-none">hexo new page categories<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+format: html
+</code></pre>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><pre><code>hexo new page categories
+</code></pre>
 <p>安装完成后找到 <code>/source/categories/index.md</code> 文件，默认内容如下：</p>
-<pre class="line-numbers language-none"><code class="language-none">---
+<pre><code>---
 title: categories
 date: 2022-10-02 14:35:38
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+---
+</code></pre>
 <p>在上面内容后面添加两行代码，添加后的内容如下：</p>
-<pre class="line-numbers language-none"><code class="language-none">---
+<pre><code>---
 title: categories
 date: 2022-10-02 14:35:38
 type: &quot;categories&quot;
 layout: &quot;categories&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+---
+</code></pre>
 <p>① 文章分类：打开需要添加分类的文章，在开头为其添加 <code>categories</code> 属性<br>② <code>categories: - 其他</code>表示添加这篇文章到 <code>其他</code> 这个分类<br>③ 注意：hexo一篇文章只能属于一个分类，也就是说如果在 <code>- 其他</code> 下方添加 <code>- xxx</code>，hexo不会产生两个分类，而是把分类嵌套（即该文章属于 <code>- 其他</code> 下的 <code>-xxx</code> 分类）</p>
-<pre class="line-numbers language-none"><code class="language-none">---
+<pre><code>---
 title: Github+hexo搭建个人博客
 categories: 
 - 其他
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><pre class="line-numbers language-none"><code class="language-none">hexo new page tags<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+---
+</code></pre>
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><pre><code>hexo new page tags
+</code></pre>
 <p>安装完成后找到 <code>/source/tags/index.md</code> 文件，默认内容如下：</p>
-<pre class="line-numbers language-none"><code class="language-none">---
+<pre><code>---
 title: 标签
 date: 2022-10-02 15:11:19
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+---
+</code></pre>
 <p>在上面内容后面添加两行代码，添加后的内容如下：</p>
-<pre class="line-numbers language-none"><code class="language-none">---
+<pre><code>---
 title: 标签
 date: 2022-10-02 15:11:19
 type: &quot;tags&quot;
 layout: &quot;tags&quot;
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+---
+</code></pre>
 <p>① 添加标签：打开需要添加分类的文章，在开头为其添加 <code>tags</code> 属性<br>② <code>tags: - hexo</code>表示为这篇文章添加 <code>hexo</code> 这个标签<br>③ 点击首页的<code>标签</code>可以看到该标签下的所有文章</p>
-<pre class="line-numbers language-none"><code class="language-none">---
+<pre><code>---
 title: Github+hexo搭建个人博客
 categories: 
 - 其他
 tags:
 - hexo
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="相册"><a href="#相册" class="headerlink" title="相册"></a>相册</h3><pre class="line-numbers language-none"><code class="language-none">hexo new page photos<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+---
+</code></pre>
+<h3 id="相册"><a href="#相册" class="headerlink" title="相册"></a>相册</h3><pre><code>hexo new page photos
+</code></pre>
 <p>然后将以下内容复制到 <code>/source/photos/index.md</code> 文件，<code>img_url</code> 替换成图片路径，<code>caption</code> 替换成图片名称：</p>
-<pre class="line-numbers language-none"><code class="language-none">---
+<pre><code>---
 title: Gallery
 
 albums: [[&quot;img_url&quot;, &quot;img_caption&quot;], [&quot;img_url&quot;, &quot;img_caption&quot;]]
----<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+---
+</code></pre>
 <p>最后在 <code>ayer</code> 目录下的 <code>_config.yml</code> 里的 <code>menu</code> 下添加 <code>相册: /photos</code> 即可</p>
-<h3 id="二次元看板娘"><a href="#二次元看板娘" class="headerlink" title="二次元看板娘"></a>二次元看板娘</h3><pre class="line-numbers language-none"><code class="language-none">npm install --save hexo-helper-live2d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="二次元看板娘"><a href="#二次元看板娘" class="headerlink" title="二次元看板娘"></a>二次元看板娘</h3><pre><code>npm install --save hexo-helper-live2d
+</code></pre>
 <p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里（注意不是 <code>ayer</code> 目录下的）:</p>
-<pre class="line-numbers language-none"><code class="language-none">live2d:
+<pre><code>live2d:
   enable: true  # 是否启动
   scriptFrom: local # 默认
-  pluginRootPath: live2dw&#x2F;  # 插件在站点上的根目录(相对路径)
-  pluginJsPath: lib&#x2F;  # 脚本文件相对与插件根目录路径
-  pluginModelPath: assets&#x2F;  # 模型文件相对与插件根目录路径
+  pluginRootPath: live2dw/  # 插件在站点上的根目录(相对路径)
+  pluginJsPath: lib/  # 脚本文件相对与插件根目录路径
+  pluginModelPath: assets/  # 模型文件相对与插件根目录路径
   tagMode: false  # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
   debug: false  # 调试, 是否在控制台输出日志
   model:
@@ -464,32 +484,39 @@ albums: [[&quot;img_url&quot;, &quot;img_caption&quot;], [&quot;img_url&quot;, &
   mobile:
     show: true  # 手机端是否显示
   react:
-    opacity: 0.7  # 模型透明度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    opacity: 0.7  # 模型透明度
+</code></pre>
 <p>① <a target="_blank" rel="noopener" href="https://huaji8.top/post/live2d-plugin-2.0/">下载模型</a>，在里面找到自己喜欢的一款模型然后下载即可，比方说作者喜欢的是 <code>koharu</code> 这个模型，那么就使用 <code>npm install --save live2d-widget-model-koharu</code> 进行安装<br>② 安装后我们在 <code>node_modules</code> 目录下面找到 <code>live2d-widget-model-koharu</code> 这个文件夹，把这个文件夹复制在我们的hexo博客的根目录(因为我们是在根目录的 <code>_config.yml</code> 里添加的配置)<br>③ 最后我们打开添加的配置文件，找到下面这行，把use后面改成我们刚才复制过来的文件夹的名称即可</p>
-<pre class="line-numbers language-none"><code class="language-none">model:
-    use: live2d-widget  ## 模型文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>model:
+    use: live2d-widget  ## 模型文件
+</code></pre>
 <p>更多插件可以在<a target="_blank" rel="noopener" href="https://hexo.io/plugins/">hexo官方插件库</a>里查找</p>
 <h2 id="4-部署在Github-x2F-Gitee"><a href="#4-部署在Github-x2F-Gitee" class="headerlink" title="4 部署在Github&#x2F;Gitee"></a>4 部署在Github&#x2F;Gitee</h2><ol>
-<li><p>安装<code>git</code>部署插件</p>
-  <pre class="line-numbers language-none"><code class="language-none">npm install --save hexo-deployer-git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>在配置文件<code>_config.yml</code>下分别修改以下内容（我这里是部署在Gitee上，部署在Github同理）</p>
-  <pre class="line-numbers language-none"><code class="language-none">url:  https:&#x2F;&#x2F;lvchungui.gitee.io # 仓库使用page服务后的网址
-root: &#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-  <pre class="line-numbers language-none"><code class="language-none">deploy:
-  type: git
-  repository: https:&#x2F;&#x2F;gitee.com&#x2F;lvchungui&#x2F;lvchungui.git # 仓库的地址
-  branch: master # 要上传的分支<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>  注意：仓库的网址和地址一定要对应</p>
-</li>
-<li><p>最后依次执行以下命令即可</p>
-  <pre class="line-numbers language-none"><code class="language-none">hexo c # 清除缓存文件 (db.json) 和已生成的静态文件 (public)
-hexo g # 生成静态文件
-hexo d # 部署网站
-# hexo g 和 hexo d 可以合并写成 hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>  可能遇到的问题：’git’ 不是内部或外部命令，也不是可运行的程序<br>  <a target="_blank" rel="noopener" href="https://www.cnblogs.com/ldq678/p/13287924.html">解决方法</a>：找到git的安装目录→打开系统环境变量→在用户变量和系统变量下的Path中新建一个→然后把git的安装目录的路径复制进去即可</p>
-</li>
+<li>安装<code>git</code>部署插件</li>
 </ol>
+<pre><code>  npm install --save hexo-deployer-git
+</code></pre>
+<ol start="2">
+<li>在配置文件<code>_config.yml</code>下分别修改以下内容（我这里是部署在Gitee上，部署在Github同理）</li>
+</ol>
+<pre><code>  url:  https://lvchungui.gitee.io # 仓库使用page服务后的网址
+  root: /
+</code></pre>
+<pre><code>  deploy:
+    type: git
+    repository: https://gitee.com/lvchungui/lvchungui.git # 仓库的地址
+    branch: master # 要上传的分支
+</code></pre>
+<p>  注意：仓库的网址和地址一定要对应</p>
+<ol start="3">
+<li>最后依次执行以下命令即可</li>
+</ol>
+<pre><code>  hexo c # 清除缓存文件 (db.json) 和已生成的静态文件 (public)
+  hexo g # 生成静态文件
+  hexo d # 部署网站
+  # hexo g 和 hexo d 可以合并写成 hexo g -d
+</code></pre>
+<p>  可能遇到的问题：’git’ 不是内部或外部命令，也不是可运行的程序<br>  <a target="_blank" rel="noopener" href="https://www.cnblogs.com/ldq678/p/13287924.html">解决方法</a>：找到git的安装目录→打开系统环境变量→在用户变量和系统变量下的Path中新建一个→然后把git的安装目录的路径复制进去即可</p>
 <h2 id="5-图片不显示问题"><a href="#5-图片不显示问题" class="headerlink" title="5 图片不显示问题"></a>5 图片不显示问题</h2><ul>
 <li>资源(Asset)代表source文件夹中除了文章以外的所有文件，例如图片、CSS、JS文件等。比方说，如果你的Hexo项目中有图片，那最简单的方法就是将它们放在<code>source/images</code> 文件夹中。然后通过类似于<code>![](/images/image.jpg）</code>的方法访问它们</li>
 </ul>
@@ -497,13 +524,13 @@ hexo d # 部署网站
 <li><p>购买一个域名（我这里使用腾讯云做个示范）</p>
 </li>
 <li><p>进入腾讯云→点开我的域名→点击解析</p>
-<p> <img src="/../images/14e2a7269aea8c27311fee1d04ede690d948ac65e2dc33905a2ba4b8b250bc48.png" alt="图 1">  </p>
+<p> <img src="/../../images/7-Github+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/14e2a7269aea8c27311fee1d04ede690d948ac65e2dc33905a2ba4b8b250bc48.png">  </p>
 </li>
 <li><p>如图所示，添加两条记录（记录值是你的博客网址）</p>
-<p> <img src="/../images/a6ddc94d4d4cda83ffc91ca54997724bf0cbcd40f8cd6136cca7bc4df29c4536.png" alt="图 2">  </p>
+<p> <img src="/../../images/7-Github+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/a6ddc94d4d4cda83ffc91ca54997724bf0cbcd40f8cd6136cca7bc4df29c4536.png">  </p>
 </li>
 <li><p>打开博客仓库→点击page服务→绑定域名</p>
-<p> <img src="/../images/b7b0d55a8109b23eabc0510f7001fa0dec8a839c135412a8aa1b2d2416951ad1.png" alt="图 3"></p>
+<p> <img src="/../../images/7-Github+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/b7b0d55a8109b23eabc0510f7001fa0dec8a839c135412a8aa1b2d2416951ad1.png"></p>
 </li>
 </ol>
 
@@ -572,7 +599,7 @@ hexo d # 部署网站
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Gitbook搭建个人笔记">
+                        <img src="/medias/featureimages/4.png" class="responsive-img" alt="Gitbook搭建个人笔记">
                         
                         <span class="card-title">Gitbook搭建个人笔记</span>
                     </div>
@@ -621,7 +648,7 @@ hexo d # 部署网站
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="Markdown语法">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Markdown语法">
                         
                         <span class="card-title">Markdown语法</span>
                     </div>
@@ -670,9 +697,6 @@ hexo d # 部署网站
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->

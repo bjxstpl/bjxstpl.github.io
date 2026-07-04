@@ -1,0 +1,66 @@
+/* Keep block code independent from inline-code styling. */
+#articleContent .code-area {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+#articleContent li > .code-area,
+#articleContent li > pre[class*="language-"] {
+    width: calc(100% + 2em);
+    margin-left: -2em;
+}
+
+#articleContent li li > .code-area,
+#articleContent li li > pre[class*="language-"] {
+    width: calc(100% + 4em);
+    margin-left: -4em;
+}
+
+#articleContent li li li > .code-area,
+#articleContent li li li > pre[class*="language-"] {
+    width: calc(100% + 6em);
+    margin-left: -6em;
+}
+
+#articleContent .code-area pre,
+#articleContent pre[class*="language-"] {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #272822;
+}
+
+#articleContent .code-area pre code,
+#articleContent pre[class*="language-"] > code {
+    top: auto !important;
+    display: block;
+    box-sizing: border-box;
+    min-width: 100%;
+    padding: 0;
+    line-height: 1.6;
+    color: #e8eaf6;
+    background: transparent;
+    border-radius: 0;
+}
+
+#articleContent .code-area pre code::selection,
+#articleContent .code-area pre code *::selection,
+#articleContent pre[class*="language-"]::selection,
+#articleContent pre[class*="language-"] *::selection {
+    color: #ffffff;
+    background: rgba(66, 185, 131, 0.42);
+    text-shadow: none;
+}
+
+#articleContent .line-numbers .line-numbers-rows {
+    top: 0;
+}
+
+#articleContent .line-numbers-rows,
+#articleContent .line-numbers-rows span,
+#articleContent .line-numbers-rows span::before {
+    background: transparent !important;
+}

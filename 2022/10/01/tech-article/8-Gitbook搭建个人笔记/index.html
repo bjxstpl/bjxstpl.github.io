@@ -226,7 +226,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -334,21 +334,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-07-03
+                    2026-07-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    9 分
                 </div>
                 
 
@@ -363,9 +363,7 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
+        <link rel="stylesheet" href="/css/codeblock-fix.css">
 
         
 
@@ -381,18 +379,22 @@
 </ul>
 <h3 id="安装-Gitbook"><a href="#安装-Gitbook" class="headerlink" title="安装 Gitbook"></a>安装 Gitbook</h3><ul>
 <li><p>打开 cmd 执行下面命令，安装 gitbook</p>
-  <pre class="line-numbers language-none"><code class="language-none">npm install -g gitbook-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre><code>  npm install -g gitbook-cli
+</code></pre>
+</li>
 </ul>
 <h2 id="2-搭建个人笔记"><a href="#2-搭建个人笔记" class="headerlink" title="2 搭建个人笔记"></a>2 搭建个人笔记</h2><h3 id="Gitbook-初始化"><a href="#Gitbook-初始化" class="headerlink" title="Gitbook 初始化"></a>Gitbook 初始化</h3><ul>
 <li><p>创建一个文件夹，并进入到该文件夹中，执行下面命令，初始化 gitbook </p>
-  <pre class="line-numbers language-none"><code class="language-none">gitbook init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>  gitbook init
+</code></pre>
 </li>
 <li><p>命令执行完成之后可以看到创建了 <code>SUMMARY.md</code> 文档，这是笔记的目录文档；还有一个 <code>REAMDE.md</code> 文档，是用来对这个笔记进行介绍</p>
 </li>
 </ul>
 <h3 id="npm-初始化"><a href="#npm-初始化" class="headerlink" title="npm 初始化"></a>npm 初始化</h3><ul>
 <li><p>执行下面命令，初始化 npm</p>
-  <pre class="line-numbers language-none"><code class="language-none">npm init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>  npm init
+</code></pre>
 </li>
 <li><p>命令会提示输入项目信息，可默认不填写，直接回车。最后，会显示配置信息，输入yes回车即可初始化完毕</p>
 </li>
@@ -402,38 +404,42 @@
 <h3 id="配置脚本命令"><a href="#配置脚本命令" class="headerlink" title="配置脚本命令"></a>配置脚本命令</h3><p><strong>配置启动脚本命令</strong></p>
 <ul>
 <li><p>在<code>package.json</code>文件的<code>scripts</code>中配置如下的脚本命令</p>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token string-property property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-    <span class="token string-property property">"serve"</span><span class="token operator">:</span> <span class="token string">"gitbook serve"</span><span class="token punctuation">,</span>
-    <span class="token string-property property">"build"</span><span class="token operator">:</span> <span class="token string">"gitbook build"</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="js">  &quot;scripts&quot;: &#123;
+      &quot;serve&quot;: &quot;gitbook serve&quot;,
+      &quot;build&quot;: &quot;gitbook build&quot;
+  &#125;
+</code></pre>
 </li>
 <li><p>上面分别是 gitbook 在本地启动的命令，和 gitbook 打包成 HTML 静态文件的命令</p>
 </li>
 <li><p>对于本地显示笔记，我们可以直接通过下面命令启动，启动成功后，就可以在浏览器输入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 查看自己的笔记，<code>gitbook build</code>命令后面再介绍 </p>
-  <pre class="line-numbers language-none"><code class="language-none">gitbook serve<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre><code>  gitbook serve
+</code></pre>
+</li>
 </ul>
 <p><strong>配置插件脚本命令</strong></p>
 <ul>
 <li><p>在文件夹的根目录中创建一个<code>book.js</code>的文件，并在该文件中配置如下信息</p>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// 书籍信息</span>
-    <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">'书名'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token string">'描述'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">isbn</span><span class="token operator">:</span> <span class="token string">'图书编号'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">author</span><span class="token operator">:</span> <span class="token string">'作者'</span><span class="token punctuation">,</span>
-    <span class="token literal-property property">lang</span><span class="token operator">:</span> <span class="token string">'zh-cn'</span><span class="token punctuation">,</span>
+<pre><code class="js">  module.exports = &#123;
+      // 书籍信息
+      title: &#39;书名&#39;,
+      description: &#39;描述&#39;,
+      isbn: &#39;图书编号&#39;,
+      author: &#39;作者&#39;,
+      lang: &#39;zh-cn&#39;,
 
-    <span class="token comment">// 插件列表</span>
-    <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      // 插件列表
+      plugins: [],
 
-    <span class="token comment">// 插件全局配置</span>
-    <span class="token literal-property property">pluginsConfig</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+      // 插件全局配置
+      pluginsConfig: &#123;&#125;,
 
-    <span class="token comment">// 模板变量</span>
-    <span class="token literal-property property">variables</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-        <span class="token comment">// 自定义</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+      // 模板变量
+      variables: &#123;
+          // 自定义
+      &#125;,
+  &#125;;
+</code></pre>
 </li>
 <li><p>在后面安装插件的时候需要在<code>book.js</code>文件中填入相关信息</p>
 </li>
@@ -441,145 +447,164 @@
 <h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>Gitbook 最灵活的地方就是有很多插件可以使用，当然如果对插件不满意，也可以自己写插件。所有插件的命名都是以gitbook-plugin-xxx的形式，gitbook 插件地址：<a target="_blank" rel="noopener" href="https://www.npmjs.com/">https://www.npmjs.com/</a></p>
 <h4 id="搜索插件"><a href="#搜索插件" class="headerlink" title="搜索插件"></a>搜索插件</h4><ul>
 <li><p>在命令行输入下面命令安装搜索插件search-pro，这个插件可以搜索任何字符并在 GitBook 中突出显示它</p>
-  <pre class="line-numbers language-none"><code class="language-none">npm install gitbook-plugin-search-pro<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>  npm install gitbook-plugin-search-pro
+</code></pre>
 </li>
 <li><p>安装完成之后会多出一个<code>node_modules</code>的文件夹，这个文件夹是专门存放插件的，以后下载的插件都会存放在这个文件里</p>
 </li>
 <li><p>插件安装成功后，还要在<code>book.js</code>中的<code>plugins</code>里添加如下插件的配置。- 号代表禁用插件，如果新安装的插件和gitbook自带的插件冲突了，需要禁用自带的插件才能使用新安装的；没有冲突的话直接在<code>plugins</code>里加上插件的名字就行</p>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"-lunr"</span><span class="token punctuation">,</span><span class="token string">"-search"</span><span class="token punctuation">,</span><span class="token string">"search-pro"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre><code class="js">  plugins: [&quot;-lunr&quot;,&quot;-search&quot;,&quot;search-pro&quot;],
+</code></pre>
+</li>
 </ul>
 <h4 id="代码插件"><a href="#代码插件" class="headerlink" title="代码插件"></a>代码插件</h4><ul>
 <li><p>在命令行输入下面命令安装代码插件code，这个插件可以在 GitBook 中显示代码和代码行号</p>
-  <pre class="line-numbers language-none"><code class="language-none">npm install gitbook-plugin-code<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>  npm install gitbook-plugin-code
+</code></pre>
 </li>
 <li><p>插件安装成功后，还要在<code>book.js</code>中的<code>plugins</code>里添加如下插件的配置</p>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"-lunr"</span><span class="token punctuation">,</span><span class="token string">"-search"</span><span class="token punctuation">,</span><span class="token string">"search-pro"</span><span class="token punctuation">,</span><span class="token string">"code"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre><code class="js">  plugins: [&quot;-lunr&quot;,&quot;-search&quot;,&quot;search-pro&quot;,&quot;code&quot;],
+</code></pre>
+</li>
 </ul>
 <h4 id="菜单折叠插件"><a href="#菜单折叠插件" class="headerlink" title="菜单折叠插件"></a>菜单折叠插件</h4><ul>
 <li><p>在命令行输入下面命令安装菜单折叠插件expandable-chapters，这个插件可以对 GitBook 左侧中的目录进行折叠操作</p>
-  <pre class="line-numbers language-none"><code class="language-none">npm install gitbook-plugin-expandable-chapters<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>  npm install gitbook-plugin-expandable-chapters
+</code></pre>
 </li>
 <li><p>插件安装成功后，还要在<code>book.js</code>中的<code>plugins</code>里添加如下插件的配置</p>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"-lunr"</span><span class="token punctuation">,</span><span class="token string">"-search"</span><span class="token punctuation">,</span><span class="token string">"search-pro"</span><span class="token punctuation">,</span><span class="token string">"code"</span><span class="token punctuation">,</span><span class="token string">"expandable-chapters"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre><code class="js">  plugins: [&quot;-lunr&quot;,&quot;-search&quot;,&quot;search-pro&quot;,&quot;code&quot;,&quot;expandable-chapters&quot;],
+</code></pre>
+</li>
 </ul>
 <h4 id="返回顶部插件"><a href="#返回顶部插件" class="headerlink" title="返回顶部插件"></a>返回顶部插件</h4><ul>
 <li><p>在命令行输入下面命令安装返回顶部插件back-to-top-button，这个插件可以对 GitBook 左侧中的目录进行折叠操作</p>
-  <pre class="line-numbers language-none"><code class="language-none">npm install gitbook-plugin-back-to-top-button<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>  npm install gitbook-plugin-back-to-top-button
+</code></pre>
 </li>
 <li><p>插件安装成功后，还要在<code>book.js</code>中的<code>plugins</code>里添加如下插件的配置</p>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"-lunr"</span><span class="token punctuation">,</span><span class="token string">"-search"</span><span class="token punctuation">,</span><span class="token string">"search-pro"</span><span class="token punctuation">,</span><span class="token string">"code"</span><span class="token punctuation">,</span><span class="token string">"expandable-chapters"</span><span class="token punctuation">,</span><span class="token string">"back-to-top-button"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<pre><code class="js">  plugins: [&quot;-lunr&quot;,&quot;-search&quot;,&quot;search-pro&quot;,&quot;code&quot;,&quot;expandable-chapters&quot;,&quot;back-to-top-button&quot;],
+</code></pre>
+</li>
 </ul>
 <h4 id="主题插件"><a href="#主题插件" class="headerlink" title="主题插件"></a>主题插件</h4><ul>
 <li><p>在命令行输入下面命令安装lou主题插件，这个主题插件是我目前用到最好的一款</p>
-  <pre class="line-numbers language-none"><code class="language-none">npm install gitbook-plugin-theme-lou<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>  npm install gitbook-plugin-theme-lou
+</code></pre>
 </li>
 <li><p>插件安装成功后，还要在<code>book.js</code>中添加如下插件的配置</p>
-  <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// book.js </span>
-<span class="token punctuation">&#123;</span> 
-    <span class="token string-property property">"plugins"</span> <span class="token operator">:</span>  <span class="token punctuation">[</span> <span class="token string">"theme-lou"</span> <span class="token punctuation">]</span> <span class="token punctuation">,</span> 
-    <span class="token string-property property">"pluginsConfig"</span> <span class="token operator">:</span>  <span class="token punctuation">&#123;</span> 
-        <span class="token string-property property">"theme-lou"</span> <span class="token operator">:</span>  <span class="token punctuation">&#123;</span> 
-            <span class="token string-property property">"color"</span> <span class="token operator">:</span>  <span class="token string">"#FF4848"</span> <span class="token punctuation">,</span>  <span class="token comment">// 主题色 </span>
-            <span class="token string-property property">"favicon"</span> <span class="token operator">:</span>  <span class="token string">"static/favicon.ico"</span> <span class="token punctuation">,</span>  <span class="token comment">// favicon图标 </span>
-            <span class="token string-property property">"logo"</span> <span class="token operator">:</span>  <span class="token string">"static/logo.png"</span> <span class="token punctuation">,</span>  <span class="token comment">// 顶部左侧图标 </span>
-            <span class="token string-property property">"appleTouchIconPrecomposed152"</span> <span class="token operator">:</span>  <span class="token string">"static/apple.png"</span> <span class="token punctuation">,</span>  <span class="token comment">// apple图标 </span>
-            <span class="token string-property property">"copyrightLogo"</span> <span class="token operator">:</span>  <span class="token string">"assets/copyright.png"</span> <span class="token punctuation">,</span>   <span class="token comment">// 底部水印LOGO </span>
-            <span class="token string-property property">"forbidCopy"</span> <span class="token operator">:</span>  <span class="token boolean">true</span> <span class="token punctuation">,</span>  <span class="token comment">// 页面是否禁止复制 </span>
-            <span class="token string-property property">"search-placeholder"</span> <span class="token operator">:</span>  <span class="token string">"Input Keywords to Search"</span> <span class="token punctuation">,</span>  <span class="token comment">// 搜索框默认文本 </span>
-            <span class="token string-property property">"book-summary-title"</span> <span class="token operator">:</span>  <span class="token string">"Article Directory"</span> <span class="token punctuation">,</span>  <span class="token comment">// 目录标题 </span>
-            <span class="token string-property property">"book-anchor-title"</span> <span class="token operator">:</span>  <span class="token string">"Search In the Article"</span> <span class="token punctuation">,</span>  <span class="token comment">// 本章目录标题 </span>
-            <span class="token string-property property">"hide-elements"</span> <span class="token operator">:</span>  <span class="token punctuation">[</span> <span class="token string">".summary .gitbook-link"</span> <span class="token punctuation">,</span>  <span class="token string">".summary .divider"</span> <span class="token punctuation">]</span> <span class="token punctuation">,</span>  <span class="token comment">// 需要隐藏的标签 </span>
-            <span class="token string-property property">"copyright"</span> <span class="token operator">:</span>  <span class="token punctuation">&#123;</span> 
-                <span class="token string-property property">"author"</span> <span class="token operator">:</span>  <span class="token string">"松露老师"</span>   <span class="token comment">// 底部版权展示的作者名 </span>
-            <span class="token punctuation">&#125;</span> 
-        <span class="token punctuation">&#125;</span> 
-    <span class="token punctuation">&#125;</span> <span class="token punctuation">,</span> 
-    <span class="token string-property property">"variables"</span> <span class="token operator">:</span>  <span class="token punctuation">&#123;</span> 
-        <span class="token string-property property">"themeLou"</span> <span class="token operator">:</span>  <span class="token punctuation">&#123;</span> 
-        <span class="token comment">// 顶部导航栏配置 </span>
-            <span class="token string-property property">"nav"</span> <span class="token operator">:</span>  <span class="token punctuation">[</span> 
-                <span class="token punctuation">&#123;</span> 
-                <span class="token string-property property">"target"</span> <span class="token operator">:</span>  <span class="token string">"_blank"</span> <span class="token punctuation">,</span>  <span class="token comment">// 跳转方式: 打开新页面 </span>
-                <span class="token string-property property">"url"</span> <span class="token operator">:</span>  <span class="token string">"http://..."</span> <span class="token punctuation">,</span>   <span class="token comment">// 跳转页面 </span>
-                <span class="token string-property property">"name"</span> <span class="token operator">:</span>  <span class="token string">"简易教程"</span>   <span class="token comment">// 导航名称 </span>
-                <span class="token punctuation">&#125;</span> 
-            <span class="token punctuation">]</span> <span class="token punctuation">,</span> 
-            <span class="token comment">// 底部打赏配置 </span>
-            <span class="token string-property property">"footer"</span> <span class="token operator">:</span>  <span class="token punctuation">&#123;</span> 
-                <span class="token string-property property">"donate"</span> <span class="token operator">:</span>  <span class="token punctuation">&#123;</span> 
-                <span class="token string-property property">"button"</span> <span class="token operator">:</span>  <span class="token string">"捐赠"</span> <span class="token punctuation">,</span>  <span class="token comment">// 打赏按钮 </span>
-                <span class="token string-property property">"avatar"</span> <span class="token operator">:</span>  <span class="token string">"头像地址"</span> <span class="token punctuation">,</span>  <span class="token comment">// 头像地址 </span>
-                <span class="token string-property property">"nickname"</span> <span class="token operator">:</span>  <span class="token string">"松露老师"</span> <span class="token punctuation">,</span>  <span class="token comment">// 昵称 </span>
-                <span class="token string-property property">"message"</span> <span class="token operator">:</span>  <span class="token string">"随意打赏，但不要超过一顿早餐钱！"</span> <span class="token punctuation">,</span>  <span class="token comment">// 打赏消息文本 </span>
-                <span class="token string-property property">"text"</span> <span class="token operator">:</span>  <span class="token string">"『 赠人玫瑰 🌹 手有余香 』"</span> <span class="token punctuation">,</span>  <span class="token comment">// 打赏话语 </span>
-                <span class="token string-property property">"wxpay"</span> <span class="token operator">:</span>  <span class="token string">"你的微信收款码地址"</span> <span class="token punctuation">,</span>  <span class="token comment">// 微信收款码 </span>
-                <span class="token string-property property">"alipay"</span> <span class="token operator">:</span>  <span class="token string">"你的支付宝收款码地址"</span>  <span class="token comment">// 支付宝收款码 </span>
-                <span class="token punctuation">&#125;</span> <span class="token punctuation">,</span> 
-                <span class="token string-property property">"copyright"</span> <span class="token operator">:</span>  <span class="token boolean">true</span>  <span class="token comment">// 是否显示版权 </span>
-            <span class="token punctuation">&#125;</span> 
-        <span class="token punctuation">&#125;</span> 
-    <span class="token punctuation">&#125;</span> 
-<span class="token punctuation">&#125;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<pre><code class="js">  // book.js 
+  &#123; 
+      &quot;plugins&quot; :  [ &quot;theme-lou&quot; ] , 
+      &quot;pluginsConfig&quot; :  &#123; 
+          &quot;theme-lou&quot; :  &#123; 
+              &quot;color&quot; :  &quot;#FF4848&quot; ,  // 主题色 
+              &quot;favicon&quot; :  &quot;static/favicon.ico&quot; ,  // favicon图标 
+              &quot;logo&quot; :  &quot;static/logo.png&quot; ,  // 顶部左侧图标 
+              &quot;appleTouchIconPrecomposed152&quot; :  &quot;static/apple.png&quot; ,  // apple图标 
+              &quot;copyrightLogo&quot; :  &quot;assets/copyright.png&quot; ,   // 底部水印LOGO 
+              &quot;forbidCopy&quot; :  true ,  // 页面是否禁止复制 
+              &quot;search-placeholder&quot; :  &quot;Input Keywords to Search&quot; ,  // 搜索框默认文本 
+              &quot;book-summary-title&quot; :  &quot;Article Directory&quot; ,  // 目录标题 
+              &quot;book-anchor-title&quot; :  &quot;Search In the Article&quot; ,  // 本章目录标题 
+              &quot;hide-elements&quot; :  [ &quot;.summary .gitbook-link&quot; ,  &quot;.summary .divider&quot; ] ,  // 需要隐藏的标签 
+              &quot;copyright&quot; :  &#123; 
+                  &quot;author&quot; :  &quot;松露老师&quot;   // 底部版权展示的作者名 
+              &#125; 
+          &#125; 
+      &#125; , 
+      &quot;variables&quot; :  &#123; 
+          &quot;themeLou&quot; :  &#123; 
+          // 顶部导航栏配置 
+              &quot;nav&quot; :  [ 
+                  &#123; 
+                  &quot;target&quot; :  &quot;_blank&quot; ,  // 跳转方式: 打开新页面 
+                  &quot;url&quot; :  &quot;http://...&quot; ,   // 跳转页面 
+                  &quot;name&quot; :  &quot;简易教程&quot;   // 导航名称 
+                  &#125; 
+              ] , 
+              // 底部打赏配置 
+              &quot;footer&quot; :  &#123; 
+                  &quot;donate&quot; :  &#123; 
+                  &quot;button&quot; :  &quot;捐赠&quot; ,  // 打赏按钮 
+                  &quot;avatar&quot; :  &quot;头像地址&quot; ,  // 头像地址 
+                  &quot;nickname&quot; :  &quot;松露老师&quot; ,  // 昵称 
+                  &quot;message&quot; :  &quot;随意打赏，但不要超过一顿早餐钱！&quot; ,  // 打赏消息文本 
+                  &quot;text&quot; :  &quot;『 赠人玫瑰 🌹 手有余香 』&quot; ,  // 打赏话语 
+                  &quot;wxpay&quot; :  &quot;你的微信收款码地址&quot; ,  // 微信收款码 
+                  &quot;alipay&quot; :  &quot;你的支付宝收款码地址&quot;  // 支付宝收款码 
+                  &#125; , 
+                  &quot;copyright&quot; :  true  // 是否显示版权 
+              &#125; 
+          &#125; 
+      &#125; 
+  &#125; 
+</code></pre>
+</li>
 </ul>
 <h3 id="目录配置"><a href="#目录配置" class="headerlink" title="目录配置"></a>目录配置</h3><ul>
 <li><p>GitBook 使用文件 <code>SUMMARY.md</code> 来定义书本的章节和子章节的结构，文件 <code>SUMMARY.md</code> 被用来生成书本内容的预览表</p>
 </li>
 <li><p><code>SUMMARY.md</code> 的格式是一个简单的链接列表，链接的名字是章节的名字，链接的指向是章节文件的路径，格式如下所示</p>
-  <pre class="line-numbers language-none"><code class="language-none">- [章节一](chapter1.md)
-- [章节二](chapter2.md)
-- [章节三](chapte#d)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-  <pre class="line-numbers language-none"><code class="language-none">- [第一章](part1&#x2F;README.md)
-  - [1.1 第一节](part1&#x2F;writing.md)
-  - [1.2 第二节](part1&#x2F;gitbook.md)
-- [第二章](part2&#x2F;README.md)
-  - [2.1 第一节](part2&#x2F;feedback_please.md)
-  - [2.2 第二节](part2&#x2F;better_tools.md)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<pre><code>  - [章节一](chapter1.md)
+  - [章节二](chapter2.md)
+  - [章节三](chapte#d)
+</code></pre>
+<pre><code>  - [第一章](part1/README.md)
+    - [1.1 第一节](part1/writing.md)
+    - [1.2 第二节](part1/gitbook.md)
+  - [第二章](part2/README.md)
+    - [2.1 第一节](part2/feedback_please.md)
+    - [2.2 第二节](part2/better_tools.md)
+</code></pre>
+</li>
 </ul>
 <h3 id="额外设置"><a href="#额外设置" class="headerlink" title="额外设置"></a>额外设置</h3><ul>
 <li><p>由于这个主题右侧的目录会显示1~6级标题，而我不想显示1级标题，需要进行以下设置</p>
 </li>
 <li><p>找到<code>lou.js</code>文件，把<code>.find</code>里的h1去掉即可，如下图所示。文件路径：<code>node_modules\gitbook-plugin-theme-lou\_assets\lou.js</code></p>
-<p>  <img src="/../images/a474cad45c7ddfed6be4f491c2f29a95887e85907bc4e599fa19f68b22095a65.png" alt="图 1"></p>
+<p>  <img src="/../../images/8-Gitbook%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/a474cad45c7ddfed6be4f491c2f29a95887e85907bc4e599fa19f68b22095a65.png"></p>
 </li>
 </ul>
 <h2 id="3-服务器部署"><a href="#3-服务器部署" class="headerlink" title="3 服务器部署"></a>3 服务器部署</h2><p>这里推荐使用Github Page，因为Gitee Page 每次提交代码后还要手动更新部署，而Github Page 提交代码后会自动部署</p>
 <h3 id="Gitee-Page"><a href="#Gitee-Page" class="headerlink" title="Gitee Page"></a>Gitee Page</h3><ul>
 <li><p>在命令行输入下面命令构建项目，成功后即可在_book文件夹中生成对应的静态网页资源</p>
-  <pre class="line-numbers language-none"><code class="language-none">gitbook build<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>  gitbook build
+</code></pre>
+<pre><code>  执行命令 gitbook build 出现的问题及解决方法
 
-  <pre class="line-numbers language-none"><code class="language-none">执行命令 gitbook build 出现的问题及解决方法
-
-问题：npm报错：无法加载文件 **.ps1，因为在此系统上禁止运行脚本
-解决方法：在命令行依次执行如下命令
-    1. 获取有效的执行策略：Get-ExecutionPolicy 
-    2. 更改当前用户执行策略：Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  问题：npm报错：无法加载文件 **.ps1，因为在此系统上禁止运行脚本
+  解决方法：在命令行依次执行如下命令
+      1. 获取有效的执行策略：Get-ExecutionPolicy 
+      2. 更改当前用户执行策略：Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+</code></pre>
 </li>
 <li><p>在 gitee 上新建一个仓库，把整个文件夹全部上传到仓库里</p>
 </li>
 <li><p>点击仓库→点击服务→点击 Gitee pages</p>
-<p>  <img src="/../images/3e11efbb6c4524dd2e0a165903e1be4f515a7d75f4cfc048dff04a90bc5ae0c0.png" alt="图 1">  </p>
-<p>  <img src="/../images/05a4fbb9285610cf64cc9bfa2d4f7bffd4559877b9f206c00484d28cca3affec.png" alt="图 2"></p>
+<p>  <img src="/../../images/8-Gitbook%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/3e11efbb6c4524dd2e0a165903e1be4f515a7d75f4cfc048dff04a90bc5ae0c0.png">  </p>
+<p>  <img src="/../../images/8-Gitbook%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/05a4fbb9285610cf64cc9bfa2d4f7bffd4559877b9f206c00484d28cca3affec.png"></p>
 </li>
 </ul>
 <h3 id="Github-Page"><a href="#Github-Page" class="headerlink" title="Github Page"></a>Github Page</h3><p>由于 Github Page 在部署目录的时候只能选择根目录或者<code>docs</code>目录，为了方便部署，我选择用<code>docs</code>目录部署。所以在本地<code>gitbook build</code>的操作会和之前有所不一样，按照下面的步骤执行即可</p>
 <ul>
 <li><p>由于执行<code>gitbook build</code>命令会默认在<code>_book</code>文件中生成对应的静态网页资源，而我们得在<code>docs</code>文件夹内生成对应的静态网页资源，所以在命令行输入下面命令构建项目，成功后即可在docs文件夹中生成对应的静态网页资源</p>
-  <pre class="line-numbers language-none"><code class="language-none">gitbook build .&#x2F; .&#x2F;docs<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code>  gitbook build ./ ./docs
+</code></pre>
+<pre><code>  参数一，书籍所在的目录，如果执行build指令时位于当前项目目录，输入./
+  参数二，输出的目录，相对于当前目录
+</code></pre>
+<pre><code>  执行命令 gitbook build ./ ./docs 出现的问题及解决方法
 
-  <pre class="line-numbers language-none"><code class="language-none">参数一，书籍所在的目录，如果执行build指令时位于当前项目目录，输入.&#x2F;
-参数二，输出的目录，相对于当前目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-  <pre class="line-numbers language-none"><code class="language-none">执行命令 gitbook build .&#x2F; .&#x2F;docs 出现的问题及解决方法
-
-问题：Error: ENOENT: no such file or directory, open &#39;D:\Repositories\gitbook\_book\gitbook\gitbook-plugin-theme-lou\logo.png&#39;
-解决方法：找到index.js文件，把里面的_book改成docs。文件路径： node_modules\gitbook-plugin-theme-lou\index.js<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>  <img src="/../images/41cf5fba8e6a31f5052b0e5fc209af73cf04531067b278103c00aa2f8b45d162.png" alt="图 2">  </p>
+  问题：Error: ENOENT: no such file or directory, open &#39;D:\Repositories\gitbook\_book\gitbook\gitbook-plugin-theme-lou\logo.png&#39;
+  解决方法：找到index.js文件，把里面的_book改成docs。文件路径： node_modules\gitbook-plugin-theme-lou\index.js
+</code></pre>
+<p>  <img src="/../../images/8-Gitbook%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/41cf5fba8e6a31f5052b0e5fc209af73cf04531067b278103c00aa2f8b45d162.png">  </p>
 </li>
 <li><p>在 github 上新建一个仓库，把整个文件夹全部上传到仓库里</p>
 </li>
 <li><p>点击仓库的设置→点击pages，按照下图设置即可</p>
-<p>  <img src="/../images/77ba37fd9dba0d1bdb31557bea072ed93036449bdc056f123af44cadbae83523.png" alt="图 3"></p>
+<p>  <img src="/../../images/8-Gitbook%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/77ba37fd9dba0d1bdb31557bea072ed93036449bdc056f123af44cadbae83523.png"></p>
 </li>
 </ul>
 
@@ -644,13 +669,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/10/tech-article/9-%E8%A7%A3%E5%86%B3hexo%E5%92%8Cgitbook%E5%9B%A0node%E7%89%88%E6%9C%AC%E5%86%B2%E7%AA%81%E7%9A%84%E9%97%AE%E9%A2%98/">
+                <a href="/2022/10/10/AI/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="解决Hexo和Gitbook因node版本冲突的问题">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="深度学习环境常用命令">
                         
-                        <span class="card-title">解决Hexo和Gitbook因node版本冲突的问题</span>
+                        <span class="card-title">深度学习环境常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -667,8 +692,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category">
+                                    人工智能
                                 </a>
                             
                             
@@ -678,16 +703,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Gitbook/">
-                        <span class="chip bg-color">Gitbook</span>
-                    </a>
-                    
-                    <a href="/tags/Node/">
-                        <span class="chip bg-color">Node</span>
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
                 </div>
@@ -705,7 +722,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Github/Gitee+hexo搭建个人博客">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Github/Gitee+hexo搭建个人博客">
                         
                         <span class="card-title">Github/Gitee+hexo搭建个人博客</span>
                     </div>
@@ -754,9 +771,6 @@
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->

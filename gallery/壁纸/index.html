@@ -323,15 +323,8 @@
 <style>
     .photo {
         padding: 0 40px !important;
-        display: inline-block;
+        display: block;
         position: relative;
-        transition: all .6s;
-    }
-    .photo:nth-child(odd) {
-        transform: rotateZ(-5deg);
-    }
-    .photo:nth-child(even) {
-        transform: rotateZ(5deg);
     }
     .biaotiss {
         padding: 8px 10px;
@@ -347,7 +340,17 @@
         border-radius: 10px;
         box-shadow: 1px 2px 2px 0 #aaa;
         transition: all .4s cubic-bezier(.63,.15,.03,1.12);
-        margin-bottom: 20px;
+        margin-bottom: 24px;
+    }
+    .photo:nth-child(odd) .img-item {
+        transform: rotateZ(-5deg);
+    }
+    .photo:nth-child(even) .img-item {
+        transform: rotateZ(5deg);
+    }
+    .my-gallery .row {
+        margin-left: 0;
+        margin-right: 0;
     }
     .img-item a {
         display: block;
@@ -403,6 +406,40 @@
         color: #777;
         text-align: center;
     }
+    .gallery .photo.gallery-page-animating {
+        animation-duration: 520ms;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(.22, .61, .36, 1);
+        transform-origin: center top;
+        will-change: opacity, transform;
+    }
+    .gallery .photo.gallery-page-hide {
+        animation-name: galleryPageHide;
+        pointer-events: none;
+    }
+    .gallery .photo.gallery-page-show {
+        animation-name: galleryPageShow;
+    }
+    @keyframes galleryPageHide {
+        from {
+            opacity: 1;
+            transform: scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: scale(0.86);
+        }
+    }
+    @keyframes galleryPageShow {
+        from {
+            opacity: 0;
+            transform: scale(0.86);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
     @media only screen and (max-width: 500px) {
         .photo {
             padding: 0 24px !important;
@@ -435,7 +472,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/01.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/01.png" class="responsive-img" alt="壁纸">
@@ -447,7 +484,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/02.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/02.png" class="responsive-img" alt="壁纸">
@@ -459,7 +496,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/03.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/03.png" class="responsive-img" alt="壁纸">
@@ -471,7 +508,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/04.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/04.png" class="responsive-img" alt="壁纸">
@@ -483,7 +520,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/05.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/05.png" class="responsive-img" alt="壁纸">
@@ -495,7 +532,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/06.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/06.png" class="responsive-img" alt="壁纸">
@@ -507,7 +544,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/07.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/07.png" class="responsive-img" alt="壁纸">
@@ -519,7 +556,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/08.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/08.png" class="responsive-img" alt="壁纸">
@@ -531,7 +568,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/09.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/09.png" class="responsive-img" alt="壁纸">
@@ -543,7 +580,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/10.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/10.png" class="responsive-img" alt="壁纸">
@@ -555,7 +592,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/11.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/11.png" class="responsive-img" alt="壁纸">
@@ -567,7 +604,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/12.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/12.png" class="responsive-img" alt="壁纸">
@@ -579,7 +616,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/13.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/13.png" class="responsive-img" alt="壁纸">
@@ -591,7 +628,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/14.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/14.png" class="responsive-img" alt="壁纸">
@@ -603,7 +640,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/15.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/15.png" class="responsive-img" alt="壁纸">
@@ -615,7 +652,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/16.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/16.png" class="responsive-img" alt="壁纸">
@@ -627,7 +664,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/17.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/17.png" class="responsive-img" alt="壁纸">
@@ -639,7 +676,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/18.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/18.png" class="responsive-img" alt="壁纸">
@@ -651,7 +688,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/19.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/19.png" class="responsive-img" alt="壁纸">
@@ -663,7 +700,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/20.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/20.png" class="responsive-img" alt="壁纸">
@@ -675,7 +712,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/21.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/21.png" class="responsive-img" alt="壁纸">
@@ -687,7 +724,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/22.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/22.png" class="responsive-img" alt="壁纸">
@@ -699,7 +736,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/23.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/23.png" class="responsive-img" alt="壁纸">
@@ -711,7 +748,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/24.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/24.png" class="responsive-img" alt="壁纸">
@@ -723,7 +760,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/25.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/25.png" class="responsive-img" alt="壁纸">
@@ -735,7 +772,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/26.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/26.png" class="responsive-img" alt="壁纸">
@@ -747,7 +784,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/27.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/27.png" class="responsive-img" alt="壁纸">
@@ -759,7 +796,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/28.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/28.png" class="responsive-img" alt="壁纸">
@@ -771,7 +808,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/29.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/29.png" class="responsive-img" alt="壁纸">
@@ -783,7 +820,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/30.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/30.png" class="responsive-img" alt="壁纸">
@@ -795,7 +832,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/31.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/31.png" class="responsive-img" alt="壁纸">
@@ -807,7 +844,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/32.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/32.png" class="responsive-img" alt="壁纸">
@@ -819,7 +856,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/33.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/33.png" class="responsive-img" alt="壁纸">
@@ -831,7 +868,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/34.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/34.png" class="responsive-img" alt="壁纸">
@@ -843,7 +880,7 @@
                                 
                                     
                                     
-                                        <div class="photo col s12 m6 l4">
+                                        <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                             <div class="img-item">
                                                 <a class="gallery-page-item" href="/my_photos/壁纸/35.png" data-caption="壁纸">
                                                     <img src="/medias/loading.svg" data-src="/my_photos/壁纸/35.png" class="responsive-img" alt="壁纸">
@@ -891,7 +928,13 @@
         var galleryItems = $('.gallery-page-item').closest('.photo');
         var galleryTotalPage = Math.ceil(galleryItems.length / galleryPageSize);
 
-        function updateGalleryPage(pageNumber) {
+        function refreshGalleryAnimation() {
+            if (window.AOS && typeof AOS.refresh === 'function') {
+                AOS.refresh();
+            }
+        }
+
+        function updateGalleryPage(pageNumber, shouldAnimate) {
             if (galleryTotalPage < 1) {
                 $('#galleryEmpty').show();
                 return;
@@ -901,8 +944,36 @@
 
             var startIndex = (galleryCurrentPage - 1) * galleryPageSize;
             var endIndex = startIndex + galleryPageSize;
+            var currentItems = galleryItems.filter(':visible');
+            var nextItems = galleryItems.slice(startIndex, endIndex);
 
-            galleryItems.hide().slice(startIndex, endIndex).show();
+            function showNextGalleryItems() {
+                galleryItems
+                    .not(nextItems)
+                    .hide()
+                    .removeClass('gallery-page-animating gallery-page-hide gallery-page-show')
+                    .css('animation-delay', '');
+
+                nextItems
+                    .show()
+                    .removeClass('gallery-page-hide aos-animate')
+                    .addClass('gallery-page-animating gallery-page-show');
+
+                nextItems.each(function(index) {
+                    $(this).css('animation-delay', (index * 70) + 'ms');
+                });
+
+                refreshGalleryAnimation();
+                start();
+
+                setTimeout(function() {
+                    nextItems
+                        .removeClass('gallery-page-animating gallery-page-show')
+                        .css('animation-delay', '');
+                    refreshGalleryAnimation();
+                }, 1100);
+            }
+
             $('#galleryPageInfo').text(galleryCurrentPage + ' / ' + galleryTotalPage);
 
             $('#galleryPrevPage')
@@ -913,24 +984,36 @@
                 .toggleClass('disabled', galleryCurrentPage === galleryTotalPage)
                 .toggleClass('waves-effect waves-light bg-color', galleryCurrentPage !== galleryTotalPage);
 
-            start();
+            if (shouldAnimate && currentItems.length > 0) {
+                currentItems
+                    .removeClass('gallery-page-show')
+                    .addClass('gallery-page-animating gallery-page-hide')
+                    .css('animation-delay', '');
+
+                setTimeout(showNextGalleryItems, 300);
+            } else {
+                galleryItems.hide();
+                nextItems.show().removeClass('aos-animate');
+                refreshGalleryAnimation();
+                start();
+            }
         }
 
         if (galleryTotalPage > 1) {
             $('#galleryPaging').show();
         }
-        updateGalleryPage(1);
+        updateGalleryPage(1, false);
 
         $('#galleryPrevPage').on('click', function() {
             if (galleryCurrentPage > 1) {
-                updateGalleryPage(galleryCurrentPage - 1);
+                updateGalleryPage(galleryCurrentPage - 1, true);
                 $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
             }
         });
 
         $('#galleryNextPage').on('click', function() {
             if (galleryCurrentPage < galleryTotalPage) {
-                updateGalleryPage(galleryCurrentPage + 1);
+                updateGalleryPage(galleryCurrentPage + 1, true);
                 $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
             }
         });

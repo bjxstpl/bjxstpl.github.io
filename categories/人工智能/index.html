@@ -269,11 +269,11 @@
                 
                 
                 
-                <a href="/categories/%E6%8A%80%E6%9C%AF/" title="技术: 12">
+                <a href="/categories/%E6%8A%80%E6%9C%AF/" title="技术: 13">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F9EBEA;">技术
-                        <span class="tag-length">12</span>
+                        <span class="tag-length">13</span>
                     </span>
                 </a>
                 
@@ -295,7 +295,7 @@
 
     
 
-    <article id="articles" class="container articles">
+    <article id="articles" class="container articles article-paged-list">
         <div class="row tags-posts">
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
@@ -304,7 +304,7 @@
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="深度学习环境常用命令">
+                            <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="深度学习环境常用命令">
                             
                             <span class="card-title">深度学习环境常用命令</span>
                         </div>
@@ -355,6 +355,76 @@
         </div>
     </article>
 </main>
+
+<style>
+    #articles.article-paged-list,
+    #articles.article-paged-list .row {
+        height: auto !important;
+    }
+
+    #articles.article-paged-list .article {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    #articles.article-paged-list .article-page-animating {
+        animation-duration: 520ms;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(.22, .61, .36, 1);
+        transform-origin: center top;
+        will-change: opacity, transform;
+    }
+
+    #articles.article-paged-list .article-page-hide {
+        animation-name: articlePageHide;
+        pointer-events: none;
+    }
+
+    #articles.article-paged-list .article-page-show {
+        animation-name: articlePageShow;
+    }
+
+    @keyframes articlePageHide {
+        from {
+            opacity: 1;
+            transform: scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: scale(0.86);
+        }
+    }
+
+    @keyframes articlePageShow {
+        from {
+            opacity: 0;
+            transform: scale(0.86);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    #articlePaging .btn-floating.bg-color {
+        background-image: linear-gradient(to right, #333333 0%, #333333 100%) !important;
+    }
+
+    #articlePaging .btn-floating.disabled {
+        background-color: #ccc !important;
+        background-image: none !important;
+    }
+
+    #articlePaging,
+    #articlePaging .row {
+        height: auto !important;
+        line-height: normal !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+</style>
+
 
 
 

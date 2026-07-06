@@ -340,21 +340,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-07-05
+                    2026-07-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    909
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -431,22 +431,22 @@ git config user.email &quot;账号B绑定邮箱&quot;<span aria-hidden="true" cl
 <li><p>账号 A：生成 id_rsa_a</p>
  <pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;账号A邮箱&quot;
 
-一路回车 → 在.ssh文件夹中重命名生成的2个文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+一路回车 → 在.ssh文件夹中重命名生成的2个文件，只能修改成这3种名称：id_rsa.pub、id_ecdsa.pub、id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 <li><p>账号 B：生成 id_rsa_b</p>
  <pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;账号B邮箱&quot;
 
-一路回车 → 在.ssh文件夹中重命名生成的2个文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+一路回车 → 在.ssh文件夹中重命名生成的2个文件，只能修改成这3种名称：id_rsa.pub、id_ecdsa.pub、id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p>在 .ssh 文件夹新建 config 文件，写入配置</p>
   <pre class="line-numbers language-none"><code class="language-none"># GitHub账号A
-Host github-a
+Host github-xxx
 HostName github.com
 IdentityFile ~&#x2F;.ssh&#x2F;id_xxx
 User git
 
 # GitHub账号B
-Host github-b
+Host github-xxx
 HostName github.com
 IdentityFile ~&#x2F;.ssh&#x2F;id_xxx
 User git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -470,7 +470,7 @@ User git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <li><p>ssh克隆优势：两套密钥隔离，推送自动匹配对应账号，完全不会权限冲突，长期开发首选</p>
 </li>
 </ol>
-<h2 id="三、完整提交流程（两个仓库互不干扰）"><a href="#三、完整提交流程（两个仓库互不干扰）" class="headerlink" title="三、完整提交流程（两个仓库互不干扰）"></a>三、完整提交流程（两个仓库互不干扰）</h2><ol>
+<h2 id="三、完整提交流程"><a href="#三、完整提交流程" class="headerlink" title="三、完整提交流程"></a>三、完整提交流程</h2><ol>
 <li><p>进入仓库 A 目录</p>
 </li>
 <li><p>确认本地 name&#x2F;email 是账号 A 信息</p>
@@ -483,15 +483,35 @@ git commit -m &quot;xxx&quot;
 git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 </li>
-<li><p>切换仓库 B 目录，自动使用仓库 B 本地配置，直接提交推送</p>
+<li><p>仓库 B 同理</p>
 </li>
 </ol>
-<h2 id="四、常见报错规避"><a href="#四、常见报错规避" class="headerlink" title="四、常见报错规避"></a>四、常见报错规避</h2><ol>
-<li><p>提交后 GitHub 贡献面板不显示绿点：邮箱不匹配，核对仓库内 <code>user.email</code> 和 GitHub 绑定邮箱完全一致；</p>
+<h2 id="四、常见报错解决方法"><a href="#四、常见报错解决方法" class="headerlink" title="四、常见报错解决方法"></a>四、常见报错解决方法</h2><ol>
+<li>git push出现报错：<code>ssh: connect to host github.com port 22: Connection refused</code><ul>
+<li>原因：开了github加速访问之类的工具</li>
+<li>解决方法：先停止工具服务，再关闭工具</li>
+</ul>
 </li>
-<li><p>push 提示 403 Forbidden：HTTPS 凭据缓存错乱，改用 SSH 方案；</p>
+<li>TortoiseGit push出现报错：<code>No supported authentication methods available(server sent: publickey)</code><ul>
+<li><p>原因：“ 没有支持的认证方法 ”，我们需要修改 TortoiseGit 网络的 SSＨ 客户端为 git 服务器的 ssh.exe</p>
 </li>
-<li><p>提交时自动用了另一个账号信息：确认每个仓库都执行过本地 git config，不要只依赖全局配置。</p>
+<li><p>解决方法：</p>
+<ul>
+<li>TortoiseGit 使用的是自己的 TortoiseGitPlink.exe 作为 SSH 客户端，鼠标右键 → TortoiseGit → Settings → Network → SSH Client 项，如下图：<br> <img src="/../../images/Git%E4%B8%AD%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%8E%A8%E9%80%81/image-2.png"></li>
+</ul>
+</li>
+<li><p>点击 “ Browser ” 找到在本地安装的 git 服务的根目录 → Git → usr → bin 目录下选中 ssh.exe ，再点击打开即可，如下图：<br><img src="/../../images/Git%E4%B8%AD%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%8E%A8%E9%80%81/image-3.png"></p>
+</li>
+<li><p>回到客户端后，点击 “ 应用 ” 即可</p>
+</li>
+</ul>
+</li>
+<li>git push出现报错：<code>Please make sure you have the correct access rights and the repository exists</code> <ul>
+<li>原因：修改了生成的密钥的文件名</li>
+<li>解决方法：将文件名修改成以下3种形式，因为github只能识别出下面3种密钥名称 <pre class="line-numbers language-none"><code class="language-none">id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+</ul>
 </li>
 </ol>
 
@@ -549,109 +569,33 @@ git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 
     
 
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2026/07/05/2026/Git%E4%B8%AD%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%8E%A8%E9%80%81/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Git中多账号配置及推送">
-                        
-                        <span class="card-title">Git中多账号配置及推送</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-05
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/codex/">
-                        <span class="chip bg-color">codex</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
+<nav id="prenext-posts" class="container paging post-paging" aria-label="文章换页">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a href="/2026/07/06/2026/Github%20Pages%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color"
+               aria-label="上一篇：Github Pages域名解析问题"
+               title="Github Pages域名解析问题">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
         </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2026/07/04/2026/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Codex的使用">
-                        
-                        <span class="card-title">Codex的使用</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-07-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/codex/">
-                        <span class="chip bg-color">codex</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">2 / 14</div>
         </div>
-        
+        <div class="col s6 m4 l4">
+            
+            <a href="/2026/07/04/2026/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/"
+               class="right btn-floating btn-large waves-effect waves-light bg-color"
+               aria-label="下一篇：Codex的使用"
+               title="Codex的使用">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
+        </div>
     </div>
-</article>
+</nav>
 
 </div>
 

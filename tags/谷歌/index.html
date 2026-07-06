@@ -313,28 +313,19 @@
                 </a>
                 
                 
-                <a href="/tags/Markdown/" title="Markdown: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Markdown" style="background-color: #F8F9F9;">Markdown
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/VScode/" title="VScode: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="VScode" style="background-color: #82E0AA;">VScode
+                            data-tagname="VScode" style="background-color: #F8F9F9;">VScode
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" title="深度学习: 1">
+                <a href="/tags/Markdown/" title="Markdown: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="深度学习" style="background-color: #D7BDE2;">深度学习
+                            data-tagname="Markdown" style="background-color: #82E0AA;">Markdown
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -343,7 +334,16 @@
                 <a href="/tags/ssh%E5%85%AC%E5%85%B1%E7%A7%98%E9%92%A5/" title="ssh公共秘钥: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="ssh公共秘钥" style="background-color: #A3E4D7;">ssh公共秘钥
+                            data-tagname="ssh公共秘钥" style="background-color: #D7BDE2;">ssh公共秘钥
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" title="深度学习: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="深度学习" style="background-color: #A3E4D7;">深度学习
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -367,11 +367,11 @@
                 </a>
                 
                 
-                <a href="/tags/codex/" title="codex: 2">
+                <a href="/tags/codex/" title="codex: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             data-tagname="codex" style="background-color: #F9E79F;">codex
-                        <span class="tag-length">2</span>
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
@@ -382,7 +382,7 @@
 
     
 
-    <article id="articles" class="container articles">
+    <article id="articles" class="container articles article-paged-list">
         <div class="row tags-posts">
             
             
@@ -392,7 +392,7 @@
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="谷歌浏览器访问">
+                            <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="谷歌浏览器访问">
                             
                             <span class="card-title">谷歌浏览器访问</span>
                         </div>
@@ -420,6 +420,76 @@
         </div>
     </article>
 </main>
+
+<style>
+    #articles.article-paged-list,
+    #articles.article-paged-list .row {
+        height: auto !important;
+    }
+
+    #articles.article-paged-list .article {
+        position: static !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    #articles.article-paged-list .article-page-animating {
+        animation-duration: 520ms;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(.22, .61, .36, 1);
+        transform-origin: center top;
+        will-change: opacity, transform;
+    }
+
+    #articles.article-paged-list .article-page-hide {
+        animation-name: articlePageHide;
+        pointer-events: none;
+    }
+
+    #articles.article-paged-list .article-page-show {
+        animation-name: articlePageShow;
+    }
+
+    @keyframes articlePageHide {
+        from {
+            opacity: 1;
+            transform: scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: scale(0.86);
+        }
+    }
+
+    @keyframes articlePageShow {
+        from {
+            opacity: 0;
+            transform: scale(0.86);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    #articlePaging .btn-floating.bg-color {
+        background-image: linear-gradient(to right, #333333 0%, #333333 100%) !important;
+    }
+
+    #articlePaging .btn-floating.disabled {
+        background-color: #ccc !important;
+        background-image: none !important;
+    }
+
+    #articlePaging,
+    #articlePaging .row {
+        height: auto !important;
+        line-height: normal !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+</style>
+
 
 
 

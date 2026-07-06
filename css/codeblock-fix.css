@@ -6,20 +6,20 @@
 
 #articleContent li > .code-area,
 #articleContent li > pre[class*="language-"] {
-    width: calc(100% + 2em);
-    margin-left: -2em;
+    width: 100%;
+    margin-left: 0;
 }
 
 #articleContent li li > .code-area,
 #articleContent li li > pre[class*="language-"] {
-    width: calc(100% + 4em);
-    margin-left: -4em;
+    width: 100%;
+    margin-left: 0;
 }
 
 #articleContent li li li > .code-area,
 #articleContent li li li > pre[class*="language-"] {
-    width: calc(100% + 6em);
-    margin-left: -6em;
+    width: 100%;
+    margin-left: 0;
 }
 
 #articleContent .code-area pre,

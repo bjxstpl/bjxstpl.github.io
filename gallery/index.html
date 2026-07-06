@@ -257,10 +257,9 @@
 <!-- 增加相册显示的特效样式 -->
 <style>
     .photo {
-        padding: 0 40px!important;
-        display: inline-block;
+        padding: 0 40px !important;
+        display: block;
         position: relative;
-        transition: all .6s;
     }
     .biaotiss {
         padding: 8px 10px;
@@ -275,13 +274,17 @@
         border-radius: 10px;
         box-shadow: 1px 2px 2px 0 #aaa;
         transition: all .4s cubic-bezier(.63,.15,.03,1.12);
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
-    .photo:nth-child(odd) {
+    .photo:nth-child(odd) .img-item {
         transform: rotateZ(-5deg);
-    }    
-    .photo:nth-child(even) {
+    }
+    .photo:nth-child(even) .img-item {
         transform: rotateZ(5deg);
+    }
+    .my-gallery .row {
+        margin-left: 0;
+        margin-right: 0;
     }
     .text_des{
         position: absolute;
@@ -313,6 +316,8 @@
     .my-gallery .photo img {
         border-radius: 10px;
         height: 240px;
+        width: 100%;
+        object-fit: cover;
     }
     .card .card-content {
         padding: 24px 24px 24px 24px;
@@ -373,6 +378,9 @@
     }
     /*小屏幕下(桌面类)的样式*/
     @media only screen and (max-width: 500px) {
+        .photo {
+            padding: 0 24px !important;
+        }
         .my-gallery .photo img {
             height: 186px;
         }
@@ -396,7 +404,7 @@
                             
                                 
                                 
-                                <div class="photo col s12 m6 l4">
+                                <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                     <div class="img-item">
                                         <a href="./大学">
                                             <img src="/medias/loading.svg" data-src="/my_photos/大学/01.png" class="responsive-img" alt="img"+0 />
@@ -408,7 +416,7 @@
                             
                                 
                                 
-                                <div class="photo col s12 m6 l4">
+                                <div class="photo col s12 m6 l4" data-aos="zoom-in">
                                     <div class="img-item">
                                         <a href="./壁纸">
                                             <img src="/medias/loading.svg" data-src="/my_photos/壁纸/31.png" class="responsive-img" alt="img"+1 />

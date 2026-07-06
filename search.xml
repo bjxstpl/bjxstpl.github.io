@@ -488,6 +488,39 @@ hexo d # 部署网站
       </tags>
   </entry>
   <entry>
+    <title>VScode中上传到Gitee或Github</title>
+    <url>/2022/10/03/2022/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/</url>
+    <content><![CDATA[<ol>
+<li><p>先把Gitee或Gihub的仓库克隆到本地</p>
+</li>
+<li><p>在VScode中打开克隆过来的文件夹，先暂存后提交，最后同步更新即可  </p>
+</li>
+<li><p>使用VSCode中报错信息：Git installation not found 解决方法</p>
+<p><img src="/../../images/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/ff9a6633df31b7281fca932bc889d5170b76a56e2fc1762c25d37fa7f96b01c7.png">  </p>
+<ul>
+<li><p>设置→输入命令“git.path”→点击“在settings.json中编辑”</p>
+<p> <img src="/../../images/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/0480e70d8820102e78ddf38cfcd989356fdaeab6c43dea384e9c72167f4b10e7.png">  </p>
+<p> <img src="/../../images/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/9789b9834c93b1b6b448d3bf2b3503d84e48490c8daf5331abd5cecbb87841c6.png">  </p>
+</li>
+<li><p>添加Git的安装地址，在git.path那里输入我们git的安装地址：注意分隔符为“&#x2F;”,而不是“\”</p>
+<p> <img src="/../../images/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/bfbed60bcbc01b4b18cfb234fa34cd5c7e27fc44b253a2490800b027b625e4b6.png"> </p>
+</li>
+<li><p>重启VScode即可</p>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Gitee</tag>
+        <tag>VScode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown语法</title>
     <url>/2022/07/18/2022/Markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1 准备工作"></a>1 准备工作</h2><ul>
@@ -803,70 +836,6 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
       </tags>
   </entry>
   <entry>
-    <title>VScode中上传到Gitee或Github</title>
-    <url>/2022/10/03/2022/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/</url>
-    <content><![CDATA[<ol>
-<li><p>先把Gitee或Gihub的仓库克隆到本地</p>
-</li>
-<li><p>在VScode中打开克隆过来的文件夹，先暂存后提交，最后同步更新即可  </p>
-</li>
-<li><p>使用VSCode中报错信息：Git installation not found 解决方法</p>
-<p><img src="/../../images/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/ff9a6633df31b7281fca932bc889d5170b76a56e2fc1762c25d37fa7f96b01c7.png">  </p>
-<ul>
-<li><p>设置→输入命令“git.path”→点击“在settings.json中编辑”</p>
-<p> <img src="/../../images/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/0480e70d8820102e78ddf38cfcd989356fdaeab6c43dea384e9c72167f4b10e7.png">  </p>
-<p> <img src="/../../images/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/9789b9834c93b1b6b448d3bf2b3503d84e48490c8daf5331abd5cecbb87841c6.png">  </p>
-</li>
-<li><p>添加Git的安装地址，在git.path那里输入我们git的安装地址：注意分隔符为“&#x2F;”,而不是“\”</p>
-<p> <img src="/../../images/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/bfbed60bcbc01b4b18cfb234fa34cd5c7e27fc44b253a2490800b027b625e4b6.png"> </p>
-</li>
-<li><p>重启VScode即可</p>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Gitee</tag>
-        <tag>VScode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习环境常用命令</title>
-    <url>/2022/10/10/2022/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<ol>
-<li><p>创建虚拟环境</p>
- <pre class="line-numbers language-none"><code class="language-none">conda create –n name python&#x3D;3.7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>激活环境</p>
- <pre class="line-numbers language-none"><code class="language-none">activate name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>安装虚拟环境所需配置</p>
-<ul>
-<li>有<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install -r requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>无<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install name&#x3D;&#x3D;version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-</li>
-<li><p>查看现有虚拟环境</p>
- <pre class="line-numbers language-none"><code class="language-none">    conda env list
-    ~~~     
-      
-5. 删除虚拟环境<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p> conda remove -n  name –all<br> ~~~</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>人工智能</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>生成ssh公共秘钥</title>
     <url>/2022/10/03/2022/%E7%94%9F%E6%88%90ssh%E5%85%AC%E5%85%B1%E7%A7%98%E9%92%A5/</url>
     <content><![CDATA[<h2 id="1-设置用户名和邮箱"><a href="#1-设置用户名和邮箱" class="headerlink" title="1 设置用户名和邮箱"></a>1 设置用户名和邮箱</h2><ul>
@@ -904,6 +873,37 @@ git config --global user.email“your@email.com&quot;<span aria-hidden="true" cl
       </categories>
       <tags>
         <tag>ssh公共秘钥</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习环境常用命令</title>
+    <url>/2022/10/10/2022/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<ol>
+<li><p>创建虚拟环境</p>
+ <pre class="line-numbers language-none"><code class="language-none">conda create –n name python&#x3D;3.7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>激活环境</p>
+ <pre class="line-numbers language-none"><code class="language-none">activate name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>安装虚拟环境所需配置</p>
+<ul>
+<li>有<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install -r requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>无<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install name&#x3D;&#x3D;version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+</li>
+<li><p>查看现有虚拟环境</p>
+ <pre class="line-numbers language-none"><code class="language-none">    conda env list
+    ~~~     
+      
+5. 删除虚拟环境<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p> conda remove -n  name –all<br> ~~~</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -975,6 +975,21 @@ git config --global user.email“your@email.com&quot;<span aria-hidden="true" cl
       </tags>
   </entry>
   <entry>
+    <title>Github Pages域名解析问题</title>
+    <url>/2026/07/06/2026/Github%20Pages%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<ul>
+<li>问题：在Github Pages解析域名时报错：<code>The austom domain 你的域名 is already taken fhyou are the ownerofthis doman, chec outhips/doas othub comfagesconflumng;a auston domaln foryourathwb;paoes steheifigour asom donair oroithulb page for information about how to verify and release this domain.</code><br><img src="/../../images/Github%20Pages%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98/image-2.png"></li>
+<li>解决方法：github账户设置（不是仓库设置） → pages →添加domain → 将github生成的主机记录和记录值添加到域名解析中<br><img src="/../../images/Github%20Pages%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98/image.png"><br><img src="/../../images/Github%20Pages%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98/image-1.png"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>codex</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git中多账号配置及推送</title>
     <url>/2026/07/05/2026/Git%E4%B8%AD%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%8E%A8%E9%80%81/</url>
     <content><![CDATA[<h2 id="一、核心原理"><a href="#一、核心原理" class="headerlink" title="一、核心原理"></a>一、核心原理</h2><p>Git 的用户名、邮箱分两套：</p>
@@ -1030,22 +1045,22 @@ git config user.email &quot;账号B绑定邮箱&quot;<span aria-hidden="true" cl
 <li><p>账号 A：生成 id_rsa_a</p>
  <pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;账号A邮箱&quot;
 
-一路回车 → 在.ssh文件夹中重命名生成的2个文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+一路回车 → 在.ssh文件夹中重命名生成的2个文件，只能修改成这3种名称：id_rsa.pub、id_ecdsa.pub、id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 <li><p>账号 B：生成 id_rsa_b</p>
  <pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;账号B邮箱&quot;
 
-一路回车 → 在.ssh文件夹中重命名生成的2个文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+一路回车 → 在.ssh文件夹中重命名生成的2个文件，只能修改成这3种名称：id_rsa.pub、id_ecdsa.pub、id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p>在 .ssh 文件夹新建 config 文件，写入配置</p>
   <pre class="line-numbers language-none"><code class="language-none"># GitHub账号A
-Host github-a
+Host github-xxx
 HostName github.com
 IdentityFile ~&#x2F;.ssh&#x2F;id_xxx
 User git
 
 # GitHub账号B
-Host github-b
+Host github-xxx
 HostName github.com
 IdentityFile ~&#x2F;.ssh&#x2F;id_xxx
 User git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -1069,7 +1084,7 @@ User git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <li><p>ssh克隆优势：两套密钥隔离，推送自动匹配对应账号，完全不会权限冲突，长期开发首选</p>
 </li>
 </ol>
-<h2 id="三、完整提交流程（两个仓库互不干扰）"><a href="#三、完整提交流程（两个仓库互不干扰）" class="headerlink" title="三、完整提交流程（两个仓库互不干扰）"></a>三、完整提交流程（两个仓库互不干扰）</h2><ol>
+<h2 id="三、完整提交流程"><a href="#三、完整提交流程" class="headerlink" title="三、完整提交流程"></a>三、完整提交流程</h2><ol>
 <li><p>进入仓库 A 目录</p>
 </li>
 <li><p>确认本地 name&#x2F;email 是账号 A 信息</p>
@@ -1082,15 +1097,35 @@ git commit -m &quot;xxx&quot;
 git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 </li>
-<li><p>切换仓库 B 目录，自动使用仓库 B 本地配置，直接提交推送</p>
+<li><p>仓库 B 同理</p>
 </li>
 </ol>
-<h2 id="四、常见报错规避"><a href="#四、常见报错规避" class="headerlink" title="四、常见报错规避"></a>四、常见报错规避</h2><ol>
-<li><p>提交后 GitHub 贡献面板不显示绿点：邮箱不匹配，核对仓库内 <code>user.email</code> 和 GitHub 绑定邮箱完全一致；</p>
+<h2 id="四、常见报错解决方法"><a href="#四、常见报错解决方法" class="headerlink" title="四、常见报错解决方法"></a>四、常见报错解决方法</h2><ol>
+<li>git push出现报错：<code>ssh: connect to host github.com port 22: Connection refused</code><ul>
+<li>原因：开了github加速访问之类的工具</li>
+<li>解决方法：先停止工具服务，再关闭工具</li>
+</ul>
 </li>
-<li><p>push 提示 403 Forbidden：HTTPS 凭据缓存错乱，改用 SSH 方案；</p>
+<li>TortoiseGit push出现报错：<code>No supported authentication methods available(server sent: publickey)</code><ul>
+<li><p>原因：“ 没有支持的认证方法 ”，我们需要修改 TortoiseGit 网络的 SSＨ 客户端为 git 服务器的 ssh.exe</p>
 </li>
-<li><p>提交时自动用了另一个账号信息：确认每个仓库都执行过本地 git config，不要只依赖全局配置。</p>
+<li><p>解决方法：</p>
+<ul>
+<li>TortoiseGit 使用的是自己的 TortoiseGitPlink.exe 作为 SSH 客户端，鼠标右键 → TortoiseGit → Settings → Network → SSH Client 项，如下图：<br> <img src="/../../images/Git%E4%B8%AD%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%8E%A8%E9%80%81/image-2.png"></li>
+</ul>
+</li>
+<li><p>点击 “ Browser ” 找到在本地安装的 git 服务的根目录 → Git → usr → bin 目录下选中 ssh.exe ，再点击打开即可，如下图：<br><img src="/../../images/Git%E4%B8%AD%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%8E%A8%E9%80%81/image-3.png"></p>
+</li>
+<li><p>回到客户端后，点击 “ 应用 ” 即可</p>
+</li>
+</ul>
+</li>
+<li>git push出现报错：<code>Please make sure you have the correct access rights and the repository exists</code> <ul>
+<li>原因：修改了生成的密钥的文件名</li>
+<li>解决方法：将文件名修改成以下3种形式，因为github只能识别出下面3种密钥名称 <pre class="line-numbers language-none"><code class="language-none">id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+</ul>
 </li>
 </ol>
 ]]></content>

@@ -78,10 +78,6 @@
         overflow-wrap: normal !important;
     }
 
-    .paging .page-info {
-        display: none !important;
-    }
-
     .post-back-button {
         left: 14px;
         top: 76px;

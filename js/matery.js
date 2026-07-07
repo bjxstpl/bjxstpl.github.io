@@ -4,7 +4,7 @@ $(function () {
      */
     let articleCardHover = function () {
         let animateClass = 'animated pulse';
-        $('article .article').hover(function () {
+        $('article .article, #prenext-posts .prev-next-card').hover(function () {
             $(this).addClass(animateClass);
         }, function () {
             $(this).removeClass(animateClass);
@@ -23,6 +23,10 @@ $(function () {
         }
 
         let w = srcDiv.width();
+        if (targetId === 'prenext-posts') {
+            $('#' + targetId).width(w);
+            return;
+        }
         if (w >= 450) {
             w = w + 21;
         } else if (w >= 350 && w < 450) {
@@ -104,6 +108,7 @@ $(function () {
         });
         $('#articleContent, #myGallery').lightGallery({
             selector: '.img-item',
+            exThumbImage: 'data-exthumbimage',
             // 启用字幕
             subHtmlSelectorRelative: true
         });

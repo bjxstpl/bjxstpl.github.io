@@ -83,6 +83,17 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="/gallery" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="/tags" class="waves-effect waves-light">
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
@@ -116,11 +127,11 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/gallery" class="waves-effect waves-light">
+    <a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
       
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      <i class="fas fa-compass" style="zoom: 0.6;"></i>
       
-      <span>相册</span>
+      <span>导航</span>
     </a>
     
   </li>
@@ -167,6 +178,17 @@
         
         <li class="m-nav-item">
 	  
+		<a href="/gallery" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
 		<a href="/tags" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-tags"></i>
@@ -200,11 +222,11 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/gallery" class="waves-effect waves-light">
+		<a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-user-circle"></i>
+			    <i class="fa-fw fas fa-compass"></i>
 			
-			相册
+			导航
 		</a>
           
         </li>
@@ -269,19 +291,19 @@
                 
                 
                 
-                <a href="/categories/%E6%8A%80%E6%9C%AF/" title="技术: 13">
+                <a href="/categories/%E6%8A%80%E6%9C%AF/" title="技术: 13" data-category-filter="技术">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">技术
+                            style="background-color: #0ea5e9;">技术
                         <span class="tag-length">13</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" title="人工智能: 1">
+                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" title="人工智能: 1" data-category-filter="人工智能">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            style="background-color: #F5EEF8;">人工智能
+                            style="background-color: #22c55e;">人工智能
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -304,7 +326,7 @@
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="深度学习环境常用命令">
+                            <img src="/medias/featureimages/5.jpeg" class="responsive-img" alt="深度学习环境常用命令">
                             
                             <span class="card-title">深度学习环境常用命令</span>
                         </div>
@@ -331,7 +353,7 @@
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category">
+                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category colored-category" style="color: #22c55e;">
                                     人工智能
                                 </a>
                                 
@@ -344,7 +366,7 @@
                     <div class="card-action article-tags">
                         
                         <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                            <span class="chip bg-color">深度学习</span>
+                            <span class="chip colored-tag" style="background-color: #22c55e;">深度学习</span>
                         </a>
                         
                     </div>
@@ -425,6 +447,211 @@
     }
 </style>
 
+
+<div id="articlePaging"
+     class="container paging"
+     data-page-size="9"
+     data-initial-page="1"
+     role="navigation"
+     aria-label="文章列表换页"
+     style="display: none;">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            <a id="articlePrevPage" href="javascript:void(0);"
+               class="left btn-floating btn-large waves-effect waves-light bg-color"
+               aria-label="上一页">
+                <i class="fas fa-angle-left"></i>
+            </a>
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div id="articlePageInfo" class="center-align b-text-gray"></div>
+        </div>
+        <div class="col s6 m4 l4">
+            <a id="articleNextPage" href="javascript:void(0);"
+               class="right btn-floating btn-large waves-effect waves-light bg-color"
+               aria-label="下一页">
+                <i class="fas fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var $paging = $('#articlePaging');
+        var $articles = $('#articles');
+        if (!$paging.length || !$articles.length) return;
+
+        var pageSize = Number($paging.data('page-size')) || 9;
+        var currentPage = Number($paging.data('initial-page')) || 1;
+        var $allItems = $articles.find('.article');
+        var $items = $allItems;
+        var totalPage = Math.ceil($items.length / pageSize);
+        var storageKey = 'materyArticleListPage:' + window.location.pathname.replace(/\/page\/\d+\/?$/, '/');
+        var savedPage = Number(sessionStorage.getItem(storageKey));
+
+        $articles.addClass('article-paged-list');
+
+        if (savedPage >= 1 && savedPage <= totalPage) {
+            currentPage = savedPage;
+        }
+
+        function relayoutArticles() {
+            if ($articles.data('masonry')) {
+                $articles.masonry('destroy');
+            }
+
+            if (window.AOS && typeof AOS.refresh === 'function') {
+                AOS.refresh();
+            }
+        }
+
+        function getEncodedNames($item, dataName) {
+            var value = String($item.attr(dataName) || '');
+            if (!value) return [];
+
+            return value.split('|').map(function (name) {
+                try {
+                    return decodeURIComponent(name);
+                } catch (error) {
+                    return name;
+                }
+            });
+        }
+
+        function updatePagingState() {
+            totalPage = Math.max(Math.ceil($items.length / pageSize), 1);
+            currentPage = Math.min(Math.max(currentPage, 1), totalPage);
+
+            $('#articlePageInfo').text(currentPage + ' / ' + totalPage);
+
+            $('#articlePrevPage')
+                .toggleClass('disabled', currentPage === 1)
+                .toggleClass('waves-effect waves-light', currentPage !== 1)
+                .toggleClass('bg-color', currentPage !== 1);
+
+            $('#articleNextPage')
+                .toggleClass('disabled', currentPage === totalPage)
+                .toggleClass('waves-effect waves-light', currentPage !== totalPage)
+                .toggleClass('bg-color', currentPage !== totalPage);
+
+            $paging.toggle($items.length > pageSize);
+        }
+
+        function updateArticlePage(pageNumber, shouldScroll) {
+            currentPage = Math.min(Math.max(pageNumber, 1), totalPage);
+            sessionStorage.setItem(storageKey, currentPage);
+
+            var startIndex = (currentPage - 1) * pageSize;
+            var endIndex = startIndex + pageSize;
+            var $currentItems = $allItems.filter(':visible');
+            var $nextItems = $items.slice(startIndex, endIndex);
+
+            function showNextItems() {
+                $allItems
+                    .not($nextItems)
+                    .hide()
+                    .removeClass('article-page-animating article-page-hide article-page-show')
+                    .css('animation-delay', '');
+
+                $nextItems
+                    .show()
+                    .removeClass('article-page-hide')
+                    .removeClass('aos-animate')
+                    .addClass('article-page-animating article-page-show');
+
+                $nextItems.each(function (index) {
+                    $(this).css('animation-delay', (index * 70) + 'ms');
+                });
+
+                relayoutArticles();
+
+                setTimeout(function () {
+                    $nextItems
+                        .removeClass('article-page-animating article-page-show')
+                        .css('animation-delay', '');
+                    relayoutArticles();
+                }, 1100);
+            }
+
+            updatePagingState();
+
+            if (shouldScroll && $currentItems.length > 0) {
+                $currentItems
+                    .removeClass('article-page-show')
+                    .addClass('article-page-animating article-page-hide')
+                    .css('animation-delay', '');
+
+                setTimeout(showNextItems, 300);
+            } else {
+                $allItems.hide();
+                $nextItems.show().removeClass('aos-animate');
+                relayoutArticles();
+            }
+
+            if (shouldScroll) {
+                $('html, body').animate({ scrollTop: $articles.offset().top - 80 }, 300);
+            }
+        }
+
+        function setActiveChip(type, value) {
+            var selector = type === 'tag' ? '[data-tag-filter]' : '[data-category-filter]';
+
+            $(selector).find('.chip')
+                .removeClass('chip-active')
+                .addClass('chip-default');
+
+            $(selector).filter(function () {
+                return String($(this).data(type + '-filter')) === value;
+            }).find('.chip')
+                .removeClass('chip-default')
+                .addClass('chip-active');
+        }
+
+        function filterArticleList(type, value, shouldScroll) {
+            var dataName = type === 'tag' ? 'data-tags' : 'data-categories';
+
+            $items = $allItems.filter(function () {
+                return getEncodedNames($(this), dataName).indexOf(value) !== -1;
+            });
+
+            currentPage = 1;
+            setActiveChip(type, value);
+            updatePagingState();
+            updateArticlePage(1, shouldScroll);
+        }
+
+        $(document).on('click', '[data-tag-filter]', function (event) {
+            if ($articles.data('filter-type') !== 'tag') return;
+
+            event.preventDefault();
+            filterArticleList('tag', String($(this).data('tag-filter')), true);
+        });
+
+        $(document).on('click', '[data-category-filter]', function (event) {
+            if ($articles.data('filter-type') !== 'category') return;
+
+            event.preventDefault();
+            filterArticleList('category', String($(this).data('category-filter')), true);
+        });
+
+        $('#articlePrevPage').on('click', function () {
+            if (currentPage > 1) {
+                updateArticlePage(currentPage - 1, true);
+            }
+        });
+
+        $('#articleNextPage').on('click', function () {
+            if (currentPage < totalPage) {
+                updateArticlePage(currentPage + 1, true);
+            }
+        });
+
+        $allItems.find('img').on('load', relayoutArticles);
+        updatePagingState();
+        updateArticlePage(currentPage, false);
+    })();
+</script>
 
 
 

@@ -12,7 +12,7 @@
 本地仓库配置：单独给某一个仓库设置专属账号信息，优先级高于全局
 
 
-你两个 GitHub 账号对应两套不同的 na">
+两个 GitHub 账号对应两套不同的 nam">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -90,6 +90,17 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="/gallery" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="/tags" class="waves-effect waves-light">
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
@@ -123,11 +134,11 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/gallery" class="waves-effect waves-light">
+    <a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
       
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      <i class="fas fa-compass" style="zoom: 0.6;"></i>
       
-      <span>相册</span>
+      <span>导航</span>
     </a>
     
   </li>
@@ -174,6 +185,17 @@
         
         <li class="m-nav-item">
 	  
+		<a href="/gallery" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
 		<a href="/tags" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-tags"></i>
@@ -207,11 +229,11 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/gallery" class="waves-effect waves-light">
+		<a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-user-circle"></i>
+			    <i class="fa-fw fas fa-compass"></i>
 			
-			相册
+			导航
 		</a>
           
         </li>
@@ -308,8 +330,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/codex/">
-                                <span class="chip bg-color">codex</span>
+                            <a href="/tags/Git/">
+                                <span class="chip colored-tag" style="background-color: #8b5cf6;">Git</span>
                             </a>
                         
                     </div>
@@ -320,7 +342,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #0ea5e9;">
                                 技术
                             </a>
                         
@@ -340,14 +362,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-07-06
+                    2026-07-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    992
                 </div>
                 
 
@@ -385,7 +407,7 @@
 <li><p><strong>本地仓库配置</strong>：单独给某一个仓库设置专属账号信息，优先级高于全局</p>
 </li>
 </ol>
-<p>你两个 GitHub 账号对应两套不同的 <code>name+注册邮箱</code>，只要<strong>每个仓库单独配置本地 user 信息</strong>，提交、推送就不会出现账号混淆、贡献图不显示、权限报错问题。</p>
+<p>两个 GitHub 账号对应两套不同的 <code>name+注册邮箱</code>，只要<strong>每个仓库单独配置本地 user 信息</strong>，提交、推送就不会出现账号混淆、贡献图不显示、权限报错问题。</p>
 <h2 id="二、解决方法"><a href="#二、解决方法" class="headerlink" title="二、解决方法"></a>二、解决方法</h2><h3 id="方式-1：HTTPS-克隆仓库"><a href="#方式-1：HTTPS-克隆仓库" class="headerlink" title="方式 1：HTTPS 克隆仓库"></a>方式 1：HTTPS 克隆仓库</h3><ul>
 <li><p>HTTPS 会缓存账号密码 &#x2F; PAT 令牌，切换仓库容易推送到另一个账号时报 403。</p>
 </li>
@@ -405,15 +427,15 @@
 <li><p>进入仓库 A 根目录，打开 Git bash：</p>
  <pre class="line-numbers language-none"><code class="language-none">设置账号A的用户名（GitHub主页显示的用户名）
 
-git config user.name &quot;GitHub账号A用户名&quot;
+git config user.name &quot;lvchungui&quot;
 
 设置账号A注册GitHub的邮箱
 
-git config user.email &quot;账号A绑定邮箱&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+git config user.email &quot;617726681@qq.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>进入仓库 B 根目录，终端执行：</p>
- <pre class="line-numbers language-none"><code class="language-none">git config user.name &quot;GitHub账号B用户名&quot;
+ <pre class="line-numbers language-none"><code class="language-none">git config user.name &quot;bjxstpl&quot;
 
-git config user.email &quot;账号B绑定邮箱&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+git config user.email &quot;3604874561@qq.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>验证是否设置成功（每个仓库单独执行查看）：</p>
  <pre class="line-numbers language-none"><code class="language-none">git config --list<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -429,64 +451,62 @@ git config user.email &quot;账号B绑定邮箱&quot;<span aria-hidden="true" cl
 </ul>
 <ul>
 <li><p>账号 A：生成 id_rsa_a</p>
- <pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;账号A邮箱&quot;
+ <pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;617726681@qq.com&quot;
 
-一路回车 → 在.ssh文件夹中重命名生成的2个文件，只能修改成这3种名称：id_rsa.pub、id_ecdsa.pub、id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+一路回车 → 在.ssh文件夹中重命名生成的2个文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 <li><p>账号 B：生成 id_rsa_b</p>
- <pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;账号B邮箱&quot;
+ <pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;3604874561@qq.com&quot;
 
-一路回车 → 在.ssh文件夹中重命名生成的2个文件，只能修改成这3种名称：id_rsa.pub、id_ecdsa.pub、id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+一路回车 → 在.ssh文件夹中重命名生成的2个文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p>在 .ssh 文件夹新建 config 文件，写入配置</p>
   <pre class="line-numbers language-none"><code class="language-none"># GitHub账号A
-Host github-xxx
+Host github-lvchungui
 HostName github.com
-IdentityFile ~&#x2F;.ssh&#x2F;id_xxx
+IdentityFile ~&#x2F;.ssh&#x2F;id_lcg
 User git
 
 # GitHub账号B
-Host github-xxx
+Host github-bjxstpl
 HostName github.com
-IdentityFile ~&#x2F;.ssh&#x2F;id_xxx
+IdentityFile ~&#x2F;.ssh&#x2F;id_bjx
 User git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>修改仓库远程地址</p>
 <ul>
-<li><p>进入<code>.git</code>文件夹下的<code>config</code>文件，修改url地址，url地址可以直接登陆github，去仓库复制</p>
- <pre class="line-numbers language-none"><code class="language-none">仓库 A 远程地址改成：git@github-a:用户名A&#x2F;仓库名.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li><p>进入<code>.git</code>文件夹下的<code>config</code>文件，修改url地址</p>
+ <pre class="line-numbers language-none"><code class="language-none">仓库 A 远程地址改成：git@github-a:用户名A&#x2F;仓库名.git
 
- <pre class="line-numbers language-none"><code class="language-none">仓库 B 远程地址改成：git@github-b:用户名B&#x2F;仓库名.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+git@github-lvchungui:lvchungui&#x2F;lvchungui.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+ <pre class="line-numbers language-none"><code class="language-none">仓库 B 远程地址改成：git@github-b:用户名B&#x2F;仓库名.git
+
+git@github-bjxstpl:bjxstpl&#x2F;bjxstpl.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>  <img src="/../../images/Git%E4%B8%AD%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%8E%A8%E9%80%81/image-1.png"></p>
 </li>
+<li><p>也可以进入仓库文件夹后用命令修改</p>
+ <pre class="line-numbers language-none"><code class="language-none">git remote set-url origin git@github-lvchungui:lvchungui&#x2F;lvchungui.github.io.git
+
+git remote set-url origin git@github-bjxstpl:bjxstpl&#x2F;bjxstpl.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p>在 Github 中添加秘钥</p>
 <ul>
-<li>用记事本打开 id_rsa.pub 将全部的内容复制</li>
+<li>用记事本打开 id_xxx.pub 将全部的内容复制</li>
 <li>打开 Github →进入设置→进入ssh设置→点击添加秘钥，然后将刚刚复制的粘贴进去就可以了</li>
 </ul>
+</li>
+<li><p>验证是否配置成功：在任意位置打开<code>git bash</code>分别输入下面命令，看到<code>Hi，xxx</code>即配置成功：</p>
+<pre class="line-numbers language-none"><code class="language-none">ssh -T git@github-bjxstpl
+
+ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="/../../images/Git%E4%B8%AD%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E5%8F%8A%E6%8E%A8%E9%80%81/image-4.png"></p>
 </li>
 <li><p>ssh克隆优势：两套密钥隔离，推送自动匹配对应账号，完全不会权限冲突，长期开发首选</p>
 </li>
 </ol>
-<h2 id="三、完整提交流程"><a href="#三、完整提交流程" class="headerlink" title="三、完整提交流程"></a>三、完整提交流程</h2><ol>
-<li><p>进入仓库 A 目录</p>
-</li>
-<li><p>确认本地 name&#x2F;email 是账号 A 信息</p>
-</li>
-<li><p>正常提交推送</p>
-<pre class="line-numbers language-none"><code class="language-none">git add .
-
-git commit -m &quot;xxx&quot;
-
-git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-</li>
-<li><p>仓库 B 同理</p>
-</li>
-</ol>
-<h2 id="四、常见报错解决方法"><a href="#四、常见报错解决方法" class="headerlink" title="四、常见报错解决方法"></a>四、常见报错解决方法</h2><ol>
+<h2 id="三、常见报错解决方法"><a href="#三、常见报错解决方法" class="headerlink" title="三、常见报错解决方法"></a>三、常见报错解决方法</h2><ol>
 <li>git push出现报错：<code>ssh: connect to host github.com port 22: Connection refused</code><ul>
 <li>原因：开了github加速访问之类的工具</li>
 <li>解决方法：先停止工具服务，再关闭工具</li>
@@ -506,13 +526,6 @@ git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 </li>
 </ul>
 </li>
-<li>git push出现报错：<code>Please make sure you have the correct access rights and the repository exists</code> <ul>
-<li>原因：修改了生成的密钥的文件名</li>
-<li>解决方法：将文件名修改成以下3种形式，因为github只能识别出下面3种密钥名称 <pre class="line-numbers language-none"><code class="language-none">id_rsa.pub
-id_ecdsa.pub
-id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
-</ul>
-</li>
 </ol>
 
                 
@@ -528,8 +541,8 @@ id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><s
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/codex/">
-                                    <span class="chip bg-color">codex</span>
+                                <a href="/tags/Git/">
+                                    <span class="chip colored-tag" style="background-color: #8b5cf6;">Git</span>
                                 </a>
                             
                         </div>
@@ -569,33 +582,101 @@ id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 
     
 
-<nav id="prenext-posts" class="container paging post-paging" aria-label="文章换页">
+
+
+
+<div id="prenext-posts" class="container prev-next">
     <div class="row">
-        <div class="col s6 m4 l4">
+        
+        <div class="prev-next-card col s12 m6">
             
-            <a href="/2026/07/06/2026/Github%20Pages%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98/"
-               class="left btn-floating btn-large waves-effect waves-light bg-color"
-               aria-label="上一篇：Github Pages域名解析问题"
-               title="Github Pages域名解析问题">
-                <i class="fas fa-angle-left"></i>
-            </a>
-            
+<div class="card">
+    <a href="/2026/07/06/2026/Github%20Pages%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98/" title="Github Pages域名解析问题">
+        <div class="card-image">
+            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Github Pages域名解析问题">
+            <span class="article-badge left-badge">上一篇</span>
+            <span class="card-title">Github Pages域名解析问题</span>
         </div>
-        <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 14</div>
-        </div>
-        <div class="col s6 m4 l4">
-            
-            <a href="/2026/07/04/2026/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/"
-               class="right btn-floating btn-large waves-effect waves-light bg-color"
-               aria-label="下一篇：Codex的使用"
-               title="Codex的使用">
-                <i class="fas fa-angle-right"></i>
-            </a>
-            
+    </a>
+
+    <div class="card-content article-content">
+        <div class="publish-info">
+            <span class="publish-date">
+                <i class="far fa-clock fa-fw icon-date"></i>2026-07-06
+            </span>
+            <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #0ea5e9;">
+                    技术
+                </a>
+                
+                
+            </span>
         </div>
     </div>
-</nav>
+
+    
+    <div class="card-action article-tags">
+        
+        <a href="/tags/Github/">
+            <span class="chip colored-tag" style="background-color: #eab308;">Github</span>
+        </a>
+        
+    </div>
+    
+</div>
+
+        </div>
+        
+
+        
+        <div class="prev-next-card col s12 m6">
+            
+<div class="card">
+    <a href="/2026/07/04/2026/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Codex的使用">
+        <div class="card-image">
+            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Codex的使用">
+            <span class="article-badge right-badge">下一篇</span>
+            <span class="card-title">Codex的使用</span>
+        </div>
+    </a>
+
+    <div class="card-content article-content">
+        <div class="publish-info">
+            <span class="publish-date">
+                <i class="far fa-clock fa-fw icon-date"></i>2026-07-04
+            </span>
+            <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #0ea5e9;">
+                    技术
+                </a>
+                
+                
+            </span>
+        </div>
+    </div>
+
+    
+    <div class="card-action article-tags">
+        
+        <a href="/tags/Codex/">
+            <span class="chip colored-tag" style="background-color: #f97316;">Codex</span>
+        </a>
+        
+    </div>
+    
+</div>
+
+        </div>
+        
+    </div>
+</div>
+
 
 </div>
 
@@ -672,6 +753,10 @@ id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span><s
             }
 
             let w = srcDiv.width();
+            if (targetId === 'prenext-posts') {
+                $('#' + targetId).width(w);
+                return;
+            }
             if (w >= 450) {
                 w = w + 21;
             } else if (w >= 350 && w < 450) {

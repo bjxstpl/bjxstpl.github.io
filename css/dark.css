@@ -33,7 +33,7 @@ body.DarkMode .moments_load_button,
 body.DarkMode .notice,
 body.DarkMode .panel-info,
 body.DarkMode .post-info .info-break-policy,
-body.DarkMode .publish-info .post-category,
+body.DarkMode .publish-info .post-category:not(.colored-category),
 body.DarkMode .publish-info .publish-date,
 body.DarkMode .row .text,
 body.DarkMode .statis .name,
@@ -44,7 +44,7 @@ body.DarkMode .v[data-class="v"] .vcount .vnum,
 body.DarkMode .valine-card .comment_headling,
 body.DarkMode a body.DarkMode table,
 body.DarkMode article .article-content .summary,
-body.DarkMode article .article-tags .chip,
+body.DarkMode article .article-tags .chip:not(.colored-tag),
 body.DarkMode .card .card-image .card-title,
 body.DarkMode div.jqcloud a,
 body.DarkMode footer .copy-right,
@@ -183,6 +183,16 @@ body.DarkMode table th {
 }
 .DarkMode .btn-floating, .DarkMode #floating-toc-btn .btn-floating, .DarkMode .btn-floating, .DarkMode #switchspring {
     background-color:rgba(255, 255, 255, 0.6);
+}
+
+.DarkMode #floating-toc-btn .btn-floating {
+    background: linear-gradient(135deg, #26c6da 0%, #5c6bc0 100%) !important;
+    box-shadow: 0 8px 18px rgba(38, 198, 218, 0.32);
+}
+
+.DarkMode #backTop .btn-floating {
+    background: linear-gradient(135deg, #ff8a65 0%, #ffd54f 100%) !important;
+    box-shadow: 0 8px 18px rgba(255, 138, 101, 0.32);
 }
 /*音乐播放器*/
 /* body.DarkMode .aplayer {

@@ -83,6 +83,17 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="/gallery" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="/tags" class="waves-effect waves-light">
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
@@ -116,11 +127,11 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/gallery" class="waves-effect waves-light">
+    <a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
       
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      <i class="fas fa-compass" style="zoom: 0.6;"></i>
       
-      <span>相册</span>
+      <span>导航</span>
     </a>
     
   </li>
@@ -167,6 +178,17 @@
         
         <li class="m-nav-item">
 	  
+		<a href="/gallery" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
 		<a href="/tags" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-tags"></i>
@@ -200,11 +222,11 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/gallery" class="waves-effect waves-light">
+		<a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-user-circle"></i>
+			    <i class="fa-fw fas fa-compass"></i>
 			
-			相册
+			导航
 		</a>
           
         </li>
@@ -317,9 +339,6 @@
 </script>
 
 
-<link rel="stylesheet" href="/libs/MyGallery/baguetteBox.css">
-<script src="/libs/MyGallery/baguetteBox.js"></script>
-
 <style>
     .photo {
         padding: 0 40px !important;
@@ -352,14 +371,15 @@
         margin-left: 0;
         margin-right: 0;
     }
-    .img-item a {
+    .gallery-page-item {
         display: block;
+        cursor: zoom-in;
     }
-    .img-item a img {
+    .gallery-page-item img {
         opacity: 1;
         transition: all .4s ease-out;
     }
-    .img-item a:hover img {
+    .gallery-page-item:hover img {
         opacity: .8;
     }
     .my-gallery .photo img {
@@ -397,9 +417,6 @@
     }
     body.DarkMode .miaoshus > strong {
         filter: none !important;
-    }
-    .gallery-page-item {
-        display: block;
     }
     .gallery-empty {
         padding: 40px 0;
@@ -473,11 +490,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/01.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/01.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/01.png"
+                                                 data-exthumbimage="/my_photos/大学/01.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/01.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -485,11 +506,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/02.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/02.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/02.png"
+                                                 data-exthumbimage="/my_photos/大学/02.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/02.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -497,11 +522,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/03.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/03.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/03.png"
+                                                 data-exthumbimage="/my_photos/大学/03.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/03.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -509,11 +538,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/04.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/04.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/04.png"
+                                                 data-exthumbimage="/my_photos/大学/04.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/04.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -521,11 +554,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/05.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/05.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/05.png"
+                                                 data-exthumbimage="/my_photos/大学/05.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/05.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -533,11 +570,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/06.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/06.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/06.png"
+                                                 data-exthumbimage="/my_photos/大学/06.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/06.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -545,11 +586,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/07.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/07.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/07.png"
+                                                 data-exthumbimage="/my_photos/大学/07.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/07.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -557,11 +602,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/08.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/08.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/08.png"
+                                                 data-exthumbimage="/my_photos/大学/08.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/08.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -569,11 +618,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/09.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/09.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/09.png"
+                                                 data-exthumbimage="/my_photos/大学/09.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/09.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -581,11 +634,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/大学/10.png" data-caption="大学">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/大学/10.png" class="responsive-img" alt="大学">
-                                                    <div class="biaotiss">“ 大学 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/大学/10.png"
+                                                 data-exthumbimage="/my_photos/大学/10.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/大学/10.png" class="responsive-img" alt="大学">
+                                                <div class="caption">
+                                                    <b class="center-caption">大学</b>
+                                                </div>
+                                                <div class="biaotiss">“ 大学 ”</div>
                                             </div>
                                         </div>
                                     
@@ -716,13 +773,6 @@
                 updateGalleryPage(galleryCurrentPage + 1, true);
                 $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
             }
-        });
-
-        baguetteBox.run('.gallery', {
-            buttons: true,
-            noScrollbars: true,
-            titleTag: true,
-            async: true
         });
 
         start();

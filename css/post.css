@@ -76,14 +76,31 @@
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 998;
+    animation: float-action-bounce 2.8s ease-in-out infinite;
 }
 
 #floating-toc-btn .btn-floating {
+    position: relative;
     width: 48px;
     height: 48px;
+    overflow: visible;
+    background: linear-gradient(135deg, #00bcd4 0%, #2196f3 100%) !important;
+    box-shadow: 0 8px 18px rgba(33, 150, 243, 0.36);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
 #floating-toc-btn .btn-floating i {
     line-height: 48px;
     font-size: 1.4rem;
+    transition: transform 0.25s ease;
+}
+
+#floating-toc-btn .btn-floating:hover {
+    transform: translateY(-4px) scale(1.08);
+    filter: brightness(1.08);
+    box-shadow: 0 12px 24px rgba(33, 150, 243, 0.48);
+}
+
+#floating-toc-btn .btn-floating:hover i {
+    transform: scale(1.12);
 }

@@ -83,6 +83,17 @@
   
   <li class="hide-on-med-and-down nav-item">
     
+    <a href="/gallery" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>相册</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
     <a href="/tags" class="waves-effect waves-light">
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
@@ -116,11 +127,11 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/gallery" class="waves-effect waves-light">
+    <a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
       
-      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      <i class="fas fa-compass" style="zoom: 0.6;"></i>
       
-      <span>相册</span>
+      <span>导航</span>
     </a>
     
   </li>
@@ -167,6 +178,17 @@
         
         <li class="m-nav-item">
 	  
+		<a href="/gallery" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			相册
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
 		<a href="/tags" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-tags"></i>
@@ -200,11 +222,11 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/gallery" class="waves-effect waves-light">
+		<a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-user-circle"></i>
+			    <i class="fa-fw fas fa-compass"></i>
 			
-			相册
+			导航
 		</a>
           
         </li>
@@ -317,9 +339,6 @@
 </script>
 
 
-<link rel="stylesheet" href="/libs/MyGallery/baguetteBox.css">
-<script src="/libs/MyGallery/baguetteBox.js"></script>
-
 <style>
     .photo {
         padding: 0 40px !important;
@@ -352,14 +371,15 @@
         margin-left: 0;
         margin-right: 0;
     }
-    .img-item a {
+    .gallery-page-item {
         display: block;
+        cursor: zoom-in;
     }
-    .img-item a img {
+    .gallery-page-item img {
         opacity: 1;
         transition: all .4s ease-out;
     }
-    .img-item a:hover img {
+    .gallery-page-item:hover img {
         opacity: .8;
     }
     .my-gallery .photo img {
@@ -397,9 +417,6 @@
     }
     body.DarkMode .miaoshus > strong {
         filter: none !important;
-    }
-    .gallery-page-item {
-        display: block;
     }
     .gallery-empty {
         padding: 40px 0;
@@ -473,11 +490,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/01.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/01.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/01.png"
+                                                 data-exthumbimage="/my_photos/壁纸/01.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/01.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -485,11 +506,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/02.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/02.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/02.png"
+                                                 data-exthumbimage="/my_photos/壁纸/02.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/02.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -497,11 +522,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/03.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/03.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/03.png"
+                                                 data-exthumbimage="/my_photos/壁纸/03.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/03.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -509,11 +538,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/04.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/04.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/04.png"
+                                                 data-exthumbimage="/my_photos/壁纸/04.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/04.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -521,11 +554,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/05.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/05.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/05.png"
+                                                 data-exthumbimage="/my_photos/壁纸/05.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/05.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -533,11 +570,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/06.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/06.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/06.png"
+                                                 data-exthumbimage="/my_photos/壁纸/06.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/06.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -545,11 +586,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/07.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/07.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/07.png"
+                                                 data-exthumbimage="/my_photos/壁纸/07.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/07.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -557,11 +602,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/08.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/08.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/08.png"
+                                                 data-exthumbimage="/my_photos/壁纸/08.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/08.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -569,11 +618,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/09.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/09.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/09.png"
+                                                 data-exthumbimage="/my_photos/壁纸/09.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/09.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -581,11 +634,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/10.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/10.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/10.png"
+                                                 data-exthumbimage="/my_photos/壁纸/10.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/10.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -593,11 +650,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/11.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/11.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/11.png"
+                                                 data-exthumbimage="/my_photos/壁纸/11.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/11.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -605,11 +666,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/12.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/12.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/12.png"
+                                                 data-exthumbimage="/my_photos/壁纸/12.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/12.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -617,11 +682,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/13.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/13.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/13.png"
+                                                 data-exthumbimage="/my_photos/壁纸/13.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/13.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -629,11 +698,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/14.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/14.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/14.png"
+                                                 data-exthumbimage="/my_photos/壁纸/14.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/14.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -641,11 +714,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/15.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/15.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/15.png"
+                                                 data-exthumbimage="/my_photos/壁纸/15.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/15.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -653,11 +730,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/16.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/16.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/16.png"
+                                                 data-exthumbimage="/my_photos/壁纸/16.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/16.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -665,11 +746,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/17.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/17.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/17.png"
+                                                 data-exthumbimage="/my_photos/壁纸/17.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/17.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -677,11 +762,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/18.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/18.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/18.png"
+                                                 data-exthumbimage="/my_photos/壁纸/18.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/18.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -689,11 +778,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/19.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/19.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/19.png"
+                                                 data-exthumbimage="/my_photos/壁纸/19.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/19.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -701,11 +794,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/20.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/20.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/20.png"
+                                                 data-exthumbimage="/my_photos/壁纸/20.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/20.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -713,11 +810,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/21.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/21.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/21.png"
+                                                 data-exthumbimage="/my_photos/壁纸/21.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/21.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -725,11 +826,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/22.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/22.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/22.png"
+                                                 data-exthumbimage="/my_photos/壁纸/22.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/22.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -737,11 +842,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/23.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/23.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/23.png"
+                                                 data-exthumbimage="/my_photos/壁纸/23.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/23.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -749,11 +858,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/24.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/24.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/24.png"
+                                                 data-exthumbimage="/my_photos/壁纸/24.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/24.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -761,11 +874,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/25.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/25.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/25.png"
+                                                 data-exthumbimage="/my_photos/壁纸/25.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/25.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -773,11 +890,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/26.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/26.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/26.png"
+                                                 data-exthumbimage="/my_photos/壁纸/26.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/26.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -785,11 +906,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/27.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/27.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/27.png"
+                                                 data-exthumbimage="/my_photos/壁纸/27.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/27.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -797,11 +922,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/28.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/28.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/28.png"
+                                                 data-exthumbimage="/my_photos/壁纸/28.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/28.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -809,11 +938,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/29.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/29.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/29.png"
+                                                 data-exthumbimage="/my_photos/壁纸/29.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/29.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -821,11 +954,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/30.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/30.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/30.png"
+                                                 data-exthumbimage="/my_photos/壁纸/30.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/30.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -833,11 +970,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/31.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/31.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/31.png"
+                                                 data-exthumbimage="/my_photos/壁纸/31.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/31.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -845,11 +986,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/32.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/32.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/32.png"
+                                                 data-exthumbimage="/my_photos/壁纸/32.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/32.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -857,11 +1002,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/33.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/33.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/33.png"
+                                                 data-exthumbimage="/my_photos/壁纸/33.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/33.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -869,11 +1018,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/34.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/34.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/34.png"
+                                                 data-exthumbimage="/my_photos/壁纸/34.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/34.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -881,11 +1034,15 @@
                                     
                                     
                                         <div class="photo col s12 m6 l4" data-aos="zoom-in">
-                                            <div class="img-item">
-                                                <a class="gallery-page-item" href="/my_photos/壁纸/35.png" data-caption="壁纸">
-                                                    <img src="/medias/loading.svg" data-src="/my_photos/壁纸/35.png" class="responsive-img" alt="壁纸">
-                                                    <div class="biaotiss">“ 壁纸 ”</div>
-                                                </a>
+                                            <div class="img-item gallery-page-item"
+                                                 data-src="/my_photos/壁纸/35.png"
+                                                 data-exthumbimage="/my_photos/壁纸/35.png"
+                                                 data-sub-html=".caption">
+                                                <img src="/medias/loading.svg" data-src="/my_photos/壁纸/35.png" class="responsive-img" alt="壁纸">
+                                                <div class="caption">
+                                                    <b class="center-caption">壁纸</b>
+                                                </div>
+                                                <div class="biaotiss">“ 壁纸 ”</div>
                                             </div>
                                         </div>
                                     
@@ -1016,13 +1173,6 @@
                 updateGalleryPage(galleryCurrentPage + 1, true);
                 $('html, body').animate({ scrollTop: $('.gallery').offset().top - 80 }, 300);
             }
-        });
-
-        baguetteBox.run('.gallery', {
-            buttons: true,
-            noScrollbars: true,
-            titleTag: true,
-            async: true
         });
 
         start();

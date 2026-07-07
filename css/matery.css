@@ -885,6 +885,19 @@ article a:hover {
     margin-right: 0;
 }
 
+/* Keep floated article cards aligned by row while preserving the AOS card animation. */
+@media only screen and (min-width: 993px) {
+    #articles.article-paged-list .article:nth-child(3n + 1) {
+        clear: left;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    #articles.article-paged-list .article:nth-child(2n + 1) {
+        clear: left;
+    }
+}
+
 article .card {
     border-radius: 8px;
     overflow: hidden;

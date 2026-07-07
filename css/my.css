@@ -38,10 +38,12 @@
         align-items: center;
         justify-content: center;
         width: auto;
-        max-width: calc(100vw - 170px);
+        max-width: calc(100vw - 150px);
         height: 56px;
         line-height: 56px;
-        white-space: nowrap;
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
         overflow: hidden;
         transform: translateX(-50%);
     }
@@ -53,23 +55,24 @@
         max-width: 100%;
         height: 56px;
         line-height: 56px;
-        white-space: nowrap;
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
     }
 
     header .brand-logo .logo-img {
-        flex: 0 0 auto;
-        height: 34px;
-        padding-bottom: 0;
-        margin-right: 8px;
+        display: none;
     }
 
     header .brand-logo .logo-span {
         display: inline-block;
         flex: 0 1 auto;
         min-width: 0;
-        font-size: 1.12rem;
+        font-size: 1rem;
         line-height: 1;
-        white-space: nowrap;
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        overflow-wrap: normal !important;
     }
 
     .post-back-button {
@@ -86,15 +89,10 @@
 
 @media only screen and (max-width: 360px) {
     header nav .brand-logo {
-        max-width: calc(100vw - 148px);
-    }
-
-    header .brand-logo .logo-img {
-        height: 30px;
-        margin-right: 6px;
+        max-width: calc(100vw - 132px);
     }
 
     header .brand-logo .logo-span {
-        font-size: 1rem;
+        font-size: 0.92rem;
     }
 }

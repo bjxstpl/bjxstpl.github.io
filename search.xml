@@ -1127,4 +1127,19 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
         <tag>Git</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Github 加速下载</title>
+    <url>/2026/07/08/2026/Github%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<ul>
+<li>将github上复制下来的链接前面加上：<code>https://gh-proxy.org/</code>  <pre class="line-numbers language-none"><code class="language-none">原始链接：https:&#x2F;&#x2F;github.com&#x2F;bjxstpl&#x2F;bjxstpl.github.io.git
+加速链接：https:&#x2F;&#x2F;gh-proxy.org&#x2F;https:&#x2F;&#x2F;github.com&#x2F;bjxstpl&#x2F;bjxstpl.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+      </tags>
+  </entry>
 </search>

@@ -921,6 +921,10 @@ git config --global user.email“your@email.com&quot;<span aria-hidden="true" cl
 <li>复制秘钥登陆codex</li>
 <li>点击使用秘钥 → 按 <code>Win+R</code>，输入 <code>%userprofile%\.codex</code> 打开配置目录 → 将相应信息配置到相应文件 → 退出重启 → 新建对话看能否正常使用<br> <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-1.png"><br> <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-2.png"></li>
 </ol>
+<h2 id="3-skills的使用"><a href="#3-skills的使用" class="headerlink" title="3 skills的使用"></a>3 skills的使用</h2><ul>
+<li>第三方skills下载网站：<a href="https://www.skills.sh/">https://www.skills.sh/</a></li>
+<li>在对话框输入<code>/xxx</code>选择要使用的skills<br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-3.png"></li>
+</ul>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -1140,17 +1144,6 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
       </categories>
       <tags>
         <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>11111</title>
-    <url>/2026/07/08/2026/1111/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Codex</tag>
       </tags>
   </entry>
 </search>

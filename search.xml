@@ -909,17 +909,30 @@ git config --global user.email“your@email.com&quot;<span aria-hidden="true" cl
   <entry>
     <title>Codex的使用</title>
     <url>/2026/07/04/2026/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="1 下载安装"></a>1 下载安装</h2><ul>
-<li>git：<a href="https://git-scm.com/?hl=zh-cn">https://git-scm.com/?hl=zh-cn</a></li>
-<li>node.js：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a></li>
-<li>python：<a href="https://www.python.org/">https://www.python.org/</a><ul>
+    <content><![CDATA[<h2 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="1 下载安装"></a>1 下载安装</h2><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><ul>
+<li>git下载：<a href="https://git-scm.com/?hl=zh-cn">https://git-scm.com/?hl=zh-cn</a></li>
+</ul>
+<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><ul>
+<li>node.js下载：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a></li>
+</ul>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><ul>
+<li>python下载：<a href="https://www.python.org/">https://www.python.org/</a></li>
+<li>安装：<ul>
 <li><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-4.png"></li>
 <li><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-5.png"></li>
 <li><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-6.png"></li>
 <li><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-7.png"></li>
 </ul>
 </li>
+<li>验证：<ul>
+<li><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-8.png"></li>
+</ul>
+</li>
+</ul>
+<h2 id="VScode"><a href="#VScode" class="headerlink" title="VScode"></a>VScode</h2><ul>
 <li>vscode：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+</ul>
+<h2 id="Codex"><a href="#Codex" class="headerlink" title="Codex"></a>Codex</h2><ul>
 <li>codex：<a href="https://openai.com/zh-Hans-CN/codex/">https://openai.com/zh-Hans-CN/codex/</a></li>
 </ul>
 <h2 id="2-配置"><a href="#2-配置" class="headerlink" title="2 配置"></a>2 配置</h2><ol>

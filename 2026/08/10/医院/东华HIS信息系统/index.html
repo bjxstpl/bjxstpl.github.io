@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="医院信息系统架构说明文档, 北极熊说它怕冷">
-    <meta name="description" content="医院信息系统架构说明文档一、文档概述1.1 文档目的本文档旨在全面阐述医院信息系统的整体架构设计、核心模块组成、技术支撑体系及各模块间的交互逻辑，为系统建设、运维、升级及相关人员开展工作提供清晰的架构指引，确保系统高效、稳定、协同运行，满足">
+    <meta name="keywords" content="东华HIS信息系统, 北极熊说它怕冷">
+    <meta name="description" content="东华HIS信息系统东华软件是国内三甲、二甲医院主流 HIS 厂商，三明市中西医结合医院用的就是东华 HIS，数据库底层为Oracle，C&amp;#x2F;S 客户端为主，搭配集成平台对接 EMR、LIS、PACS、医保，自带中医业务模块，适配中西">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>医院信息系统架构说明文档 | 北极熊说它怕冷</title>
+    <title>东华HIS信息系统 | 北极熊说它怕冷</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
     
 
@@ -247,12 +247,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/34.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <!-- <h1 class="description center-align post-title">医院信息系统架构说明文档</h1> -->
+                    <!-- <h1 class="description center-align post-title">东华HIS信息系统</h1> -->
                 </div>
             </div>
         </div>
@@ -343,12 +343,12 @@
                     
                 </div>
             </div>
-            <h1 class="description center-align post-title">医院信息系统架构说明文档</h1>
+            <h1 class="description center-align post-title">东华HIS信息系统</h1>
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-08-09
+                    2026-08-10
                 </div>
                 
 
@@ -362,14 +362,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.1k
+                    225
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    1 分
                 </div>
                 
 
@@ -393,228 +393,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="医院信息系统架构说明文档"><a href="#医院信息系统架构说明文档" class="headerlink" title="医院信息系统架构说明文档"></a>医院信息系统架构说明文档</h1><h1 id="一、文档概述"><a href="#一、文档概述" class="headerlink" title="一、文档概述"></a>一、文档概述</h1><h2 id="1-1-文档目的"><a href="#1-1-文档目的" class="headerlink" title="1.1 文档目的"></a>1.1 文档目的</h2><p>本文档旨在全面阐述医院信息系统的整体架构设计、核心模块组成、技术支撑体系及各模块间的交互逻辑，为系统建设、运维、升级及相关人员开展工作提供清晰的架构指引，确保系统高效、稳定、协同运行，满足医院诊疗、管理、服务等全流程业务需求。</p>
-<h2 id="1-2-适用范围"><a href="#1-2-适用范围" class="headerlink" title="1.2 适用范围"></a>1.2 适用范围</h2><p>本文档适用于医院信息系统的建设方、运维团队、各科室业务负责人及相关技术人员，涵盖系统架构设计、模块功能说明、技术选型、数据交互等全维度内容，可作为系统验收、优化、扩展的核心参考依据。</p>
-<h2 id="1-3-架构设计原则"><a href="#1-3-架构设计原则" class="headerlink" title="1.3 架构设计原则"></a>1.3 架构设计原则</h2><ul>
-<li><p><strong>实用性原则</strong>：贴合医院实际业务流程，聚焦诊疗核心需求，兼顾管理效率与患者服务体验，避免冗余功能设计。</p>
-</li>
-<li><p><strong>稳定性原则</strong>：采用成熟可靠的技术架构与组件，保障系统7×24小时不间断运行，关键业务模块具备容错、灾备能力。</p>
-</li>
-<li><p><strong>扩展性原则</strong>：架构设计预留扩展接口，支持后续模块新增、功能升级及业务量增长，适配医院长期发展需求。</p>
-</li>
-<li><p><strong>安全性原则</strong>：构建全流程安全防护体系，保障患者隐私数据、医疗业务数据及系统运行安全，符合医疗行业数据安全规范。</p>
-</li>
-<li><p><strong>协同性原则</strong>：打破信息孤岛，实现各核心模块数据互通、业务协同，提升医院整体运营效率。</p>
-</li>
-</ul>
-<h1 id="二、系统整体架构"><a href="#二、系统整体架构" class="headerlink" title="二、系统整体架构"></a>二、系统整体架构</h1><p>医院信息系统采用“分层架构+模块化设计”模式，整体分为基础设施层、数据层、应用支撑层、业务应用层、用户接入层五大层级，各层级相互支撑、协同运行，同时配套安全保障体系与运维管理体系，形成完整的系统架构闭环。</p>
-<h2 id="2-1-架构层级说明"><a href="#2-1-架构层级说明" class="headerlink" title="2.1 架构层级说明"></a>2.1 架构层级说明</h2><h3 id="2-1-1-基础设施层"><a href="#2-1-1-基础设施层" class="headerlink" title="2.1.1 基础设施层"></a>2.1.1 基础设施层</h3><p>基础设施层是系统运行的硬件基础，为上层应用提供稳定的运行环境，主要包括服务器集群、存储设备、网络设备、安全设备及终端设备等。其中，服务器集群采用分布式部署，支撑高并发业务请求；存储设备采用双备份机制，保障数据安全存储；网络设备划分内网、外网、专网，实现业务流量隔离与高效传输；终端设备涵盖医生工作站、护士工作站、收费终端、自助服务终端等，覆盖各业务场景。</p>
-<h3 id="2-1-2-数据层"><a href="#2-1-2-数据层" class="headerlink" title="2.1.2 数据层"></a>2.1.2 数据层</h3><p>数据层负责系统数据的存储、管理与调用，是系统的核心数据支撑。主要包括业务数据库、数据仓库、数据备份系统三部分。业务数据库采用关系型数据库（如 Oracle、MySQL），存储患者信息、诊疗数据、收费数据、药品数据等核心业务数据；数据仓库用于整合、分析业务数据，为医院管理决策提供数据支撑；数据备份系统采用实时备份+定期归档模式，确保数据可恢复、不丢失。</p>
-<h3 id="2-1-3-应用支撑层"><a href="#2-1-3-应用支撑层" class="headerlink" title="2.1.3 应用支撑层"></a>2.1.3 应用支撑层</h3><p>应用支撑层为业务应用层提供通用技术支撑，降低模块开发与集成难度，主要包括集成平台、消息中间件、接口服务、权限管理组件、日志管理组件等。其中，集成平台（HIP）是核心支撑组件，负责打通各业务模块的数据交互通道，实现跨模块业务协同；消息中间件用于处理模块间的异步通信，提升系统响应效率；接口服务支持与医保系统、区域卫生平台、第三方服务等外部系统的对接；权限管理组件实现用户角色、权限的精细化管控，保障系统访问安全；日志管理组件记录系统运行日志，便于运维排查与追溯。</p>
-<h3 id="2-1-4-业务应用层"><a href="#2-1-4-业务应用层" class="headerlink" title="2.1.4 业务应用层"></a>2.1.4 业务应用层</h3><p>业务应用层是系统的核心功能载体，涵盖医院诊疗、管理、服务全流程核心模块，分为核心业务模块、辅助业务模块、管理分析模块三大类，各模块独立运行又相互协同，具体模块组成详见第三部分“核心模块说明”。</p>
-<h3 id="2-1-5-用户接入层"><a href="#2-1-5-用户接入层" class="headerlink" title="2.1.5 用户接入层"></a>2.1.5 用户接入层</h3><p>用户接入层为不同用户群体提供多样化的系统访问渠道，适配不同业务场景需求，主要包括 PC 端工作站、移动终端（医生&#x2F;护士移动端、患者移动端）、自助服务终端、大屏展示端等。其中，PC 端工作站适用于固定岗位业务操作（如医生诊疗、收费结算）；移动终端支持医护人员移动办公、患者线上服务；自助服务终端为患者提供挂号、缴费、报告查询等自助服务；大屏展示端用于医院运营数据实时监控、科室业务进度展示等。</p>
-<h2 id="2-2-架构拓扑逻辑"><a href="#2-2-架构拓扑逻辑" class="headerlink" title="2.2 架构拓扑逻辑"></a>2.2 架构拓扑逻辑</h2><p>用户通过接入层发起业务请求，请求经应用支撑层处理后，调用业务应用层对应模块的功能，业务模块从数据层获取或存储相关数据，最终完成业务交互并返回结果。各模块间通过集成平台实现数据互通，外部系统通过接口服务与内部系统对接，安全保障体系贯穿全层级，确保系统运行安全与数据安全。</p>
-<h1 id="三、核心模块说明"><a href="#三、核心模块说明" class="headerlink" title="三、核心模块说明"></a>三、核心模块说明</h1><p>业务应用层核心模块分为核心业务模块、辅助业务模块、管理分析模块三大类，覆盖医院日常运营全流程，各模块功能如下：</p>
-<h2 id="3-1-核心业务模块（诊疗核心）"><a href="#3-1-核心业务模块（诊疗核心）" class="headerlink" title="3.1 核心业务模块（诊疗核心）"></a>3.1 核心业务模块（诊疗核心）</h2><h3 id="3-1-1-HIS-医院信息系统"><a href="#3-1-1-HIS-医院信息系统" class="headerlink" title="3.1.1 HIS 医院信息系统"></a>3.1.1 HIS 医院信息系统</h3><p>作为医院最核心的主干系统，聚焦诊疗流程与收费管理，支撑医院日常基础运营，主要模块包括：</p>
-<ul>
-<li><p>门诊管理：涵盖挂号、分诊、门诊收费、门诊医生工作站、处方管理等功能，实现门诊全流程线上化；</p>
-</li>
-<li><p>住院管理：包括入院登记、床位管理、住院收费、出院结算、押金管理、住院医嘱对接等功能，规范住院业务流程；</p>
-</li>
-<li><p>医保结算：支持医保实时对接、医保报销、异地医保结算、医保数据上传等功能，满足医保合规要求；</p>
-</li>
-<li><p>基础管理：包含患者档案管理、科室管理、收费项目管理、物价维护、财务票据管理等功能，为系统运行提供基础支撑。</p>
-</li>
-</ul>
-<h3 id="3-1-2-EMR-电子病历系统"><a href="#3-1-2-EMR-电子病历系统" class="headerlink" title="3.1.2 EMR 电子病历系统"></a>3.1.2 EMR 电子病历系统</h3><p>作为临床诊疗的核心载体，完整记录患者诊疗全过程，满足病历质控与等级医院评审要求，主要功能包括：门诊病历、住院病历、病程记录、医嘱管理、手术记录、护理文书、病历打印、病历质控、病历归档等，同时支持与 HIS、LIS、PACS 等模块联动，实现病历数据与诊疗数据互通。</p>
-<h3 id="3-1-3-LIS-检验信息系统"><a href="#3-1-3-LIS-检验信息系统" class="headerlink" title="3.1.3 LIS 检验信息系统"></a>3.1.3 LIS 检验信息系统</h3><p>专为检验科业务打造，实现检验全流程信息化管理，主要功能包括：接收医生开具的检验申请、标本接收与登记、检验仪器对接、检验结果自动采集与审核、检验报告打印与推送、质控管理、检验数据统计分析等，医生可通过工作站直接调阅检验报告，提升诊疗效率。</p>
-<h3 id="3-1-4-PACS-影像归档与通信系统"><a href="#3-1-4-PACS-影像归档与通信系统" class="headerlink" title="3.1.4 PACS 影像归档与通信系统"></a>3.1.4 PACS 影像归档与通信系统</h3><p>聚焦医学影像的存储、传输与阅片，解决传统胶片管理的痛点，主要功能包括：CT、DR、MRI、B 超等影像数据的存储与归档、影像传输与共享、医生在线阅片、影像报告书写与审核、影像数据备份与恢复等，可与 EMR、HIS 模块打通，实现病历与影像报告联动调阅。</p>
-<h3 id="3-1-5-药房管理系统"><a href="#3-1-5-药房管理系统" class="headerlink" title="3.1.5 药房管理系统"></a>3.1.5 药房管理系统</h3><p>覆盖门诊药房、住院药房、药库全流程管理，保障药品规范使用与库存可控，主要功能包括：药品入库与出库管理、库存实时监控、药品效期管理、处方审核与摆药、药品盘点、药品采购申请等，与 HIS 医嘱系统联动，实现医嘱开具与药品发放的无缝衔接。</p>
-<h2 id="3-2-辅助业务模块（运营支撑）"><a href="#3-2-辅助业务模块（运营支撑）" class="headerlink" title="3.2 辅助业务模块（运营支撑）"></a>3.2 辅助业务模块（运营支撑）</h2><h3 id="3-2-1-OMS-手术麻醉系统"><a href="#3-2-1-OMS-手术麻醉系统" class="headerlink" title="3.2.1 OMS 手术麻醉系统"></a>3.2.1 OMS 手术麻醉系统</h3><p>支撑手术室全流程管理，主要功能包括手术预约、麻醉记录、手术文书书写、手术计费、手术人员排班、手术器械管理等，实现手术业务的规范化、信息化管控。</p>
-<h3 id="3-2-2-NIS-护理信息系统"><a href="#3-2-2-NIS-护理信息系统" class="headerlink" title="3.2.2 NIS 护理信息系统"></a>3.2.2 NIS 护理信息系统</h3><p>聚焦护理工作全流程，主要功能包括护理记录、体温单管理、护理评估、医嘱执行核对、输液管理、护理排班等，部分功能可集成至 EMR 系统，提升护理工作效率与质量。</p>
-<h3 id="3-2-3-HRP-医院资源规划系统"><a href="#3-2-3-HRP-医院资源规划系统" class="headerlink" title="3.2.3 HRP 医院资源规划系统"></a>3.2.3 HRP 医院资源规划系统</h3><p>覆盖医院后勤、财务、人事等资源管理，主要功能包括财务核算、物资耗材管理、固定资产管理、人事管理、成本核算等，实现医院资源的精细化管控，降低运营成本。</p>
-<h3 id="3-2-4-排队叫号系统"><a href="#3-2-4-排队叫号系统" class="headerlink" title="3.2.4 排队叫号系统"></a>3.2.4 排队叫号系统</h3><p>对接 HIS 挂号系统，实现门诊分诊叫号、诊室显示、患者提醒等功能，优化门诊就诊秩序，提升患者就诊体验。</p>
-<h2 id="3-3-管理分析模块（决策支撑）"><a href="#3-3-管理分析模块（决策支撑）" class="headerlink" title="3.3 管理分析模块（决策支撑）"></a>3.3 管理分析模块（决策支撑）</h2><h3 id="3-3-1-医院运营分析系统"><a href="#3-3-1-医院运营分析系统" class="headerlink" title="3.3.1 医院运营分析系统"></a>3.3.1 医院运营分析系统</h3><p>整合各业务模块数据，生成运营报表，涵盖门诊量、住院量、收费情况、药品消耗、科室绩效等核心指标，为医院管理层提供决策支撑。</p>
-<h3 id="3-3-2-病历质控系统"><a href="#3-3-2-病历质控系统" class="headerlink" title="3.3.2 病历质控系统"></a>3.3.2 病历质控系统</h3><p>对电子病历进行全流程质控，实时监测病历书写规范、完整性、及时性等，自动生成质控报告，助力提升病历质量，满足等级医院评审要求。</p>
-<h3 id="3-3-3-数据上报系统"><a href="#3-3-3-数据上报系统" class="headerlink" title="3.3.3 数据上报系统"></a>3.3.3 数据上报系统</h3><p>支持向卫健委、医保局等上级部门上报诊疗数据、公卫数据、医保数据等，确保数据上报的及时性、准确性与合规性。</p>
-<h1 id="四、技术支撑体系"><a href="#四、技术支撑体系" class="headerlink" title="四、技术支撑体系"></a>四、技术支撑体系</h1><h2 id="4-1-技术选型原则"><a href="#4-1-技术选型原则" class="headerlink" title="4.1 技术选型原则"></a>4.1 技术选型原则</h2><p>技术选型遵循“成熟稳定、兼容扩展、安全可靠”的原则，优先选用医疗行业通用、经过市场验证的技术与组件，兼顾系统性能与后期维护成本。</p>
-<h2 id="4-2-核心技术栈"><a href="#4-2-核心技术栈" class="headerlink" title="4.2 核心技术栈"></a>4.2 核心技术栈</h2><ul>
-<li><p>开发语言：Java、Python、C#等，适配不同模块的开发需求；</p>
-</li>
-<li><p>数据库：Oracle、MySQL、SQL Server 等，根据业务数据量与并发需求选择；</p>
-</li>
-<li><p>中间件：Tomcat、Nginx、RabbitMQ 等，支撑系统运行与模块间通信；</p>
-</li>
-<li><p>前端技术：Vue、React 等，适配 PC 端与移动端的界面开发；</p>
-</li>
-<li><p>安全技术：数据加密、访问控制、入侵检测、备份恢复等，保障系统与数据安全。</p>
-</li>
-</ul>
-<h2 id="4-3-集成与接口规范"><a href="#4-3-集成与接口规范" class="headerlink" title="4.3 集成与接口规范"></a>4.3 集成与接口规范</h2><p>各模块间通过集成平台（HIP）实现数据交互，采用标准化接口协议（如 HL7、FHIR），确保模块间兼容互通；与外部系统（医保、区域平台、第三方服务）对接时，遵循外部系统接口规范，采用加密传输、身份认证等方式，保障数据交互安全。</p>
-<h1 id="五、安全保障体系"><a href="#五、安全保障体系" class="headerlink" title="五、安全保障体系"></a>五、安全保障体系</h1><h2 id="5-1-网络安全"><a href="#5-1-网络安全" class="headerlink" title="5.1 网络安全"></a>5.1 网络安全</h2><p>划分内网、外网、专网，实现网络流量隔离；部署防火墙、入侵检测系统、防病毒软件等，防范网络攻击与病毒入侵；定期进行网络安全扫描与漏洞修复，保障网络环境安全。</p>
-<h2 id="5-2-数据安全"><a href="#5-2-数据安全" class="headerlink" title="5.2 数据安全"></a>5.2 数据安全</h2><p>对患者隐私数据、诊疗数据进行加密存储与传输；建立数据备份与恢复机制，采用实时备份+定期归档模式，确保数据不丢失；严格管控数据访问权限，实现数据操作全程可追溯，符合《医疗保障基金使用监督管理条例》《个人信息保护法》等相关法规要求。</p>
-<h2 id="5-3-系统安全"><a href="#5-3-系统安全" class="headerlink" title="5.3 系统安全"></a>5.3 系统安全</h2><p>建立用户身份认证机制，采用账号密码、指纹、人脸识别等多因素认证方式；精细化管控用户权限，实现“最小权限”原则；定期进行系统升级与补丁更新，排查系统漏洞，保障系统运行安全。</p>
-<h1 id="六、运维管理体系"><a href="#六、运维管理体系" class="headerlink" title="六、运维管理体系"></a>六、运维管理体系</h1><h2 id="6-1-运维团队配置"><a href="#6-1-运维团队配置" class="headerlink" title="6.1 运维团队配置"></a>6.1 运维团队配置</h2><p>组建专业运维团队，涵盖系统运维、网络运维、数据运维、安全运维等岗位，明确各岗位职责，确保系统日常运维工作有序开展。</p>
-<h2 id="6-2-运维流程规范"><a href="#6-2-运维流程规范" class="headerlink" title="6.2 运维流程规范"></a>6.2 运维流程规范</h2><p>建立系统日常巡检、故障排查、升级维护、数据备份等运维流程；制定故障应急预案，针对系统宕机、数据丢失、网络中断等突发情况，快速响应、高效处置，降低故障影响；定期开展运维培训，提升运维人员专业能力。</p>
-<h2 id="6-3-运维监控机制"><a href="#6-3-运维监控机制" class="headerlink" title="6.3 运维监控机制"></a>6.3 运维监控机制</h2><p>部署运维监控系统，实时监控服务器、网络、数据库、应用模块的运行状态，及时发现异常并预警；定期生成运维报告，总结运维工作情况，优化运维流程，提升系统稳定性。</p>
-<h1 id="七、架构优势与扩展规划"><a href="#七、架构优势与扩展规划" class="headerlink" title="七、架构优势与扩展规划"></a>七、架构优势与扩展规划</h1><h2 id="7-1-架构优势"><a href="#7-1-架构优势" class="headerlink" title="7.1 架构优势"></a>7.1 架构优势</h2><ul>
-<li><p>模块化设计：各模块独立运行，可根据医院需求灵活部署、升级，降低系统维护成本；</p>
-</li>
-<li><p>数据互通：通过集成平台打破信息孤岛，实现诊疗、管理、服务数据协同，提升运营效率；</p>
-</li>
-<li><p>安全可靠：构建全流程安全保障体系，保障数据安全与系统稳定运行；</p>
-</li>
-<li><p>扩展性强：架构预留扩展接口，支持后续新增模块、功能升级及业务量增长。</p>
-</li>
-</ul>
-<h2 id="7-2-扩展规划"><a href="#7-2-扩展规划" class="headerlink" title="7.2 扩展规划"></a>7.2 扩展规划</h2><p>后续将根据医院发展需求，逐步新增互联网医院模块（线上问诊、慢病复诊、药品配送）、AI 辅助诊疗模块、区域医疗协同模块等，进一步完善系统功能，提升医院服务能力与管理水平；同时优化架构性能，适配更高并发的业务场景，保障系统长期稳定运行。</p>
-<h1 id="八、医院信息系统英文全称-amp-缩写对照表"><a href="#八、医院信息系统英文全称-amp-缩写对照表" class="headerlink" title="八、医院信息系统英文全称&amp;缩写对照表"></a>八、医院信息系统英文全称&amp;缩写对照表</h1><table>
-<thead>
-<tr>
-<th>缩写</th>
-<th>英文全称</th>
-<th>中文名称</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>HIS</td>
-<td>Hospital Information System</td>
-<td>医院信息系统</td>
-</tr>
-<tr>
-<td>EMR</td>
-<td>Electronic Medical Record</td>
-<td>电子病历系统</td>
-</tr>
-<tr>
-<td>EHR</td>
-<td>Electronic Health Record</td>
-<td>电子健康档案（面向居民，卫健委）</td>
-</tr>
-<tr>
-<td>LIS</td>
-<td>Laboratory Information System</td>
-<td>检验信息系统</td>
-</tr>
-<tr>
-<td>PACS</td>
-<td>Picture Archiving and Communication System</td>
-<td>影像归档与通信系统</td>
-</tr>
-<tr>
-<td>RIS</td>
-<td>Radiology Information System</td>
-<td>放射信息系统</td>
-</tr>
-<tr>
-<td>CIS</td>
-<td>Clinical Information System</td>
-<td>临床信息系统</td>
-</tr>
-<tr>
-<td>NIS</td>
-<td>Nursing Information System</td>
-<td>护理信息系统</td>
-</tr>
-<tr>
-<td>OMS</td>
-<td>Operation Management System</td>
-<td>手术麻醉系统（也常写 Anesthesia Information System，AIS 麻醉信息系统）</td>
-</tr>
-<tr>
-<td>HIP</td>
-<td>Hospital Integration Platform</td>
-<td>医院集成平台</td>
-</tr>
-<tr>
-<td>HRP</td>
-<td>Hospital Resource Planning</td>
-<td>医院资源规划系统</td>
-</tr>
-<tr>
-<td>QMS</td>
-<td>Quality Management System</td>
-<td>病历 &#x2F; 医疗质控系统</td>
-</tr>
-<tr>
-<td>HIS‑RM</td>
-<td>Hospital Information System‑Resource Management</td>
-<td>药库药房管理（常并入 HIS）</td>
-</tr>
-<tr>
-<td>BEP</td>
-<td>Business Exchange Platform</td>
-<td>业务交换平台（部分厂商集成平台别名）</td>
-</tr>
-</tbody></table>
-<h2 id="8-1-医疗接口-x2F-标准"><a href="#8-1-医疗接口-x2F-标准" class="headerlink" title="8.1 医疗接口 &#x2F; 标准"></a>8.1 医疗接口 &#x2F; 标准</h2><table>
-<thead>
-<tr>
-<th>缩写</th>
-<th>英文全称</th>
-<th>中文名称</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>HL7</td>
-<td>Health Level Seven</td>
-<td>医疗信息交换标准</td>
-</tr>
-<tr>
-<td>FHIR</td>
-<td>Fast Healthcare Interoperability Resources</td>
-<td>快速医疗互操作资源</td>
-</tr>
-<tr>
-<td>DICOM</td>
-<td>Digital Imaging and Communications in Medicine</td>
-<td>医学数字成像和通信（影像标准）</td>
-</tr>
-</tbody></table>
-<h2 id="8-2-其他常见配套系统"><a href="#8-2-其他常见配套系统" class="headerlink" title="8.2 其他常见配套系统"></a>8.2 其他常见配套系统</h2><table>
-<thead>
-<tr>
-<th>缩写</th>
-<th>英文全称</th>
-<th>中文名称</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>OA</td>
-<td>Office Automation</td>
-<td>办公自动化</td>
-</tr>
-<tr>
-<td>HERP</td>
-<td>Hospital Enterprise Resource Planning</td>
-<td>医院企业资源计划（同 HRP）</td>
-</tr>
-<tr>
-<td>MDT</td>
-<td>Multi‑Disciplinary Team</td>
-<td>多学科会诊系统</td>
-</tr>
-<tr>
-<td>IVR</td>
-<td>Interactive Voice Response</td>
-<td>叫号分诊系统</td>
-</tr>
-<tr>
-<td>CDSS</td>
-<td>Clinical Decision Support System</td>
-<td>临床决策支持系统</td>
-</tr>
-<tr>
-<td>DRGs</td>
-<td>Diagnosis Related Groups</td>
-<td>疾病诊断相关分组（医保付费）</td>
-</tr>
-<tr>
-<td>DIP</td>
-<td>Diagnosis‑Intervention Packet</td>
-<td>按病种分值付费</td>
-</tr>
-</tbody></table>
+                <h1 id="东华HIS信息系统"><a href="#东华HIS信息系统" class="headerlink" title="东华HIS信息系统"></a>东华HIS信息系统</h1><p>东华软件是国内三甲、二甲医院主流 HIS 厂商，三明市中西医结合医院用的就是东华 HIS，数据库底层为Oracle，C&#x2F;S 客户端为主，搭配集成平台对接 EMR、LIS、PACS、医保，自带中医业务模块，适配中西医结合医院场景 </p>
+<blockquote>
+<p>注意：信息科不碰源码，主要做故障定位、厂商协调、权限管理、数据查询、接口运维</p>
+</blockquote>
+<h1 id="一、门诊业务流程"><a href="#一、门诊业务流程" class="headerlink" title="一、门诊业务流程"></a>一、门诊业务流程</h1><p><img src="/../../images/%E4%B8%9C%E5%8D%8EHIS%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/image.png"></p>
+<h2 id="1-1-挂号收费"><a href="#1-1-挂号收费" class="headerlink" title="1.1 挂号收费"></a>1.1 挂号收费</h2><h3 id="1-1-1-主界面"><a href="#1-1-1-主界面" class="headerlink" title="1.1.1 主界面"></a>1.1.1 主界面</h3><p><img src="/../../images/%E4%B8%9C%E5%8D%8EHIS%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/image-1.png"></p>
+<h3 id="1-1-2-建卡流程"><a href="#1-1-2-建卡流程" class="headerlink" title="1.1.2 建卡流程"></a>1.1.2 建卡流程</h3><p><img src="/../../images/%E4%B8%9C%E5%8D%8EHIS%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/image-2.png"><br><img src="/../../images/%E4%B8%9C%E5%8D%8EHIS%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/image-3.png"></p>
+<blockquote>
+<p>注意：如果是本院职工则需要填写工号</p>
+</blockquote>
+<h3 id="1-1-3-卡查询"><a href="#1-1-3-卡查询" class="headerlink" title="1.1.3 卡查询"></a>1.1.3 卡查询</h3><p><img src="/../../images/%E4%B8%9C%E5%8D%8EHIS%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/image-4.png"></p>
+<blockquote>
+<p>注意：卡号可能不唯一，但是登记号是唯一的，所以查询最好输入登记号</p>
+</blockquote>
+<h3 id="1-1-4-卡合并"><a href="#1-1-4-卡合并" class="headerlink" title="1.1.4 卡合并"></a>1.1.4 卡合并</h3><p><img src="/../../images/%E4%B8%9C%E5%8D%8EHIS%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/image-5.png"><br><img src="/../../images/%E4%B8%9C%E5%8D%8EHIS%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/image-6.png"></p>
+<blockquote>
+<p>注意：如果一个患者有多张卡信息，则可以进行合并</p>
+</blockquote>
 
                 
             </div>
@@ -676,14 +472,16 @@
 <div id="prenext-posts" class="container prev-next">
     <div class="row">
         
+
+        
         <div class="prev-next-card col s12 m6">
             
 <div class="card">
-    <a href="/2026/08/10/2026/%E4%B8%9C%E5%8D%8EHIS%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/" title="东华HIS信息系统">
+    <a href="/2026/08/10/%E5%8C%BB%E9%99%A2/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/" title="医院运维记录">
         <div class="card-image">
-            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="东华HIS信息系统">
-            <span class="article-badge left-badge">上一篇</span>
-            <span class="card-title">东华HIS信息系统</span>
+            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="医院运维记录">
+            <span class="article-badge right-badge">下一篇</span>
+            <span class="card-title">医院运维记录</span>
         </div>
     </a>
 
@@ -710,50 +508,6 @@
         
         <a href="/tags/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91/">
             <span class="chip colored-tag" style="background-color: #f97316;">医院信息科</span>
-        </a>
-        
-    </div>
-    
-</div>
-
-        </div>
-        
-
-        
-        <div class="prev-next-card col s12 m6">
-            
-<div class="card">
-    <a href="/2026/07/08/2026/Github%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD/" title="Github 加速下载">
-        <div class="card-image">
-            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Github 加速下载">
-            <span class="article-badge right-badge">下一篇</span>
-            <span class="card-title">Github 加速下载</span>
-        </div>
-    </a>
-
-    <div class="card-content article-content">
-        <div class="publish-info">
-            <span class="publish-date">
-                <i class="far fa-clock fa-fw icon-date"></i>2026-07-08
-            </span>
-            <span class="publish-author">
-                
-                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                
-                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #0ea5e9;">
-                    技术
-                </a>
-                
-                
-            </span>
-        </div>
-    </div>
-
-    
-    <div class="card-action article-tags">
-        
-        <a href="/tags/Github/">
-            <span class="chip colored-tag" style="background-color: #ec4899;">Github</span>
         </a>
         
     </div>

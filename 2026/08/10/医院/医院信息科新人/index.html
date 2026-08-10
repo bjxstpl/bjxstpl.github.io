@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: 深度学习, 北极熊说它怕冷">
-    <meta name="description" content="北极熊说它怕冷">
+    <meta name="keywords" content="医院信息科新人, 北极熊说它怕冷">
+    <meta name="description" content="一、堡垒机、个人运维机、VPN三者关系医院信息科新人刚来一般都会先让同事给你配一个堡垒机、个人运维机和VPN账号
+1.1 堡垒机账号
+作用：第一道大门，不直接干活，只做跳转。你不能直接连 HIS、数据库、服务器，必须先登堡垒机
+
+登录方式：">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: 深度学习 | 北极熊说它怕冷</title>
+    <title>医院信息科新人 | 北极熊说它怕冷</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
     
 
@@ -243,490 +247,525 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <!-- <h1 class="description center-align post-title">医院信息科新人</h1> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+    
+    <button type="button" id="postBackButton" class="post-back-button" aria-label="返回上一页" title="返回上一页">
+    <i class="fas fa-arrow-left"></i>
+</button>
+
+<script>
+    (function () {
+        var backButton = document.getElementById('postBackButton');
+        if (!backButton) return;
+
+        var backTargetKey = 'materyPostBackTarget';
+        var restoreKey = 'materyPostBackRestore';
+
+        function cleanUrl(url) {
+            return String(url || '').split('#')[0];
+        }
+
+        function getBackTarget() {
+            try {
+                return JSON.parse(sessionStorage.getItem(backTargetKey) || 'null');
+            } catch (error) {
+                return null;
+            }
+        }
+
+        backButton.addEventListener('click', function () {
+            var target = getBackTarget();
+            var currentUrl = cleanUrl(window.location.href);
+
+            if (target && target.url && cleanUrl(target.url) !== currentUrl) {
+                sessionStorage.setItem(restoreKey, JSON.stringify(target));
+                sessionStorage.removeItem(backTargetKey);
+                window.location.href = target.url;
+                return;
+            }
+
+            if (window.history.length > 1) {
+                window.history.back();
+                return;
+            }
+
+            window.location.href = '/';
+        });
+    })();
+</script>
+
+    
+
+    
     <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                 
-                
-            </div>
-
-            <div class="description center-align">
-                
-                    
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 
-<script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
-</script>
- -->
-
-<script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
-</script>
-
-
-    </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="tags" class="container chip-container">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91/">
+                                <span class="chip colored-tag" style="background-color: #f97316;">医院信息科</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%8C%BB%E9%99%A2/" class="post-category colored-category" style="color: #f97316;">
+                                医院
+                            </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="tag-chips">
+            <h1 class="description center-align post-title">医院信息科新人</h1>
+            <div class="post-info">
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2026-08-10
+                </div>
                 
-                <a href="/tags/Gitbook/" title="Gitbook: 2" data-tag-filter="Gitbook">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Gitbook" style="background-color: #14b8a6;">Gitbook
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
+
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2026-08-10
+                </div>
                 
-                <a href="/tags/Github/" title="Github: 5" data-tag-filter="Github">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Github" style="background-color: #ec4899;">Github
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
+
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.6k
+                </div>
                 
-                <a href="/tags/Git/" title="Git: 3" data-tag-filter="Git">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Git" style="background-color: #ef4444;">Git
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
+
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    5 分
+                </div>
                 
-                <a href="/tags/Gitee/" title="Gitee: 2" data-tag-filter="Gitee">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Gitee" style="background-color: #eab308;">Gitee
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
+
                 
-                
-                <a href="/tags/Hexo/" title="Hexo: 2" data-tag-filter="Hexo">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Hexo" style="background-color: #6366f1;">Hexo
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Markdown/" title="Markdown: 1" data-tag-filter="Markdown">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Markdown" style="background-color: #84cc16;">Markdown
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/VScode/" title="VScode: 1" data-tag-filter="VScode">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="VScode" style="background-color: #a855f7;">VScode
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ssh%E5%85%AC%E5%85%B1%E7%A7%98%E9%92%A5/" title="ssh公共秘钥: 1" data-tag-filter="ssh公共秘钥">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ssh公共秘钥" style="background-color: #f43f5e;">ssh公共秘钥
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" title="深度学习: 1" data-tag-filter="深度学习">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="深度学习" style="background-color: #22c55e;">深度学习
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Codex/" title="Codex: 1" data-tag-filter="Codex">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Codex" style="background-color: #8b5cf6;">Codex
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/Node/" title="Node: 1" data-tag-filter="Node">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Node" style="background-color: #06b6d4;">Node
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E8%B0%B7%E6%AD%8C/" title="谷歌: 1" data-tag-filter="谷歌">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="谷歌" style="background-color: #0ea5e9;">谷歌
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91/" title="医院信息科: 4" data-tag-filter="医院信息科">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="医院信息科" style="background-color: #f97316;">医院信息科
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
-    </div>
-</div>
+        <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+        <link rel="stylesheet" href="/css/codeblock-fix.css">
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="一、堡垒机、个人运维机、VPN三者关系"><a href="#一、堡垒机、个人运维机、VPN三者关系" class="headerlink" title="一、堡垒机、个人运维机、VPN三者关系"></a>一、堡垒机、个人运维机、VPN三者关系</h1><p>医院信息科新人刚来一般都会先让同事给你配一个堡垒机、个人运维机和VPN账号</p>
+<h2 id="1-1-堡垒机账号"><a href="#1-1-堡垒机账号" class="headerlink" title="1.1 堡垒机账号"></a>1.1 堡垒机账号</h2><ul>
+<li><p>作用：<strong>第一道大门，不直接干活，只做跳转</strong>。你不能直接连 HIS、数据库、服务器，必须先登堡垒机</p>
+</li>
+<li><p>登录方式：网页 &#x2F; SSH 客户端登录堡垒机地址，输入堡垒机账号密码</p>
+</li>
+<li><p>特点：这里看不到业务数据，堡垒机内部有授权列表，授权哪些设备你才能访问；所有操作录像留日志，等保审计会查</p>
+</li>
+<li><p>注意：堡垒机里本身<strong>没有文件，不能装软件</strong>，它只是跳转通道。登录堡垒机之后，下一步目标，就是你的个人运维机</p>
+</li>
+</ul>
+<h2 id="1-2-个人运维机账号"><a href="#1-2-个人运维机账号" class="headerlink" title="1.2 个人运维机账号"></a>1.2 个人运维机账号</h2><ul>
+<li><p>本质：一台专门分配给你用的 Linux 虚拟机，是你的工作主机。</p>
+</li>
+<li><p>登录流程：登录堡垒机 → 在堡垒机列表点开你的个人运维机，跳转到这台机器。<strong>所有敲命令、查日志、传文件都在这台机器上完成</strong>。</p>
+</li>
+<li><p>功能：可以在这里 ssh 连数据库、业务服务器，放脚本、导出日志，做日常运维操作。</p>
+</li>
+<li><p>权限：医院一般限制，<strong>业务服务器禁止堡垒机直连，强制通过个人运维机二次跳转</strong>，相当于多一层隔离。真实业务服务器密码，大多保存在堡垒机密码库，你在运维机上通过堡垒机代填访问，你看不到原始密码。</p>
+</li>
+</ul>
+<h2 id="1-3-VPN-账号"><a href="#1-3-VPN-账号" class="headerlink" title="1.3 VPN 账号"></a>1.3 VPN 账号</h2><ul>
+<li><p>作用：你办公电脑在外网（比如医院外网办公区、居家），医院业务服务器、堡垒机都在内网，外网本来访问不到内网资源。<strong>VPN 就是把你的电脑接入医院内部局域网</strong>，建立加密隧道，让你本机可以访问堡垒机地址。</p>
+</li>
+<li><p>登录方式：电脑安装 VPN 客户端，输入 VPN 账号密码拨号连接，连接成功后本机才可以打开堡垒机网页 &#x2F; SSH 访问堡垒机地址。</p>
+</li>
+<li><p>关键点：VPN 只负责 “进内网”，<strong>本身不做操作审计，不管控你能执行什么命令，没有权限管控业务系统的能力</strong>，只是网络通道。</p>
+</li>
+<li><p>断开后果：VPN 断开，你的电脑就脱离医院内网，堡垒机、运维机、业务服务器全部访问不了。</p>
+</li>
+</ul>
+<h2 id="1-4-完整工作链路"><a href="#1-4-完整工作链路" class="headerlink" title="1.4 完整工作链路"></a>1.4 完整工作链路</h2><ul>
+<li>在医院内：你的工位电脑 →【堡垒机账号登录】→ 堡垒机平台 → 选择你的个人运维机 →【个人运维机账号密码】登录虚拟机 → 从运维机再访问 HIS、数据库、交换机等业务设备。</li>
+<li>在医院外：你自己的电脑 →【VPN 账号密码拨号，接入医院内网】→【堡垒机账号密码登录堡垒机平台】→选择个人运维机→【个人运维机账号密码登录虚拟机】→访问 HIS、数据库、交换机等业务设备</li>
+</ul>
+<h2 id="1-5-三者对比表"><a href="#1-5-三者对比表" class="headerlink" title="1.5 三者对比表"></a>1.5 三者对比表</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>VPN 账号</th>
+<th>堡垒机账号</th>
+<th>个人运维机账号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>核心定位</td>
+<td>网络通道，接入医院内网</td>
+<td>安全运维门户，权限审计跳板</td>
+<td>你的工作操作虚拟机</td>
+</tr>
+<tr>
+<td>能干什么</td>
+<td>只打通网络，不能执行业务命令</td>
+<td>跳转授权，录屏审计，不直接干活</td>
+<td>敲命令、查日志、处理业务运维工作</td>
+</tr>
+<tr>
+<td>能否存储文件</td>
+<td>不能</td>
+<td>不能</td>
+<td>可存放脚本、日志临时文件</td>
+</tr>
+<tr>
+<td>审计能力</td>
+<td>几乎无操作审计</td>
+<td>全程录屏、命令日志审计</td>
+<td>所有操作被堡垒机审计留存</td>
+</tr>
+</tbody></table>
+<h2 id="1-6-实操提醒"><a href="#1-6-实操提醒" class="headerlink" title="1.6 实操提醒"></a>1.6 实操提醒</h2><ol>
+<li><p>不要把两个账号密码弄混：堡垒机密码登不进运维机，运维机密码登不上堡垒机。</p>
+</li>
+<li><p>所有操作<strong>不要从自己办公电脑直接 ssh 业务服务器</strong>，必须走堡垒机→运维机这条链路，否则等保违规。</p>
+</li>
+<li><p>个人运维机是你的专属，不要把账号借别人；堡垒机所有操作都会被日志留存，误删命令会留下追责记录。</p>
+</li>
+<li><p>运维机里的文件，只是临时存放，重要数据记得导出到本地，运维机系统重装会全部丢失。</p>
+</li>
+<li><p>顺序不能乱：<strong>必须先连 VPN，才能访问堡垒机；VPN 没连上，堡垒机地址打不开</strong>。</p>
+</li>
+<li><p>VPN 连通≠可以直接连业务服务器。就算 VPN 连上内网，也禁止本机直接 SSH&#x2F;RDP 访问业务服务器，必须走堡垒机→个人运维机路径，直接访问属于违规操作，审计会告警。</p>
+</li>
+<li><p>VPN 账号不要共用，用完及时断开；长时间挂着 VPN 有安全风险。</p>
+</li>
+<li><p>三个账号密码相互独立，不能混用：VPN 密码登不上堡垒机，堡垒机密码登不上运维机。</p>
+</li>
+</ol>
+<h1 id="二、OA账号说明"><a href="#二、OA账号说明" class="headerlink" title="二、OA账号说明"></a>二、OA账号说明</h1><p>新人可以向同事申请一个OA的管理员账号，OA 即办公自动化系统，<strong>是医院内部行政办公平台，不属于运维技术账号，和 VPN、堡垒机、个人运维机完全分开</strong>，有时候其他科室会让你重置OA密码</p>
+<h2 id="2-1-OA-账号"><a href="#2-1-OA-账号" class="headerlink" title="2.1 OA 账号"></a>2.1 OA 账号</h2><ul>
+<li><p>作用：处理医院行政、人事、审批、通知公文，和服务器运维无关 </p>
+</li>
+<li><p>主要用途：收院内通知公告、提交请假、出差报销流程、阅读院内文件、收发内部消息、申请物资、看科室通知；部分医院 OA 附带个人工资、考勤查询  </p>
+</li>
+<li><p>登录环境：内网可直接访问 OA 地址；外网环境下，<strong>部分医院 OA 不需要 VPN，部分需要连上 VPN 才能打开</strong></p>
+</li>
+<li><p>账号来源：一般是人事统一开通，账号大多是工号，密码独立，<strong>不能用来登录堡垒机、运维机、业务服务器</strong></p>
+</li>
+</ul>
+<h2 id="2-2-实操提醒"><a href="#2-2-实操提醒" class="headerlink" title="2.2 实操提醒"></a>2.2 实操提醒</h2><ol>
+<li><p>OA 账号属于行政办公账号，<strong>不能拿来登录服务器相关设备，密码和运维三套账号互不通用</strong></p>
+</li>
+<li><p>做系统运维：走 VPN → 堡垒机 → 个人运维机；看通知、走审批流程：登录 OA 系统，两套工作互不干扰</p>
+</li>
+<li><p>不要混淆：OA 看不到 HIS、数据库等业务数据，只处理行政事务</p>
+</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91/">
+                                    <span class="chip colored-tag" style="background-color: #f97316;">医院信息科</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
 
     
 
-    <article id="articles" class="container articles article-paged-list">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="深度学习" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2022/10/10/2022/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/34.png" class="responsive-img" alt="深度学习环境常用命令">
-                            
-                            <span class="card-title">深度学习环境常用命令</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-10
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category colored-category" style="color: #22c55e;">
-                                人工智能
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+    
+
+</div>
+
                 </div>
             </div>
             
         </div>
-    </article>
-</main>
+    </div>
 
-<style>
-    #articles.article-paged-list,
-    #articles.article-paged-list .row {
-        height: auto !important;
-    }
+    
 
-    #articles.article-paged-list .article {
-        position: static !important;
-        left: auto !important;
-        top: auto !important;
-    }
+    
 
-    #articles.article-paged-list .article-page-animating {
-        animation-duration: 520ms;
-        animation-fill-mode: both;
-        animation-timing-function: cubic-bezier(.22, .61, .36, 1);
-        transform-origin: center top;
-        will-change: opacity, transform;
-    }
+    
 
-    #articles.article-paged-list .article-page-hide {
-        animation-name: articlePageHide;
-        pointer-events: none;
-    }
+    
 
-    #articles.article-paged-list .article-page-show {
-        animation-name: articlePageShow;
-    }
+    
 
-    @keyframes articlePageHide {
-        from {
-            opacity: 1;
-            transform: scale(1);
-        }
-        to {
-            opacity: 0;
-            transform: scale(0.86);
-        }
-    }
+    
 
-    @keyframes articlePageShow {
-        from {
-            opacity: 0;
-            transform: scale(0.86);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
+    
 
-    #articlePaging .btn-floating.bg-color {
-        background-image: linear-gradient(to right, #333333 0%, #333333 100%) !important;
-    }
+    
 
-    #articlePaging .btn-floating.disabled {
-        background-color: #ccc !important;
-        background-image: none !important;
-    }
-
-    #articlePaging,
-    #articlePaging .row {
-        height: auto !important;
-        line-height: normal !important;
-        background: transparent !important;
-        box-shadow: none !important;
-    }
-</style>
+    
 
 
-<div id="articlePaging"
-     class="container paging"
-     data-page-size="9"
-     data-initial-page="1"
-     role="navigation"
-     aria-label="文章列表换页"
-     style="display: none;">
+
+
+<div id="prenext-posts" class="container prev-next">
     <div class="row">
-        <div class="col s4 m4 l4">
-            <a id="articlePrevPage" href="javascript:void(0);"
-               class="left btn-floating btn-large waves-effect waves-light bg-color"
-               aria-label="上一页">
-                <i class="fas fa-angle-left"></i>
-            </a>
+        
+        <div class="prev-next-card col s12 m6">
+            
+<div class="card">
+    <a href="/2026/08/10/%E5%8C%BB%E9%99%A2/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/" title="医院运维记录">
+        <div class="card-image">
+            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="医院运维记录">
+            <span class="article-badge left-badge">上一篇</span>
+            <span class="card-title">医院运维记录</span>
         </div>
-        <div class="page-info col s4 m4 l4">
-            <div id="articlePageInfo" class="center-align b-text-gray"></div>
+    </a>
+
+    <div class="card-content article-content">
+        <div class="publish-info">
+            <span class="publish-date">
+                <i class="far fa-clock fa-fw icon-date"></i>2026-08-10
+            </span>
+            <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/%E5%8C%BB%E9%99%A2/" class="post-category colored-category" style="color: #f97316;">
+                    医院
+                </a>
+                
+                
+            </span>
         </div>
-        <div class="col s4 m4 l4">
-            <a id="articleNextPage" href="javascript:void(0);"
-               class="right btn-floating btn-large waves-effect waves-light bg-color"
-               aria-label="下一页">
-                <i class="fas fa-angle-right"></i>
-            </a>
+    </div>
+
+    
+    <div class="card-action article-tags">
+        
+        <a href="/tags/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91/">
+            <span class="chip colored-tag" style="background-color: #f97316;">医院信息科</span>
+        </a>
+        
+    </div>
+    
+</div>
+
+        </div>
+        
+
+        
+        <div class="prev-next-card col s12 m6">
+            
+<div class="card">
+    <a href="/2026/08/09/%E5%8C%BB%E9%99%A2/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/" title="医院信息系统架构说明文档">
+        <div class="card-image">
+            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="医院信息系统架构说明文档">
+            <span class="article-badge right-badge">下一篇</span>
+            <span class="card-title">医院信息系统架构说明文档</span>
+        </div>
+    </a>
+
+    <div class="card-content article-content">
+        <div class="publish-info">
+            <span class="publish-date">
+                <i class="far fa-clock fa-fw icon-date"></i>2026-08-09
+            </span>
+            <span class="publish-author">
+                
+                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                
+                <a href="/categories/%E5%8C%BB%E9%99%A2/" class="post-category colored-category" style="color: #f97316;">
+                    医院
+                </a>
+                
+                
+            </span>
+        </div>
+    </div>
+
+    
+    <div class="card-action article-tags">
+        
+        <a href="/tags/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91/">
+            <span class="chip colored-tag" style="background-color: #f97316;">医院信息科</span>
+        </a>
+        
+    </div>
+    
+</div>
+
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
         </div>
     </div>
 </div>
 
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
-    (function () {
-        var $paging = $('#articlePaging');
-        var $articles = $('#articles');
-        if (!$paging.length || !$articles.length) return;
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1,h2, h3, h4'
+        });
 
-        var pageSize = Number($paging.data('page-size')) || 9;
-        var currentPage = Number($paging.data('initial-page')) || 1;
-        var $allItems = $articles.find('.article');
-        var $items = $allItems;
-        var totalPage = Math.ceil($items.length / pageSize);
-        var storageKey = 'materyArticleListPage:' + window.location.pathname.replace(/\/page\/\d+\/?$/, '/');
-        var savedPage = Number(sessionStorage.getItem(storageKey));
-
-        $articles.addClass('article-paged-list');
-
-        if (savedPage >= 1 && savedPage <= totalPage) {
-            currentPage = savedPage;
-        }
-
-        function relayoutArticles() {
-            if ($articles.data('masonry')) {
-                $articles.masonry('destroy');
-            }
-
-            if (window.AOS && typeof AOS.refresh === 'function') {
-                AOS.refresh();
-            }
-        }
-
-        function getEncodedNames($item, dataName) {
-            var value = String($item.attr(dataName) || '');
-            if (!value) return [];
-
-            return value.split('|').map(function (name) {
-                try {
-                    return decodeURIComponent(name);
-                } catch (error) {
-                    return name;
-                }
-            });
-        }
-
-        function updatePagingState() {
-            totalPage = Math.max(Math.ceil($items.length / pageSize), 1);
-            currentPage = Math.min(Math.max(currentPage, 1), totalPage);
-
-            $('#articlePageInfo').text(currentPage + ' / ' + totalPage);
-
-            $('#articlePrevPage')
-                .toggleClass('disabled', currentPage === 1)
-                .toggleClass('waves-effect waves-light', currentPage !== 1)
-                .toggleClass('bg-color', currentPage !== 1);
-
-            $('#articleNextPage')
-                .toggleClass('disabled', currentPage === totalPage)
-                .toggleClass('waves-effect waves-light', currentPage !== totalPage)
-                .toggleClass('bg-color', currentPage !== totalPage);
-
-            $paging.toggle($items.length > pageSize);
-        }
-
-        function updateArticlePage(pageNumber, shouldScroll) {
-            currentPage = Math.min(Math.max(pageNumber, 1), totalPage);
-            sessionStorage.setItem(storageKey, currentPage);
-
-            var startIndex = (currentPage - 1) * pageSize;
-            var endIndex = startIndex + pageSize;
-            var $currentItems = $allItems.filter(':visible');
-            var $nextItems = $items.slice(startIndex, endIndex);
-
-            function showNextItems() {
-                $allItems
-                    .not($nextItems)
-                    .hide()
-                    .removeClass('article-page-animating article-page-hide article-page-show')
-                    .css('animation-delay', '');
-
-                $nextItems
-                    .show()
-                    .removeClass('article-page-hide')
-                    .removeClass('aos-animate')
-                    .addClass('article-page-animating article-page-show');
-
-                $nextItems.each(function (index) {
-                    $(this).css('animation-delay', (index * 70) + 'ms');
-                });
-
-                relayoutArticles();
-
-                setTimeout(function () {
-                    $nextItems
-                        .removeClass('article-page-animating article-page-show')
-                        .css('animation-delay', '');
-                    relayoutArticles();
-                }, 1100);
-            }
-
-            updatePagingState();
-
-            if (shouldScroll && $currentItems.length > 0) {
-                $currentItems
-                    .removeClass('article-page-show')
-                    .addClass('article-page-animating article-page-hide')
-                    .css('animation-delay', '');
-
-                setTimeout(showNextItems, 300);
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
             } else {
-                $allItems.hide();
-                $nextItems.show().removeClass('aos-animate');
-                relayoutArticles();
-            }
-
-            if (shouldScroll) {
-                $('html, body').animate({ scrollTop: $articles.offset().top - 80 }, 300);
-            }
-        }
-
-        function setActiveChip(type, value) {
-            var selector = type === 'tag' ? '[data-tag-filter]' : '[data-category-filter]';
-
-            $(selector).find('.chip')
-                .removeClass('chip-active')
-                .addClass('chip-default');
-
-            $(selector).filter(function () {
-                return String($(this).data(type + '-filter')) === value;
-            }).find('.chip')
-                .removeClass('chip-default')
-                .addClass('chip-active');
-        }
-
-        function filterArticleList(type, value, shouldScroll) {
-            var dataName = type === 'tag' ? 'data-tags' : 'data-categories';
-
-            $items = $allItems.filter(function () {
-                return getEncodedNames($(this), dataName).indexOf(value) !== -1;
-            });
-
-            currentPage = 1;
-            setActiveChip(type, value);
-            updatePagingState();
-            updateArticlePage(1, shouldScroll);
-        }
-
-        $(document).on('click', '[data-tag-filter]', function (event) {
-            if ($articles.data('filter-type') !== 'tag') return;
-
-            event.preventDefault();
-            filterArticleList('tag', String($(this).data('tag-filter')), true);
-        });
-
-        $(document).on('click', '[data-category-filter]', function (event) {
-            if ($articles.data('filter-type') !== 'category') return;
-
-            event.preventDefault();
-            filterArticleList('category', String($(this).data('category-filter')), true);
-        });
-
-        $('#articlePrevPage').on('click', function () {
-            if (currentPage > 1) {
-                updateArticlePage(currentPage - 1, true);
+                $tocWidget.removeClass('toc-fixed');
             }
         });
 
-        $('#articleNextPage').on('click', function () {
-            if (currentPage < totalPage) {
-                updateArticlePage(currentPage + 1, true);
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
             }
-        });
 
-        $allItems.find('img').on('load', relayoutArticles);
-        updatePagingState();
-        updateArticlePage(currentPage, false);
-    })();
+            let w = srcDiv.width();
+            if (targetId === 'prenext-posts') {
+                $('#' + targetId).width(w);
+                return;
+            }
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
 </script>
+
+    
+
+</main>
 
 
 

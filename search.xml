@@ -1471,7 +1471,7 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
   <entry>
     <title>医院信息科新人</title>
     <url>/2026/08/10/%E5%8C%BB%E9%99%A2/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/</url>
-    <content><![CDATA[<h1 id="一、堡垒机、个人运维机、VPN三者关系"><a href="#一、堡垒机、个人运维机、VPN三者关系" class="headerlink" title="一、堡垒机、个人运维机、VPN三者关系"></a>一、堡垒机、个人运维机、VPN三者关系</h1><p>医院信息科新人刚来一般都会先让同事给你配一个堡垒机、个人运维机和VPN账号</p>
+    <content><![CDATA[<h1 id="一、堡垒机、个人运维机、VPN"><a href="#一、堡垒机、个人运维机、VPN" class="headerlink" title="一、堡垒机、个人运维机、VPN"></a>一、堡垒机、个人运维机、VPN</h1><p>医院信息科新人刚来一般都会先让同事给你配一个堡垒机、个人运维机和VPN账号</p>
 <h2 id="1-1-堡垒机账号"><a href="#1-1-堡垒机账号" class="headerlink" title="1.1 堡垒机账号"></a>1.1 堡垒机账号</h2><ul>
 <li><p>作用：<strong>第一道大门，不直接干活，只做跳转</strong>。你不能直接连 HIS、数据库、服务器，必须先登堡垒机</p>
 </li>
@@ -1558,7 +1558,8 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <li><p>三个账号密码相互独立，不能混用：VPN 密码登不上堡垒机，堡垒机密码登不上运维机。</p>
 </li>
 </ol>
-<h1 id="二、OA账号说明"><a href="#二、OA账号说明" class="headerlink" title="二、OA账号说明"></a>二、OA账号说明</h1><p>新人可以向同事申请一个OA的管理员账号，OA 即办公自动化系统，<strong>是医院内部行政办公平台，不属于运维技术账号，和 VPN、堡垒机、个人运维机完全分开</strong>，有时候其他科室会让你重置OA密码</p>
+<h2 id="1-7-相关问题"><a href="#1-7-相关问题" class="headerlink" title="1.7 相关问题"></a>1.7 相关问题</h2><p>问题：进入堡垒机后，登陆个人运维机输入账号密码没反应<br>解决：下载浏览器上方弹出来的插件<br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/image-1.png"></p>
+<h1 id="二、OA系统"><a href="#二、OA系统" class="headerlink" title="二、OA系统"></a>二、OA系统</h1><p>新人可以向同事申请一个OA的管理员账号，OA 即办公自动化系统，<strong>是医院内部行政办公平台，不属于运维技术账号，和 VPN、堡垒机、个人运维机完全分开</strong>，有时候其他科室会让你重置OA密码</p>
 <h2 id="2-1-OA-账号"><a href="#2-1-OA-账号" class="headerlink" title="2.1 OA 账号"></a>2.1 OA 账号</h2><ul>
 <li><p>作用：处理医院行政、人事、审批、通知公文，和服务器运维无关 </p>
 </li>
@@ -1566,17 +1567,16 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 </li>
 <li><p>登录环境：内网可直接访问 OA 地址；外网环境下，<strong>部分医院 OA 不需要 VPN，部分需要连上 VPN 才能打开</strong></p>
 </li>
-<li><p>账号来源：一般是人事统一开通，账号大多是工号，密码独立，<strong>不能用来登录堡垒机、运维机、业务服务器</strong></p>
+<li><p>账号来源：一般是信息科统一开通，账号大多是工号，密码独立，<strong>不能用来登录堡垒机、运维机、业务服务器</strong></p>
 </li>
 </ul>
 <h2 id="2-2-实操提醒"><a href="#2-2-实操提醒" class="headerlink" title="2.2 实操提醒"></a>2.2 实操提醒</h2><ol>
 <li><p>OA 账号属于行政办公账号，<strong>不能拿来登录服务器相关设备，密码和运维三套账号互不通用</strong></p>
 </li>
-<li><p>做系统运维：走 VPN → 堡垒机 → 个人运维机；看通知、走审批流程：登录 OA 系统，两套工作互不干扰</p>
-</li>
 <li><p>不要混淆：OA 看不到 HIS、数据库等业务数据，只处理行政事务</p>
 </li>
 </ol>
+<h2 id="2-3-相关运维问题"><a href="#2-3-相关运维问题" class="headerlink" title="2.3 相关运维问题"></a>2.3 相关运维问题</h2><p>问题：OA账号密码重置<br>解决：登陆OA账号 → 系统管理 → 用户管理 → 查找工号 → 重置密码<br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/1.png"><br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/image.png"></p>
 <h1 id="三、爱数云文档"><a href="#三、爱数云文档" class="headerlink" title="三、爱数云文档"></a>三、爱数云文档</h1><p>爱数云文档是<strong>私有化部署的企业级私有云盘 + 文档协作平台</strong>，医院内网部署，文件全部存在医院本地服务器，不是互联网上的百度网盘，主打安全、权限管控、文档共享备份，满足等保、医疗数据合规要求</p>
 <h2 id="3-1-医院里用来干什么"><a href="#3-1-医院里用来干什么" class="headerlink" title="3.1 医院里用来干什么"></a>3.1 医院里用来干什么</h2><ol>
 <li><p><strong>文件集中存储</strong>：各科室制度、培训文档、调研纪要、报表、PPT 统一存放，替代 U 盘、FTP、电脑本地散乱存文件，电脑坏了文件不会丢，支持桌面自动备份</p>
@@ -1614,7 +1614,65 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <li><p>运维层面：堡垒机登录后台，可以做用户、部门目录、权限、存储配额、审计日志查看。</p>
 </li>
 </ol>
-]]></content>
+<h2 id="3-5-相关运维问题"><a href="#3-5-相关运维问题" class="headerlink" title="3.5 相关运维问题"></a>3.5 相关运维问题</h2><p>问题：爱数云文档账号密码重置<br>解决：登陆爱数云文档管理员账号 → 搜索工号 → 选中用户 → 用户管理 → 管控密码 → 重置密码<br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/image-2.png"><br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/image-4.png"><br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/image-3.png"></p>
+<h1 id="四、阳途终端安全管理系统"><a href="#四、阳途终端安全管理系统" class="headerlink" title="四、阳途终端安全管理系统"></a>四、阳途终端安全管理系统</h1><p>对于信息科来说主要作用是远程运维，它支持快速远程协助，信息科工作人员可远程查看或操作故障电脑的屏幕，提高故障处理效率</p>
+<h2 id="4-1-安装"><a href="#4-1-安装" class="headerlink" title="4.1 安装"></a>4.1 安装</h2><ul>
+<li>到医院内网共享文件夹找到安装安装包进行安装，也可以直接找同事要安装包<blockquote>
+<p>外网电脑的安装包或文件可以直接复制到内网虚拟机，内网虚拟机的文件也可以直接复制到外网电脑</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="4-2-登录"><a href="#4-2-登录" class="headerlink" title="4.2 登录"></a>4.2 登录</h2><ul>
+<li>可以向同事要到阳途终端安全管理系统的IP地址和账号密码<blockquote>
+<p>第一次登陆需要输入IP地址</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="4-3-远程协助"><a href="#4-3-远程协助" class="headerlink" title="4.3 远程协助"></a>4.3 远程协助</h2><ul>
+<li>点击IP图标 → 输入对方IP地址 → 点击地址 → 点击远程协助<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/5b6e91a2-2c35-4d0b-8a22-6d69486fb3f0.png"></li>
+</ul>
+<h1 id="五、东华HIS系统"><a href="#五、东华HIS系统" class="headerlink" title="五、东华HIS系统"></a>五、东华HIS系统</h1><p>东华医为（东华软件）的 HIS，是医院<strong>运营收费、物资、患者流程的核心业务系统</strong>，偏向<strong>管理、计费、流程流转</strong>，不是写病历的系统，医院内网部署，数据库一般为 Oracle，是全院业务的底座。</p>
+<blockquote>
+<p>通俗理解：HIS 管 “看病流程、钱、药、床位”；EMR 管 “看病病历、病情描述”，两者深度对接，数据互通。</p>
+</blockquote>
+<ul>
+<li><p><strong>核心模块</strong></p>
+<ul>
+<li><p>门诊部分<br>   1. 门诊挂号分诊：建档、挂号、医保读卡、号源、分诊叫号、患者主索引 EMPI 管理。<br>   2. 门诊收费：处方收费、检查治疗计费、医保实时结算、退费、发票、预交金、财务对账。<br>   3. 门诊医生站：开处方、开检查检验申请、门诊简单病历、开住院证。<br>   4. 门诊药房：处方接收、发药、药品库存扣减、麻精药管理。</p>
+</li>
+<li><p>住院部分<br>1. 入出转：入院登记、床位分配、收取押金、转科、出院结算、医保报销计算、费用清单打印。<br>2. 住院医生站：开长期 &#x2F; 临时医嘱、手术申请、会诊申请，医嘱会传给护士站、药房、检查科室。<br>3. 护士工作站：医嘱核对、执行签名、床位管理、费用查看、护理执行单打印。<br>4. 住院收费：住院费用归集、欠费预警、出院结算。</p>
+</li>
+<li><p>药库物资管理<br>药库采购入库、调价、效期预警、盘点；耗材入库领用；麻精特殊药品台账管控。</p>
+</li>
+<li><p>系统管理模块（信息科运维接触）<br>科室维护、人员账号角色权限 RBAC、全院参数配置、日志审计、统计报表、医保接口配置。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>和院内其他系统关系</strong></p>
+<ol>
+<li><p><strong>HIS ↔ EMR 电子病历</strong>：HIS 提供住院号、患者基础信息、医嘱；EMR 写病程、入院记录、出院小结；<strong>医嘱双向互通</strong>，医生在 EMR 开医嘱，实际落地计费走 HIS。</p>
+</li>
+<li><p><strong>HIS ↔ LIS 检验系统</strong>：HIS 开检验申请，LIS 做完把检验结果回传给 HIS&#x2F;EMR。</p>
+</li>
+<li><p><strong>HIS ↔ PACS 影像系统</strong>：HIS 开 CT、DR 申请，PACS 做完回传报告图像。</p>
+</li>
+<li><p><strong>HIS ↔ 医保接口</strong>：门诊住院实时医保报销，是 HIS 最重要对外接口。</p>
+</li>
+<li><p><strong>HIS ↔ 堡垒机</strong>：运维人员通过堡垒机登录 HIS 数据库、后台管理程序，普通医护人员直接网页 &#x2F; 客户端访问业务界面，不走堡垒机。</p>
+</li>
+<li><p><strong>HIS ↔ 爱数云文档</strong>：HIS 本身不直接对接爱数；导出的 HIS 统计报表，合规脱敏后可上传爱数共享；<strong>严禁直接把患者原始病历导出上传爱数</strong>。</p>
+</li>
+<li><p><strong>HIS ↔ OA</strong>：一般不直接打通，OA 走审批流程，HIS 走业务流程。</p>
+</li>
+</ol>
+</li>
+<li><p><strong>信息科新人常见问题场景</strong><br> 1. 收费窗口：医保结算报错、退费失败、发票打印异常。<br> 2. 护士站：医嘱执行报错、费用漏记、重复计费、床位状态异常。<br> 3. 药房：处方接收不到、药品库存不准、发药失败。<br> 4. 医生站：医嘱保存失败、申请单无法下发 LIS&#x2F;PACS。<br> 5. 运维层面：数据库慢查询、存储压力大、接口报错、权限账号新增修改。</p>
+</li>
+<li><p><strong>安全要点</strong></p>
+<p>  1.HIS 存储患者敏感就诊、费用数据，属于核心等保对象，所有操作留日志。<br>  2. 禁止直接给普通业务人员开放数据库访问，变更、查询数据库必须走堡垒机，留审计记录。<br>  3. 导出患者数据必须脱敏，符合隐私合规。</p>
+</li>
+</ul>
+<h2 id="5-1-门诊业务流程"><a href="#5-1-门诊业务流程" class="headerlink" title="5.1 门诊业务流程"></a>5.1 门诊业务流程</h2>]]></content>
       <categories>
         <category>医院</category>
       </categories>

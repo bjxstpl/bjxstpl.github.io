@@ -62,7 +62,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light" data-reset-article-page>
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -76,7 +76,8 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/" class="waves-effect waves-light">
+    <a href="/" class="waves-effect waves-light"
+       data-reset-article-page>
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -87,7 +88,8 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/gallery" class="waves-effect waves-light">
+    <a href="/gallery" class="waves-effect waves-light"
+       >
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
@@ -98,18 +100,8 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
+    <a href="/categories" class="waves-effect waves-light"
+       >
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
@@ -120,7 +112,20 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/archives" class="waves-effect waves-light">
+    <a href="/tags" class="waves-effect waves-light"
+       >
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light"
+       >
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
@@ -131,7 +136,8 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
+    <a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light"
+       >
       
       <i class="fas fa-compass" style="zoom: 0.6;"></i>
       
@@ -171,7 +177,8 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/" class="waves-effect waves-light">
+		<a href="/" class="waves-effect waves-light"
+		   data-reset-article-page>
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -182,7 +189,8 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/gallery" class="waves-effect waves-light">
+		<a href="/gallery" class="waves-effect waves-light"
+		   >
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
@@ -193,18 +201,8 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
+		<a href="/categories" class="waves-effect waves-light"
+		   >
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
@@ -215,7 +213,20 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/archives" class="waves-effect waves-light">
+		<a href="/tags" class="waves-effect waves-light"
+		   >
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light"
+		   >
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
@@ -226,7 +237,8 @@
         
         <li class="m-nav-item">
 	  
-		<a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
+		<a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light"
+		   >
 			
 			    <i class="fa-fw fas fa-compass"></i>
 			
@@ -247,11 +259,35 @@
 
 </header>
 
+<script>
+    (function () {
+        document.addEventListener('click', function (event) {
+            if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+                return;
+            }
+
+            var target = event.target;
+            if (target && target.nodeType === 3) {
+                target = target.parentElement;
+            }
+
+            var homeLink = target && target.closest && target.closest('[data-reset-article-page]');
+            if (!homeLink) return;
+
+            var homeUrl = new URL(homeLink.href, window.location.href);
+            if (homeUrl.origin !== window.location.origin) return;
+
+            var homePath = homeUrl.pathname.replace(/\/page\/\d+\/?$/, '/');
+            sessionStorage.removeItem('materyArticleListPage:' + homePath);
+        }, true);
+    })();
+</script>
+
     
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -267,54 +303,6 @@
 
 
 <main class="post-container content">
-    
-    <button type="button" id="postBackButton" class="post-back-button" aria-label="返回上一页" title="返回上一页">
-    <i class="fas fa-arrow-left"></i>
-</button>
-
-<script>
-    (function () {
-        var backButton = document.getElementById('postBackButton');
-        if (!backButton) return;
-
-        var backTargetKey = 'materyPostBackTarget';
-        var restoreKey = 'materyPostBackRestore';
-
-        function cleanUrl(url) {
-            return String(url || '').split('#')[0];
-        }
-
-        function getBackTarget() {
-            try {
-                return JSON.parse(sessionStorage.getItem(backTargetKey) || 'null');
-            } catch (error) {
-                return null;
-            }
-        }
-
-        backButton.addEventListener('click', function () {
-            var target = getBackTarget();
-            var currentUrl = cleanUrl(window.location.href);
-
-            if (target && target.url && cleanUrl(target.url) !== currentUrl) {
-                sessionStorage.setItem(restoreKey, JSON.stringify(target));
-                sessionStorage.removeItem(backTargetKey);
-                window.location.href = target.url;
-                return;
-            }
-
-            if (window.history.length > 1) {
-                window.history.back();
-                return;
-            }
-
-            window.location.href = '/';
-        });
-    })();
-</script>
-
-    
-
     
     <div class="row">
     <div id="main-content" class="col s12 m12 l9">
@@ -339,8 +327,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8C%BB%E9%99%A2/" class="post-category colored-category" style="color: #f97316;">
-                                医院
+                            <a href="/categories/%E5%B7%A5%E4%BD%9C/" class="post-category colored-category" style="color: #0ea5e9;">
+                                工作
                             </a>
                         
                     </div>
@@ -359,21 +347,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-08-13
+                    2026-08-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.5k
+                    5.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    19 分
                 </div>
                 
 
@@ -419,9 +407,9 @@
 </li>
 </ul>
 <h2 id="1-3-VPN-账号"><a href="#1-3-VPN-账号" class="headerlink" title="1.3 VPN 账号"></a>1.3 VPN 账号</h2><ul>
-<li><p>作用：你办公电脑在外网（比如医院外网办公区、居家），医院业务服务器、堡垒机都在内网，外网本来访问不到内网资源。<strong>VPN 就是把你的电脑接入医院内部局域网</strong>，建立加密隧道，让你本机可以访问堡垒机地址。</p>
+<li><p>作用：你办公电脑在外网（比如在家），医院业务服务器、堡垒机都在内网，外网本来访问不到内网资源。<strong>VPN 就是把你的电脑接入医院内部局域网</strong>，建立加密隧道，让你本机可以访问堡垒机地址。</p>
 </li>
-<li><p>登录方式：电脑安装 VPN 客户端，输入 VPN 账号密码拨号连接，连接成功后本机才可以打开堡垒机网页 &#x2F; SSH 访问堡垒机地址。</p>
+<li><p>登录方式：电脑安装 VPN 客户端，输入访问网址和 VPN 账号密码进行连接，连接成功后本机才可以打开堡垒机网页 &#x2F; SSH 访问堡垒机地址。</p>
 </li>
 <li><p>关键点：VPN 只负责 “进内网”，<strong>本身不做操作审计，不管控你能执行什么命令，没有权限管控业务系统的能力</strong>，只是网络通道。</p>
 </li>
@@ -475,13 +463,7 @@
 </li>
 <li><p>运维机里的文件，只是临时存放，重要数据记得导出到本地，运维机系统重装会全部丢失。</p>
 </li>
-<li><p>顺序不能乱：<strong>必须先连 VPN，才能访问堡垒机；VPN 没连上，堡垒机地址打不开</strong>。</p>
-</li>
-<li><p>VPN 连通≠可以直接连业务服务器。就算 VPN 连上内网，也禁止本机直接 SSH&#x2F;RDP 访问业务服务器，必须走堡垒机→个人运维机路径，直接访问属于违规操作，审计会告警。</p>
-</li>
 <li><p>VPN 账号不要共用，用完及时断开；长时间挂着 VPN 有安全风险。</p>
-</li>
-<li><p>三个账号密码相互独立，不能混用：VPN 密码登不上堡垒机，堡垒机密码登不上运维机。</p>
 </li>
 </ol>
 <h2 id="1-7-相关问题"><a href="#1-7-相关问题" class="headerlink" title="1.7 相关问题"></a>1.7 相关问题</h2><p>问题：进入堡垒机后，登陆个人运维机输入账号密码没反应<br>解决：下载浏览器上方弹出来的插件<br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/image-1.png"></p>
@@ -557,7 +539,8 @@
 <h2 id="4-3-远程协助"><a href="#4-3-远程协助" class="headerlink" title="4.3 远程协助"></a>4.3 远程协助</h2><ul>
 <li>点击IP图标 → 输入对方IP地址 → 点击地址 → 点击远程协助<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/5b6e91a2-2c35-4d0b-8a22-6d69486fb3f0.png"></li>
 </ul>
-<h1 id="五、东华HIS系统"><a href="#五、东华HIS系统" class="headerlink" title="五、东华HIS系统"></a>五、东华HIS系统</h1><p>东华医为（东华软件）的 HIS，是医院<strong>运营收费、物资、患者流程的核心业务系统</strong>，偏向<strong>管理、计费、流程流转</strong>，不是写病历的系统，医院内网部署，数据库一般为 Oracle，是全院业务的底座。</p>
+<h1 id="五、HIS系统"><a href="#五、HIS系统" class="headerlink" title="五、HIS系统"></a>五、HIS系统</h1><p>可以向同事要到HIS系统的培训视频和测试库的管理员账号密码进行学习，学习HIS系统可以在测试库中进行操作，在测试库中随便怎么玩都行，不影响正式库</p>
+<h2 id="5-1-东华HIS系统介绍"><a href="#5-1-东华HIS系统介绍" class="headerlink" title="5.1 东华HIS系统介绍"></a>5.1 东华HIS系统介绍</h2><p>东华医为（东华软件）的 HIS，是医院<strong>运营收费、物资、患者流程的核心业务系统</strong>，偏向<strong>管理、计费、流程流转</strong>，不是写病历的系统，医院内网部署，数据库一般为 Oracle，是全院业务的底座。</p>
 <blockquote>
 <p>通俗理解：HIS 管 “看病流程、钱、药、床位”；EMR 管 “看病病历、病情描述”，两者深度对接，数据互通。</p>
 </blockquote>
@@ -584,12 +567,6 @@
 </li>
 <li><p><strong>HIS ↔ 医保接口</strong>：门诊住院实时医保报销，是 HIS 最重要对外接口。</p>
 </li>
-<li><p><strong>HIS ↔ 堡垒机</strong>：运维人员通过堡垒机登录 HIS 数据库、后台管理程序，普通医护人员直接网页 &#x2F; 客户端访问业务界面，不走堡垒机。</p>
-</li>
-<li><p><strong>HIS ↔ 爱数云文档</strong>：HIS 本身不直接对接爱数；导出的 HIS 统计报表，合规脱敏后可上传爱数共享；<strong>严禁直接把患者原始病历导出上传爱数</strong>。</p>
-</li>
-<li><p><strong>HIS ↔ OA</strong>：一般不直接打通，OA 走审批流程，HIS 走业务流程。</p>
-</li>
 </ol>
 </li>
 <li><p><strong>信息科新人常见问题场景</strong><br> 1. 收费窗口：医保结算报错、退费失败、发票打印异常。<br> 2. 护士站：医嘱执行报错、费用漏记、重复计费、床位状态异常。<br> 3. 药房：处方接收不到、药品库存不准、发药失败。<br> 4. 医生站：医嘱保存失败、申请单无法下发 LIS&#x2F;PACS。<br> 5. 运维层面：数据库慢查询、存储压力大、接口报错、权限账号新增修改。</p>
@@ -598,7 +575,146 @@
 <p>  1.HIS 存储患者敏感就诊、费用数据，属于核心等保对象，所有操作留日志。<br>  2. 禁止直接给普通业务人员开放数据库访问，变更、查询数据库必须走堡垒机，留审计记录。<br>  3. 导出患者数据必须脱敏，符合隐私合规。</p>
 </li>
 </ul>
-<h2 id="5-1-门诊业务流程"><a href="#5-1-门诊业务流程" class="headerlink" title="5.1 门诊业务流程"></a>5.1 门诊业务流程</h2>
+<h2 id="5-2-配置账号"><a href="#5-2-配置账号" class="headerlink" title="5.2 配置账号"></a>5.2 配置账号</h2><h3 id="5-2-1-创建账号"><a href="#5-2-1-创建账号" class="headerlink" title="5.2.1 创建账号"></a>5.2.1 创建账号</h3><p>为了方便后续学习，可以先登陆测试库管理员的账号给自己创建一个信息科的管理员账号：登陆测试库管理员账号 → 基础数据 → 系统管理 → 用户 → 注册新用户 → 填写相关信息保存即可<br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/1b93599c-a2d2-4ce2-91fa-8e28e836e673.png"><br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/b3e56b15-31ca-4489-a24f-8427e885114a.png"></p>
+<h3 id="5-2-2-添加其他科室登录权限"><a href="#5-2-2-添加其他科室登录权限" class="headerlink" title="5.2.2 添加其他科室登录权限"></a>5.2.2 添加其他科室登录权限</h3><ul>
+<li><p>HIS 系统给自己添加其他科室登录权限含义</p>
+<ul>
+<li>东华 HIS 每个账号绑定科室权限、岗位权限，账号默认只允许登录分配给自己的科室模块，比如你信息科账号，默认只能访问信息科相关菜单，不能直接切换到门诊、消化内科护士站、收费处界面。给自己添加其他科室登录权限，就是在 HIS 账号权限配置里，把别的科室加入你的账号可登录科室列表，登录系统后右上角可以切换科室，模拟该科室人员视角操作对应业务界面。</li>
+</ul>
+</li>
+<li><p>实际作用</p>
+<ul>
+<li>排查业务问题：比如消化内科护士站报错、门诊建卡挂号异常，不用找护士借账号，自己账号切换到对应科室，复现问题、看界面报错、核对流程。</li>
+<li>业务测试：HIS 参数调整、版本更新后，切换收费 &#x2F; 门诊 &#x2F; 住院科室，验证建卡、挂号、收费、退号流程是否正常。</li>
+<li>需求调研：跟班临床科室时，直接用自己账号进入该科室业务界面，看医生护士日常操作页面。</li>
+</ul>
+</li>
+<li><p>给自己添加其他科室登录权限：查找到自己的账号然后双击 → 点击其他登录科室 → 添加相关权限<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/b6b106ac-7dba-40c8-bcc7-648c16600648.png"></p>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li>登陆科室可以随便选不影响，重点是安全组，比如你学习门诊业务，可以添加门诊挂号收费这个安全组，学到哪里你就给自己添加哪个安全组</li>
+<li>一定要先点击添加或修改后在点击保存</li>
+</ol>
+</blockquote>
+<h2 id="5-3-门诊业务流程"><a href="#5-3-门诊业务流程" class="headerlink" title="5.3 门诊业务流程"></a>5.3 门诊业务流程</h2><p><img src="/../../images/%E4%B8%9C%E5%8D%8EHIS%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/image.png"></p>
+<ul>
+<li>名词解释：<ol>
+<li>医嘱：医生下达的医疗指令，包含用药、检查、检验、治疗、处置等。门诊医生在诊间开立，住院在医生工作站开立</li>
+<li>诊间预约：医生诊室里面直接做的预约，叫诊间预约。患者看完病，医生在自己工作站直接帮患者预约下次复诊、检查时间，不用患者跑到收费窗口或者自助机操作。<ul>
+<li>场景：消化内科看完，医生直接在电脑给患者约 7 天后复诊号；或者约胃镜检查时间。</li>
+<li>区别：普通挂号是患者自己抢号；诊间预约是医生端权限，由医生直接预约，生成预约记录，患者后续到收费处确认缴费取号</li>
+</ul>
+</li>
+<li>处方：属于医嘱的其中一类，特指药品相关医嘱，用来开药。<ul>
+<li>医生开药品医嘱，系统生成电子处方；</li>
+<li>处方经过审方后，收费处可以收费，收费完成后药房才能发药；</li>
+<li>处方有有效期，过期不能收费；</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="5-3-1-建卡（门诊建档-x2F-发卡）"><a href="#5-3-1-建卡（门诊建档-x2F-发卡）" class="headerlink" title="5.3.1 建卡（门诊建档 &#x2F; 发卡）"></a>5.3.1 建卡（门诊建档 &#x2F; 发卡）</h3><ul>
+<li><p><strong>建卡</strong></p>
+<ul>
+<li><p><strong>含义</strong>：初诊患者，在 HIS 系统建立患者基础档案，生成就诊卡号（实体卡 &#x2F; 电子卡），是挂号、就诊、收费的前提。</p>
+</li>
+<li><p><strong>操作入口</strong>：门诊挂号收费窗口，【患者建档 &#x2F; 建卡】模块；也支持自助机、公众号线上建卡。</p>
+</li>
+<li><p><strong>标准操作步骤</strong>：<br>  1. 读取身份证 &#x2F; 社保卡，自动带出姓名、性别、身份证号、出生日期；无证件则手动录入信息。<br>  2. 补录手机号、地址、医保类型；儿童需要录入监护人信息。<br>  3. 系统 EMPI 自动校验：身份证号是否已经存在院内档案。<br>   - 提示 “该证件已存在患者档案”：<strong>禁止新建卡</strong>，选择关联原有档案，更新手机号等信息即可，防止一人多卡。<br>   - 无匹配档案：保存，生成就诊卡号，完成建卡。<br>  4. 实体卡：写卡发卡；电子卡：直接生成虚拟就诊卡号。</p>
+</li>
+<li><p><strong>常见坑</strong><br>  1. 不读卡、手动新建档案，同一患者重复建多张卡，造成<strong>一人多卡</strong>，病历割裂，医生只能看到单张卡就诊记录。<br>  2. 儿童无身份证，只填姓名生日，容易出现重名重复档案。<br>  3. 建卡≠挂号，建卡只是建立患者档案，还需要单独挂号。</p>
+</li>
+<li><p><strong>测试库操作</strong>：登陆门诊挂号收费安全组 → 点击建卡 → 填写相关信息即可<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/1b0cb926-7a81-49c5-b5d6-255658838629.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/24c95ce4-5824-4fdf-bf0f-9ebce4f01b7c.png"></p>
+<blockquote>
+<p>按照培训视频流程填写即可，然后发卡</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>卡查询</strong></p>
+<ul>
+<li><p><strong>含义</strong>：患者记不得就诊卡号、卡片丢失，通过身份证、手机号、姓名、生日检索院内已存在的患者档案，定位就诊卡号，用于挂号、补卡、处理重复档案</p>
+</li>
+<li><p><strong>查询条件</strong>：身份证号（最准）、手机号、姓名 + 出生日期、就诊卡号、社保卡号</p>
+</li>
+<li><p><strong>使用场景</strong><br>  1. 患者卡丢了，记不住卡号，查询原有档案，办理补卡。<br>  2. 挂号读卡提示查不到档案，先卡查询确认是否已经建档。<br>  3. 排查一人多卡：输入身份证，查出该身份证下多条不同就诊卡号。<br>  4. 信息科排查问题：核对患者历史就诊、收费、处方属于哪一个就诊档案。</p>
+</li>
+<li><p><strong>测试库操作</strong>：在主界面找到查询统计 → 卡查询</p>
+<blockquote>
+<p>注意：卡号可能不唯一，但是登记号是唯一的，所以查询最好输入登记号</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>卡合并</strong></p>
+<ul>
+<li><p><strong>含义</strong>：同一个患者，在系统产生多条独立就诊档案（多个就诊卡号），把多条档案合并归集到<strong>同一个主索引 ID 下</strong>；合并后所有历史挂号、收费、处方、医嘱、检验记录全部统一，医生站可以看到全部就诊历史。</p>
+</li>
+<li><p><strong>产生一人多卡的原因</strong><br>  1. 患者第一次没带身份证，手工建卡；第二次带身份证，又新建一张卡。<br>  2. 线上公众号自助建档，窗口又手工建档。<br>  3. 姓名录入错别字，系统识别为两个不同患者。</p>
+</li>
+<li><p><strong>测试库操作</strong>：在主界面找到卡管理 → 点击卡合并 → 查找要合并的用户<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/630a9273-8434-4d2f-b153-51c22411a01d.png"></p>
+<blockquote>
+<ol>
+<li>合并到的那张是主卡，被合并的是待合并卡号</li>
+<li>核对两个档案姓名、身份证、生日确认确实是同一个人，执行合并，合并后旧卡号依然可以刷卡使用，后台全部指向主索引</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-2-挂号"><a href="#5-3-2-挂号" class="headerlink" title="5.3.2 挂号"></a>5.3.2 挂号</h3><ul>
+<li><p><strong>挂号</strong></p>
+<ul>
+<li><strong>含义</strong>：占用号源，生成门诊就诊记录，确定患者挂哪个科室、哪位医生、什么时间段就诊，挂号成功后患者才能到医生工作站叫号看病。</li>
+<li><strong>挂号分类</strong><ol>
+<li>现场窗口挂号：收费人员窗口操作。</li>
+<li>自助机挂号：患者自助刷卡 &#x2F; 电子健康卡操作。</li>
+<li>线上预约挂号：公众号预约，到院后可直接取号；也可线上直接缴费。</li>
+<li>诊间预约挂号：医生工作站做完诊间预约，患者到收费窗口确认缴费生成正式挂号单。</li>
+</ol>
+</li>
+<li><strong>常见问题</strong><ol>
+<li>号源已满，无法挂号；</li>
+<li>患者未建卡，无法挂号，要先建卡；</li>
+<li>预约号过期未取号，号源自动释放；</li>
+</ol>
+</li>
+<li><strong>测试库操作</strong>：在主界面点击挂号 → 输入卡号 → 选择科室和医生等信息 → 选择号进行挂号即可<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/8692cd37-de3b-4dcb-923a-0d9d0401d9be.png"><ul>
+<li>测试库没有挂号信息，要自己去配置：登入demo管理员账号 → 在搜索框搜医生坐诊 → 新增排班<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/04cb77f5-9db4-4676-bfdd-183a53425da9.png"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>退号</strong></p>
+<ul>
+<li><strong>含义</strong>：占取消已经存在的挂号记录，释放号源，退回挂号费用，作废本次就诊流水</li>
+<li><strong>业务规则</strong><ol>
+<li>未就诊：医生还没有接诊、没有开立任何医嘱 &#x2F; 处方，可以正常退号，全额退还挂号费，号源释放回池。</li>
+<li>已就诊（医生已经接诊开单）：一般不允许直接退号。已经产生医嘱、处方、检查单，必须先把该挂号下所有收费单据全部退费作废，清空业务数据之后，才允许退号；部分医院配置规则，就诊后禁止退号。</li>
+<li>已过就诊日期：过期号，按医院参数，部分支持退号，部分不允许。</li>
+</ol>
+</li>
+<li><strong>测试库操作</strong>：在挂号界面点击退号即可<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/0121bd64-30c4-4f55-86f6-070bbe6c9bdd.png"></li>
+</ul>
+</li>
+<li><p><strong>换号</strong></p>
+<ul>
+<li><strong>含义</strong>：不取消原有就诊流水，更换科室 &#x2F; 医生 &#x2F; 就诊时段；或者原有号作废，更换为另一个号源</li>
+<li><strong>使用场景</strong><ol>
+<li>患者挂 A 医生，A 医生临时停诊，换成同科室 B 医生；</li>
+<li>患者挂上午号来不及到院，更换为本日下午时段；</li>
+<li>患者挂错科室，不做退号，直接换至正确科室号源。</li>
+</ol>
+</li>
+<li><strong>测试库操作</strong>：同上</li>
+</ul>
+</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -659,13 +775,15 @@
 <div id="prenext-posts" class="container prev-next">
     <div class="row">
         
+
+        
         <div class="prev-next-card col s12 m6">
             
 <div class="card">
-    <a href="/2026/08/10/%E5%8C%BB%E9%99%A2/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/" title="医院运维记录">
+    <a href="/2026/08/10/%E5%B7%A5%E4%BD%9C/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/" title="医院运维记录">
         <div class="card-image">
-            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="医院运维记录">
-            <span class="article-badge left-badge">上一篇</span>
+            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="医院运维记录">
+            <span class="article-badge right-badge">下一篇</span>
             <span class="card-title">医院运维记录</span>
         </div>
     </a>
@@ -679,52 +797,8 @@
                 
                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                 
-                <a href="/categories/%E5%8C%BB%E9%99%A2/" class="post-category colored-category" style="color: #f97316;">
-                    医院
-                </a>
-                
-                
-            </span>
-        </div>
-    </div>
-
-    
-    <div class="card-action article-tags">
-        
-        <a href="/tags/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91/">
-            <span class="chip colored-tag" style="background-color: #f97316;">医院信息科</span>
-        </a>
-        
-    </div>
-    
-</div>
-
-        </div>
-        
-
-        
-        <div class="prev-next-card col s12 m6">
-            
-<div class="card">
-    <a href="/2026/08/09/%E5%8C%BB%E9%99%A2/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/" title="医院信息系统架构说明文档">
-        <div class="card-image">
-            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="医院信息系统架构说明文档">
-            <span class="article-badge right-badge">下一篇</span>
-            <span class="card-title">医院信息系统架构说明文档</span>
-        </div>
-    </a>
-
-    <div class="card-content article-content">
-        <div class="publish-info">
-            <span class="publish-date">
-                <i class="far fa-clock fa-fw icon-date"></i>2026-08-09
-            </span>
-            <span class="publish-author">
-                
-                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                
-                <a href="/categories/%E5%8C%BB%E9%99%A2/" class="post-category colored-category" style="color: #f97316;">
-                    医院
+                <a href="/categories/%E5%B7%A5%E4%BD%9C/" class="post-category colored-category" style="color: #0ea5e9;">
+                    工作
                 </a>
                 
                 
@@ -1106,68 +1180,6 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-    <script>
-        (function () {
-            var backTargetKey = 'materyPostBackTarget';
-            var restoreKey = 'materyPostBackRestore';
-
-            function cleanUrl(url) {
-                return String(url || '').split('#')[0];
-            }
-
-            function isTrackedDetailLink(anchor) {
-                if (!anchor || !anchor.href || anchor.target === '_blank') return false;
-
-                var linkUrl = new URL(anchor.href, window.location.href);
-                if (linkUrl.origin !== window.location.origin) return false;
-                if (linkUrl.hash && cleanUrl(linkUrl.href) === cleanUrl(window.location.href)) return false;
-
-                return /^\/\d{4}\/\d{2}\/\d{2}\//.test(linkUrl.pathname)
-                    || /^\/gallery\/[^/]+\/?$/.test(linkUrl.pathname);
-            }
-
-            document.addEventListener('click', function (event) {
-                if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
-                    return;
-                }
-
-                var target = event.target;
-                if (target && target.nodeType === 3) {
-                    target = target.parentElement;
-                }
-
-                var anchor = target && target.closest && target.closest('a');
-                if (!isTrackedDetailLink(anchor)) return;
-
-                sessionStorage.setItem(backTargetKey, JSON.stringify({
-                    url: cleanUrl(window.location.href),
-                    scrollY: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
-                    createdAt: Date.now()
-                }));
-            }, true);
-
-            var restore = null;
-            try {
-                restore = JSON.parse(sessionStorage.getItem(restoreKey) || 'null');
-            } catch (error) {
-                restore = null;
-            }
-
-            if (restore && cleanUrl(window.location.href) === cleanUrl(restore.url)) {
-                sessionStorage.removeItem(restoreKey);
-
-                var scrollY = Number(restore.scrollY) || 0;
-                var restoreScroll = function () {
-                    window.scrollTo(0, scrollY);
-                };
-
-                restoreScroll();
-                requestAnimationFrame(restoreScroll);
-                setTimeout(restoreScroll, 120);
-                setTimeout(restoreScroll, 500);
-            }
-        })();
-    </script>
 
     
 

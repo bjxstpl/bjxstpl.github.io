@@ -60,7 +60,7 @@ git 下载地址：http">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light" data-reset-article-page>
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -74,7 +74,8 @@ git 下载地址：http">
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/" class="waves-effect waves-light">
+    <a href="/" class="waves-effect waves-light"
+       data-reset-article-page>
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
@@ -85,7 +86,8 @@ git 下载地址：http">
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/gallery" class="waves-effect waves-light">
+    <a href="/gallery" class="waves-effect waves-light"
+       >
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
@@ -96,18 +98,8 @@ git 下载地址：http">
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
+    <a href="/categories" class="waves-effect waves-light"
+       >
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
@@ -118,7 +110,20 @@ git 下载地址：http">
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/archives" class="waves-effect waves-light">
+    <a href="/tags" class="waves-effect waves-light"
+       >
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light"
+       >
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
@@ -129,7 +134,8 @@ git 下载地址：http">
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
+    <a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light"
+       >
       
       <i class="fas fa-compass" style="zoom: 0.6;"></i>
       
@@ -169,7 +175,8 @@ git 下载地址：http">
         
         <li class="m-nav-item">
 	  
-		<a href="/" class="waves-effect waves-light">
+		<a href="/" class="waves-effect waves-light"
+		   data-reset-article-page>
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
@@ -180,7 +187,8 @@ git 下载地址：http">
         
         <li class="m-nav-item">
 	  
-		<a href="/gallery" class="waves-effect waves-light">
+		<a href="/gallery" class="waves-effect waves-light"
+		   >
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
@@ -191,18 +199,8 @@ git 下载地址：http">
         
         <li class="m-nav-item">
 	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
+		<a href="/categories" class="waves-effect waves-light"
+		   >
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
@@ -213,7 +211,20 @@ git 下载地址：http">
         
         <li class="m-nav-item">
 	  
-		<a href="/archives" class="waves-effect waves-light">
+		<a href="/tags" class="waves-effect waves-light"
+		   >
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light"
+		   >
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
@@ -224,7 +235,8 @@ git 下载地址：http">
         
         <li class="m-nav-item">
 	  
-		<a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light">
+		<a target="_blank" rel="noopener" href="https://lcg520.com" class="waves-effect waves-light"
+		   >
 			
 			    <i class="fa-fw fas fa-compass"></i>
 			
@@ -245,11 +257,35 @@ git 下载地址：http">
 
 </header>
 
+<script>
+    (function () {
+        document.addEventListener('click', function (event) {
+            if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+                return;
+            }
+
+            var target = event.target;
+            if (target && target.nodeType === 3) {
+                target = target.parentElement;
+            }
+
+            var homeLink = target && target.closest && target.closest('[data-reset-article-page]');
+            if (!homeLink) return;
+
+            var homeUrl = new URL(homeLink.href, window.location.href);
+            if (homeUrl.origin !== window.location.origin) return;
+
+            var homePath = homeUrl.pathname.replace(/\/page\/\d+\/?$/, '/');
+            sessionStorage.removeItem('materyArticleListPage:' + homePath);
+        }, true);
+    })();
+</script>
+
     
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -265,54 +301,6 @@ git 下载地址：http">
 
 
 <main class="post-container content">
-    
-    <button type="button" id="postBackButton" class="post-back-button" aria-label="返回上一页" title="返回上一页">
-    <i class="fas fa-arrow-left"></i>
-</button>
-
-<script>
-    (function () {
-        var backButton = document.getElementById('postBackButton');
-        if (!backButton) return;
-
-        var backTargetKey = 'materyPostBackTarget';
-        var restoreKey = 'materyPostBackRestore';
-
-        function cleanUrl(url) {
-            return String(url || '').split('#')[0];
-        }
-
-        function getBackTarget() {
-            try {
-                return JSON.parse(sessionStorage.getItem(backTargetKey) || 'null');
-            } catch (error) {
-                return null;
-            }
-        }
-
-        backButton.addEventListener('click', function () {
-            var target = getBackTarget();
-            var currentUrl = cleanUrl(window.location.href);
-
-            if (target && target.url && cleanUrl(target.url) !== currentUrl) {
-                sessionStorage.setItem(restoreKey, JSON.stringify(target));
-                sessionStorage.removeItem(backTargetKey);
-                window.location.href = target.url;
-                return;
-            }
-
-            if (window.history.length > 1) {
-                window.history.back();
-                return;
-            }
-
-            window.location.href = '/';
-        });
-    })();
-</script>
-
-    
-
     
     <div class="row">
     <div id="main-content" class="col s12 m12 l9">
@@ -337,7 +325,7 @@ git 下载地址：http">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #0ea5e9;">
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #22c55e;">
                                 技术
                             </a>
                         
@@ -526,7 +514,7 @@ git 下载地址：http">
                 
                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                 
-                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #0ea5e9;">
+                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #22c55e;">
                     技术
                 </a>
                 
@@ -570,7 +558,7 @@ git 下载地址：http">
                 
                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                 
-                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #0ea5e9;">
+                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category colored-category" style="color: #22c55e;">
                     技术
                 </a>
                 
@@ -961,68 +949,6 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
-    <script>
-        (function () {
-            var backTargetKey = 'materyPostBackTarget';
-            var restoreKey = 'materyPostBackRestore';
-
-            function cleanUrl(url) {
-                return String(url || '').split('#')[0];
-            }
-
-            function isTrackedDetailLink(anchor) {
-                if (!anchor || !anchor.href || anchor.target === '_blank') return false;
-
-                var linkUrl = new URL(anchor.href, window.location.href);
-                if (linkUrl.origin !== window.location.origin) return false;
-                if (linkUrl.hash && cleanUrl(linkUrl.href) === cleanUrl(window.location.href)) return false;
-
-                return /^\/\d{4}\/\d{2}\/\d{2}\//.test(linkUrl.pathname)
-                    || /^\/gallery\/[^/]+\/?$/.test(linkUrl.pathname);
-            }
-
-            document.addEventListener('click', function (event) {
-                if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
-                    return;
-                }
-
-                var target = event.target;
-                if (target && target.nodeType === 3) {
-                    target = target.parentElement;
-                }
-
-                var anchor = target && target.closest && target.closest('a');
-                if (!isTrackedDetailLink(anchor)) return;
-
-                sessionStorage.setItem(backTargetKey, JSON.stringify({
-                    url: cleanUrl(window.location.href),
-                    scrollY: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
-                    createdAt: Date.now()
-                }));
-            }, true);
-
-            var restore = null;
-            try {
-                restore = JSON.parse(sessionStorage.getItem(restoreKey) || 'null');
-            } catch (error) {
-                restore = null;
-            }
-
-            if (restore && cleanUrl(window.location.href) === cleanUrl(restore.url)) {
-                sessionStorage.removeItem(restoreKey);
-
-                var scrollY = Number(restore.scrollY) || 0;
-                var restoreScroll = function () {
-                    window.scrollTo(0, scrollY);
-                };
-
-                restoreScroll();
-                requestAnimationFrame(restoreScroll);
-                setTimeout(restoreScroll, 120);
-                setTimeout(restoreScroll, 500);
-            }
-        })();
-    </script>
 
     
 

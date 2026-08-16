@@ -1175,7 +1175,12 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
     <title>医院信息科新人</title>
     <url>/2026/08/10/%E5%B7%A5%E4%BD%9C/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/</url>
     <content><![CDATA[<h1 id="一、堡垒机、个人运维机、VPN"><a href="#一、堡垒机、个人运维机、VPN" class="headerlink" title="一、堡垒机、个人运维机、VPN"></a>一、堡垒机、个人运维机、VPN</h1><p>医院信息科新人刚来一般都会先让同事给你配一个堡垒机、个人运维机和VPN账号</p>
-<h2 id="1-1-堡垒机账号"><a href="#1-1-堡垒机账号" class="headerlink" title="1.1 堡垒机账号"></a>1.1 堡垒机账号</h2><ul>
+<h2 id="1-1-堡垒机"><a href="#1-1-堡垒机" class="headerlink" title="1.1 堡垒机"></a>1.1 堡垒机</h2><ul>
+<li><p>本质：运维操作的审计管控跳板机，主要用来管理服务器、业务系统（HIS、数据库）的登录访问，医院信息科用的非常多</p>
+<blockquote>
+<p>简单理解：不允许运维人员直接直连业务服务器，所有登录必须先过堡垒机，再由堡垒机跳转访问目标设备</p>
+</blockquote>
+</li>
 <li><p>作用：<strong>第一道大门，不直接干活，只做跳转</strong>。你不能直接连 HIS、数据库、服务器，必须先登堡垒机</p>
 </li>
 <li><p>登录方式：网页 &#x2F; SSH 客户端登录堡垒机地址，输入堡垒机账号密码</p>
@@ -1185,7 +1190,7 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <li><p>注意：堡垒机里本身<strong>没有文件，不能装软件</strong>，它只是跳转通道。登录堡垒机之后，下一步目标，就是你的个人运维机</p>
 </li>
 </ul>
-<h2 id="1-2-个人运维机账号"><a href="#1-2-个人运维机账号" class="headerlink" title="1.2 个人运维机账号"></a>1.2 个人运维机账号</h2><ul>
+<h2 id="1-2-个人运维机"><a href="#1-2-个人运维机" class="headerlink" title="1.2 个人运维机"></a>1.2 个人运维机</h2><ul>
 <li><p>本质：一台专门分配给你用的 Linux 虚拟机，是你的工作主机。</p>
 </li>
 <li><p>登录流程：登录堡垒机 → 在堡垒机列表点开你的个人运维机，跳转到这台机器。<strong>所有敲命令、查日志、传文件都在这台机器上完成</strong>。</p>
@@ -1195,7 +1200,7 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <li><p>权限：医院一般限制，<strong>业务服务器禁止堡垒机直连，强制通过个人运维机二次跳转</strong>，相当于多一层隔离。真实业务服务器密码，大多保存在堡垒机密码库，你在运维机上通过堡垒机代填访问，你看不到原始密码。</p>
 </li>
 </ul>
-<h2 id="1-3-VPN-账号"><a href="#1-3-VPN-账号" class="headerlink" title="1.3 VPN 账号"></a>1.3 VPN 账号</h2><ul>
+<h2 id="1-3-VPN"><a href="#1-3-VPN" class="headerlink" title="1.3 VPN"></a>1.3 VPN</h2><ul>
 <li><p>作用：你办公电脑在外网（比如在家），医院业务服务器、堡垒机都在内网，外网本来访问不到内网资源。<strong>VPN 就是把你的电脑接入医院内部局域网</strong>，建立加密隧道，让你本机可以访问堡垒机地址。</p>
 </li>
 <li><p>登录方式：电脑安装 VPN 客户端，输入访问网址和 VPN 账号密码进行连接，连接成功后本机才可以打开堡垒机网页 &#x2F; SSH 访问堡垒机地址。</p>
@@ -1533,6 +1538,126 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 </li>
 </ol>
 ]]></content>
+      <categories>
+        <category>工作</category>
+      </categories>
+      <tags>
+        <tag>医院信息科</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>医院布局</title>
+    <url>/2026/08/10/%E5%B7%A5%E4%BD%9C/%E5%8C%BB%E9%99%A2%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<blockquote>
+<p>新人接电话可能会遇到没听过的科室或地方，没事可以多看看熟悉了解一下</p>
+</blockquote>
+<h1 id="一、厚德楼"><a href="#一、厚德楼" class="headerlink" title="一、厚德楼"></a>一、厚德楼</h1><h2 id="1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室"><a href="#1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室" class="headerlink" title="1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室"></a>1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室</h2><ul>
+<li>西药房：便民窗口、急诊窗口、窗口</li>
+<li>急诊科：导诊台、内科、外科、护士站、抢救室、注射室、移动推车、收费处</li>
+<li>服务中心：导诊台</li>
+</ul>
+<h2 id="2F：儿科门诊、儿童保健科、口腔科、乳腺科"><a href="#2F：儿科门诊、儿童保健科、口腔科、乳腺科" class="headerlink" title="2F：儿科门诊、儿童保健科、口腔科、乳腺科"></a>2F：儿科门诊、儿童保健科、口腔科、乳腺科</h2><ul>
+<li>儿科门诊：导诊台、诊室</li>
+<li>口腔科：导诊台、诊室、种植室</li>
+<li>乳腺科：导诊台、门诊</li>
+</ul>
+<h2 id="3F：门诊部"><a href="#3F：门诊部" class="headerlink" title="3F：门诊部"></a>3F：门诊部</h2><ul>
+<li>门诊部：3楼门诊导诊台、3楼门诊收费处、3楼门诊肺功能室、各种科室的门诊</li>
+</ul>
+<h2 id="4F：生殖中心"><a href="#4F：生殖中心" class="headerlink" title="4F：生殖中心"></a>4F：生殖中心</h2><ul>
+<li>生殖中心：导诊台、诊室、实验室、IUI实验室、男科实验室、建档室、采血室</li>
+</ul>
+<h2 id="5F：康复科门诊"><a href="#5F：康复科门诊" class="headerlink" title="5F：康复科门诊"></a>5F：康复科门诊</h2><ul>
+<li>康复科门诊：盆底康复门诊、骨关节康复门诊、儿童康复门诊</li>
+</ul>
+<h2 id="6F：康复科"><a href="#6F：康复科" class="headerlink" title="6F：康复科"></a>6F：康复科</h2><ul>
+<li>康复科：康复运动治疗室</li>
+</ul>
+<h2 id="7F：呼吸内科"><a href="#7F：呼吸内科" class="headerlink" title="7F：呼吸内科"></a>7F：呼吸内科</h2><ul>
+<li>呼吸内科：护士站、医生办公室、移动推车</li>
+</ul>
+<h2 id="9F：神经内科"><a href="#9F：神经内科" class="headerlink" title="9F：神经内科"></a>9F：神经内科</h2><ul>
+<li>呼吸内科：护士站、医生办公室、移动推车</li>
+</ul>
+<h2 id="10F：行政办公室"><a href="#10F：行政办公室" class="headerlink" title="10F：行政办公室"></a>10F：行政办公室</h2><ul>
+<li>行政楼层：院长办公室、副院长办公室、院感科、人事科、医保办、</li>
+</ul>
+<h2 id="11F：消化内科"><a href="#11F：消化内科" class="headerlink" title="11F：消化内科"></a>11F：消化内科</h2><ul>
+<li>消化内科：护士站、医生办公室、移动推车</li>
+</ul>
+<h2 id="12F：血透室"><a href="#12F：血透室" class="headerlink" title="12F：血透室"></a>12F：血透室</h2><h2 id="13F：内分泌科、肾内内分泌科、全科医学科、老年医学科"><a href="#13F：内分泌科、肾内内分泌科、全科医学科、老年医学科" class="headerlink" title="13F：内分泌科、肾内内分泌科、全科医学科、老年医学科"></a>13F：内分泌科、肾内内分泌科、全科医学科、老年医学科</h2><ul>
+<li>护士站、医生办公室、移动推车</li>
+</ul>
+<h2 id="14F：病案室"><a href="#14F：病案室" class="headerlink" title="14F：病案室"></a>14F：病案室</h2><h1 id="二、精诚楼"><a href="#二、精诚楼" class="headerlink" title="二、精诚楼"></a>二、精诚楼</h1><h2 id="1F：影像科"><a href="#1F：影像科" class="headerlink" title="1F：影像科"></a>1F：影像科</h2><ul>
+<li>影像科：医生办公室、主任办公室、诊室、示教室、检查室、CT室、介入导管室</li>
+</ul>
+<h2 id="2F：检验科、输血科"><a href="#2F：检验科、输血科" class="headerlink" title="2F：检验科、输血科"></a>2F：检验科、输血科</h2><ul>
+<li>检验科：血常规、办公室、微生物室</li>
+</ul>
+<h2 id="3F：超声科、心电图室、脑电图室、-脑-彩超室、信息科"><a href="#3F：超声科、心电图室、脑电图室、-脑-彩超室、信息科" class="headerlink" title="3F：超声科、心电图室、脑电图室、(脑)彩超室、信息科"></a>3F：超声科、心电图室、脑电图室、(脑)彩超室、信息科</h2><ul>
+<li>超声科：导诊台、检查室</li>
+</ul>
+<h2 id="4F：消化内镜中心、病理科、心脏康复中心、热疗室"><a href="#4F：消化内镜中心、病理科、心脏康复中心、热疗室" class="headerlink" title="4F：消化内镜中心、病理科、心脏康复中心、热疗室"></a>4F：消化内镜中心、病理科、心脏康复中心、热疗室</h2><ul>
+<li>消化内镜中心：导诊台、内镜室、苏醒间</li>
+<li>病理科：诊断室、产物扩增室、取材室、免疫组化室、标本制备室、接收处</li>
+<li>心脏康复中心：导诊台</li>
+</ul>
+<h2 id="5F：耳鼻喉科、眼科"><a href="#5F：耳鼻喉科、眼科" class="headerlink" title="5F：耳鼻喉科、眼科"></a>5F：耳鼻喉科、眼科</h2><ul>
+<li>护士站、医生办公室</li>
+</ul>
+<h2 id="6F：泌尿科、胸外科"><a href="#6F：泌尿科、胸外科" class="headerlink" title="6F：泌尿科、胸外科"></a>6F：泌尿科、胸外科</h2><ul>
+<li>护士站、医生办公室</li>
+</ul>
+<h2 id="7F：骨一科"><a href="#7F：骨一科" class="headerlink" title="7F：骨一科"></a>7F：骨一科</h2><ul>
+<li>护士站、医生办公室、主任办公室</li>
+</ul>
+<h2 id="8F：骨二科"><a href="#8F：骨二科" class="headerlink" title="8F：骨二科"></a>8F：骨二科</h2><ul>
+<li>护士站、医生办公室、主任办公室</li>
+</ul>
+<h2 id="9F：肿瘤科"><a href="#9F：肿瘤科" class="headerlink" title="9F：肿瘤科"></a>9F：肿瘤科</h2><ul>
+<li>肿瘤科：护士站、医生办公室、主任办公室</li>
+</ul>
+<h2 id="10F：普外科-外一科-、神经外科"><a href="#10F：普外科-外一科-、神经外科" class="headerlink" title="10F：普外科(外一科)、神经外科"></a>10F：普外科(外一科)、神经外科</h2><ul>
+<li>护士站、医生办公室、主任办公室</li>
+</ul>
+<h2 id="11F：心血管内科-心内科"><a href="#11F：心血管内科-心内科" class="headerlink" title="11F：心血管内科(心内科)"></a>11F：心血管内科(心内科)</h2><ul>
+<li>心血管内科(心内科)：护士站、医生办公室、主任办公室</li>
+</ul>
+<h2 id="12F：ICU-重症医学科"><a href="#12F：ICU-重症医学科" class="headerlink" title="12F：ICU(重症医学科)"></a>12F：ICU(重症医学科)</h2><ul>
+<li>ICU(重症医学科)：护士站、医生办公室、手推车</li>
+</ul>
+<h2 id="13F：手术室-一"><a href="#13F：手术室-一" class="headerlink" title="13F：手术室(一)"></a>13F：手术室(一)</h2><ul>
+<li>手术室(一)：导诊台、护士长办公室、第10手术室、笔记本(张主任)</li>
+</ul>
+<h2 id="14F：手术室-二"><a href="#14F：手术室-二" class="headerlink" title="14F：手术室(二)"></a>14F：手术室(二)</h2><ul>
+<li>手术室(二)：第1-9手术室、护理站、无菌笔记本、麻醉苏醒、PACU</li>
+</ul>
+<h1 id="三、大医楼"><a href="#三、大医楼" class="headerlink" title="三、大医楼"></a>三、大医楼</h1><h2 id="1F：中药房、供应室"><a href="#1F：中药房、供应室" class="headerlink" title="1F：中药房、供应室"></a>1F：中药房、供应室</h2><h2 id="2F：经典中医门诊、睡眠心理科门诊、营养科门诊、体重管理门诊"><a href="#2F：经典中医门诊、睡眠心理科门诊、营养科门诊、体重管理门诊" class="headerlink" title="2F：经典中医门诊、睡眠心理科门诊、营养科门诊、体重管理门诊"></a>2F：经典中医门诊、睡眠心理科门诊、营养科门诊、体重管理门诊</h2><ul>
+<li>经典中医门诊：诊室、中医外治治疗室</li>
+</ul>
+<h2 id="3F：疼痛科、产房"><a href="#3F：疼痛科、产房" class="headerlink" title="3F：疼痛科、产房"></a>3F：疼痛科、产房</h2><h2 id="4F：产科"><a href="#4F：产科" class="headerlink" title="4F：产科"></a>4F：产科</h2><ul>
+<li>产科：护士站、医生办公室</li>
+</ul>
+<h2 id="5F：妇产科门诊、妇科"><a href="#5F：妇产科门诊、妇科" class="headerlink" title="5F：妇产科门诊、妇科"></a>5F：妇产科门诊、妇科</h2><ul>
+<li>妇产科门诊：妇科诊室、产科诊室、胎心监护</li>
+<li>妇科：护士站、医生办公室、移动推车</li>
+</ul>
+<h2 id="6F：康复科-1"><a href="#6F：康复科-1" class="headerlink" title="6F：康复科"></a>6F：康复科</h2><ul>
+<li>康复科：护士站、医生办公室、移动推车</li>
+</ul>
+<h2 id="7F：肝科"><a href="#7F：肝科" class="headerlink" title="7F：肝科"></a>7F：肝科</h2><ul>
+<li>肝科：护士站、医生办公室、移动推车</li>
+</ul>
+<h2 id="8F：儿科"><a href="#8F：儿科" class="headerlink" title="8F：儿科"></a>8F：儿科</h2><ul>
+<li>儿科：护士站、医生办公室、移动推车</li>
+</ul>
+<h2 id="9F：肛肠科"><a href="#9F：肛肠科" class="headerlink" title="9F：肛肠科"></a>9F：肛肠科</h2><ul>
+<li>肛肠科：护士站、医生办公室、移动推车</li>
+</ul>
+<h1 id="四、时珍楼"><a href="#四、时珍楼" class="headerlink" title="四、时珍楼"></a>四、时珍楼</h1><h2 id="1F：消毒供应室"><a href="#1F：消毒供应室" class="headerlink" title="1F：消毒供应室"></a>1F：消毒供应室</h2><h2 id="2F：体检中心"><a href="#2F：体检中心" class="headerlink" title="2F：体检中心"></a>2F：体检中心</h2><h2 id="3F：医务部、医务科、质控科、护理部、重点办、医患办"><a href="#3F：医务部、医务科、质控科、护理部、重点办、医患办" class="headerlink" title="3F：医务部、医务科、质控科、护理部、重点办、医患办"></a>3F：医务部、医务科、质控科、护理部、重点办、医患办</h2><h2 id="6F：医学教育科、实训中心"><a href="#6F：医学教育科、实训中心" class="headerlink" title="6F：医学教育科、实训中心"></a>6F：医学教育科、实训中心</h2><h2 id="7F：药学部、科研办、临床营养科、临床实验机构、临床药学室、伦理委员会"><a href="#7F：药学部、科研办、临床营养科、临床实验机构、临床药学室、伦理委员会" class="headerlink" title="7F：药学部、科研办、临床营养科、临床实验机构、临床药学室、伦理委员会"></a>7F：药学部、科研办、临床营养科、临床实验机构、临床药学室、伦理委员会</h2><ul>
+<li>药学部：办公室</li>
+</ul>
+<h1 id="五、研修楼"><a href="#五、研修楼" class="headerlink" title="五、研修楼"></a>五、研修楼</h1><h2 id="1F：中医护理门诊、治未病门诊"><a href="#1F：中医护理门诊、治未病门诊" class="headerlink" title="1F：中医护理门诊、治未病门诊"></a>1F：中医护理门诊、治未病门诊</h2><h2 id="2F：足全息门诊"><a href="#2F：足全息门诊" class="headerlink" title="2F：足全息门诊"></a>2F：足全息门诊</h2><h1 id="六、发热门诊-门口"><a href="#六、发热门诊-门口" class="headerlink" title="六、发热门诊(门口)"></a>六、发热门诊(门口)</h1>]]></content>
       <categories>
         <category>工作</category>
       </categories>

@@ -1508,6 +1508,32 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 </ul>
 </li>
 </ul>
+<h3 id="5-3-3-分诊排号"><a href="#5-3-3-分诊排号" class="headerlink" title="5.3.3 分诊排号"></a>5.3.3 分诊排号</h3><ul>
+<li><p>排号：挂号完成后，系统按照规则给患者生成就诊顺序号，决定在诊室 &#x2F; 分诊台叫号的先后次序。简单说：挂号是拿到就诊资格，排号是排队顺序</p>
+<ol>
+<li>触发时机：部分医院挂号直接自动排号；部分是患者到院后，在分诊台 &#x2F; 自助机点击报到，才执行排号，生成排队序列。</li>
+<li>排序规则：一般优先按报到时间，也会兼顾预约优先、急诊优先、过号重排、特殊患者优先<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/6edc559f-7612-42e6-9cc1-2bdff1e0321b.png"></li>
+</ol>
+</li>
+<li><p>只有在系统配置了<code>报到</code>才会触发分诊排号，没有配置则直接到门诊医生那</p>
+<ul>
+<li>大类配置，优先级高于小类配置<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/507ebea6-5323-4987-9407-541b3e17b3ab.png"></li>
+<li>小类配置<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/66fb3028-b0ba-4e8d-b735-65acafcc9933.png"></li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-4-门诊医生问诊"><a href="#5-3-4-门诊医生问诊" class="headerlink" title="5.3.4 门诊医生问诊"></a>5.3.4 门诊医生问诊</h3><ul>
+<li><p>按照视频流程操作即可<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/667601f1-2754-4690-8734-40eff4e136bf.png"></p>
+</li>
+<li><p>测试库操作要点：</p>
+<ol>
+<li>要在系统配置上增加<code>doctor</code>这个医生的号源<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/image-8.png"></li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li>必须登陆<code>doctor</code>这个账号才能看到患者信息</li>
+</ol>
 ]]></content>
       <categories>
         <category>工作</category>
@@ -1551,10 +1577,9 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
     <content><![CDATA[<blockquote>
 <p>新人接电话可能会遇到没听过的科室或地方，没事可以多看看熟悉了解一下</p>
 </blockquote>
-<h1 id="一、厚德楼"><a href="#一、厚德楼" class="headerlink" title="一、厚德楼"></a>一、厚德楼</h1><h2 id="1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室"><a href="#1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室" class="headerlink" title="1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室"></a>1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室</h2><ul>
+<h1 id="一、厚德楼"><a href="#一、厚德楼" class="headerlink" title="一、厚德楼"></a>一、厚德楼</h1><h2 id="1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室、picc门诊"><a href="#1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室、picc门诊" class="headerlink" title="1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室、picc门诊"></a>1F：收费处、西药房、急诊科、服务中心、便民门诊、医保窗口、门诊手术室、picc门诊</h2><ul>
 <li>西药房：便民窗口、急诊窗口、窗口</li>
 <li>急诊科：导诊台、内科、外科、护士站、抢救室、注射室、移动推车、收费处</li>
-<li>服务中心：导诊台</li>
 </ul>
 <h2 id="2F：儿科门诊、儿童保健科、口腔科、乳腺科"><a href="#2F：儿科门诊、儿童保健科、口腔科、乳腺科" class="headerlink" title="2F：儿科门诊、儿童保健科、口腔科、乳腺科"></a>2F：儿科门诊、儿童保健科、口腔科、乳腺科</h2><ul>
 <li>儿科门诊：导诊台、诊室</li>

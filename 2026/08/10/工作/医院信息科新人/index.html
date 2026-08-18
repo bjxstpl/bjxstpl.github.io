@@ -287,7 +287,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -347,21 +347,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-08-17
+                    2026-08-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.9k
+                    6.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    20 分
+                    21 分
                 </div>
                 
 
@@ -745,6 +745,32 @@
 <ol start="2">
 <li>必须登陆<code>doctor</code>这个账号才能看到患者信息</li>
 </ol>
+<h3 id="5-3-5-门诊收费"><a href="#5-3-5-门诊收费" class="headerlink" title="5.3.5 门诊收费"></a>5.3.5 门诊收费</h3><ul>
+<li>医生接诊完成之后可以登陆挂号收费这个安全组去结算<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/57cd7e12-3ee4-4c8c-9f4a-8db2282f0445.png"></li>
+</ul>
+<h3 id="5-3-6-配药、发药、退药"><a href="#5-3-6-配药、发药、退药" class="headerlink" title="5.3.6 配药、发药、退药"></a>5.3.6 配药、发药、退药</h3><ul>
+<li><p>登陆<code>demo</code>这个账号，然后科室切换到<strong>门诊西药房</strong>，安全组切换到<strong>门诊药房组长</strong></p>
+</li>
+<li><p>按照视频流程操作即可</p>
+</li>
+<li><p>退药必须先在门诊医生点击退费申请才能退</p>
+</li>
+</ul>
+<h3 id="5-3-7-退费"><a href="#5-3-7-退费" class="headerlink" title="5.3.7 退费"></a>5.3.7 退费</h3><ul>
+<li><p>退药退费后可以登陆挂号收费这个安全组去执行退费</p>
+<ul>
+<li>作废：仅限当天、未日结、项目未执行、未发药、医保未上传清算的结算单。逻辑：标记原单据无效，不新增负数记录，原始单据状态改为作废，财务报表不计这笔收入；相当于这笔收费 “从来没发生过”，原始记录还在数据库，不是物理删除，但是不再参与日结统计<blockquote>
+<p>A收费员对自己未结算的单子是作废</p>
+</blockquote>
+</li>
+<li>红冲：跨天、已日结、药品已发、检查已做、医保已经结算，不能作废时用红冲。逻辑：保留原来正向收费单不变，额外生成一条金额完全一样的负数冲销单据，一正一负互相抵消；两条记录全部永久留存，审计、医保对账两条都能查到，会影响当日财务报表，产生一笔负收入<blockquote>
+<p>A收费员对B收费员结算的单子是红冲<br>A收费员对B自己已结算的单子是红冲</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/f9b3e70f-1852-4bbb-a38a-0a03858539b5.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/5020e201-37d0-42e1-bf6b-11c4aaf9d8f3.png"></p>
+<h2 id="5-4-住院业务流程"><a href="#5-4-住院业务流程" class="headerlink" title="5.4 住院业务流程"></a>5.4 住院业务流程</h2></li>
+</ul>
 
                 
             </div>

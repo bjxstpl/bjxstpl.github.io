@@ -1534,6 +1534,32 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <ol start="2">
 <li>必须登陆<code>doctor</code>这个账号才能看到患者信息</li>
 </ol>
+<h3 id="5-3-5-门诊收费"><a href="#5-3-5-门诊收费" class="headerlink" title="5.3.5 门诊收费"></a>5.3.5 门诊收费</h3><ul>
+<li>医生接诊完成之后可以登陆挂号收费这个安全组去结算<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/57cd7e12-3ee4-4c8c-9f4a-8db2282f0445.png"></li>
+</ul>
+<h3 id="5-3-6-配药、发药、退药"><a href="#5-3-6-配药、发药、退药" class="headerlink" title="5.3.6 配药、发药、退药"></a>5.3.6 配药、发药、退药</h3><ul>
+<li><p>登陆<code>demo</code>这个账号，然后科室切换到<strong>门诊西药房</strong>，安全组切换到<strong>门诊药房组长</strong></p>
+</li>
+<li><p>按照视频流程操作即可</p>
+</li>
+<li><p>退药必须先在门诊医生点击退费申请才能退</p>
+</li>
+</ul>
+<h3 id="5-3-7-退费"><a href="#5-3-7-退费" class="headerlink" title="5.3.7 退费"></a>5.3.7 退费</h3><ul>
+<li><p>退药退费后可以登陆挂号收费这个安全组去执行退费</p>
+<ul>
+<li>作废：仅限当天、未日结、项目未执行、未发药、医保未上传清算的结算单。逻辑：标记原单据无效，不新增负数记录，原始单据状态改为作废，财务报表不计这笔收入；相当于这笔收费 “从来没发生过”，原始记录还在数据库，不是物理删除，但是不再参与日结统计<blockquote>
+<p>A收费员对自己未结算的单子是作废</p>
+</blockquote>
+</li>
+<li>红冲：跨天、已日结、药品已发、检查已做、医保已经结算，不能作废时用红冲。逻辑：保留原来正向收费单不变，额外生成一条金额完全一样的负数冲销单据，一正一负互相抵消；两条记录全部永久留存，审计、医保对账两条都能查到，会影响当日财务报表，产生一笔负收入<blockquote>
+<p>A收费员对B收费员结算的单子是红冲<br>A收费员对B自己已结算的单子是红冲</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/f9b3e70f-1852-4bbb-a38a-0a03858539b5.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/5020e201-37d0-42e1-bf6b-11c4aaf9d8f3.png"></p>
+<h2 id="5-4-住院业务流程"><a href="#5-4-住院业务流程" class="headerlink" title="5.4 住院业务流程"></a>5.4 住院业务流程</h2></li>
+</ul>
 ]]></content>
       <categories>
         <category>工作</category>
@@ -1556,6 +1582,9 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 </ol>
 <h2 id="LIS检验系统相关"><a href="#LIS检验系统相关" class="headerlink" title="LIS检验系统相关"></a>LIS检验系统相关</h2><ol>
 <li>问题：病人自己查不到检验报告，向你查询<br>解决：登陆LIS检验系统 → 点击报告查询 → 选择时间、填入病人相关信息即可查询<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/f5a5753d-6c10-42f2-86f8-8cd594946d51.png"></li>
+</ol>
+<h2 id="HIS系统相关"><a href="#HIS系统相关" class="headerlink" title="HIS系统相关"></a>HIS系统相关</h2><ol>
+<li><strong>问题</strong>：超声科在 PACS 对医嘱撤销执行，超声本地界面状态变了，但在 HIS 上这条医嘱依旧显示 “已执行”<br><strong>原因</strong>：PACS 本地把这条任务标记撤销，接口没有把 “撤销执行” 消息推送回 HIS 医嘱执行表 OE_OrdExec。HIS 的医嘱主表还是保留旧的 “已执行” 状态，两边状态割裂<br><strong>解决</strong>：登陆HIS系统 → 点击执行医嘱 → 搜索患者信息 → 勾选已执行 → 撤销执行(撤销前要问清楚是哪条，不要撤销错了)<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/23c8f515-767e-4f63-84b3-a2c4019a8ecc.png"></li>
 </ol>
 <h1 id="硬件问题"><a href="#硬件问题" class="headerlink" title="硬件问题"></a>硬件问题</h1><ol>
 <li><p>问题：无线鼠标动不了<br>解决：可能电池没电，需要换电池</p>

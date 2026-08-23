@@ -1369,7 +1369,10 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <p>  1.HIS 存储患者敏感就诊、费用数据，属于核心等保对象，所有操作留日志。<br>  2. 禁止直接给普通业务人员开放数据库访问，变更、查询数据库必须走堡垒机，留审计记录。<br>  3. 导出患者数据必须脱敏，符合隐私合规。</p>
 </li>
 </ul>
-<h2 id="5-2-配置账号"><a href="#5-2-配置账号" class="headerlink" title="5.2 配置账号"></a>5.2 配置账号</h2><h3 id="5-2-1-创建账号"><a href="#5-2-1-创建账号" class="headerlink" title="5.2.1 创建账号"></a>5.2.1 创建账号</h3><p>为了方便后续学习，可以先登陆测试库管理员的账号给自己创建一个信息科的管理员账号：登陆测试库管理员账号 → 基础数据 → 系统管理 → 用户 → 注册新用户 → 填写相关信息保存即可<br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/1b93599c-a2d2-4ce2-91fa-8e28e836e673.png"><br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/b3e56b15-31ca-4489-a24f-8427e885114a.png"></p>
+<h2 id="5-2-配置账号"><a href="#5-2-配置账号" class="headerlink" title="5.2 配置账号"></a>5.2 配置账号</h2><h3 id="5-2-1-创建账号"><a href="#5-2-1-创建账号" class="headerlink" title="5.2.1 创建账号"></a>5.2.1 创建账号</h3><p>为了方便后续学习，可以先登陆<code>demo</code>账号创建收费、护士、医生、药房的账号：登陆测试库管理员账号 → 基础数据 → 系统管理 → 用户 → 注册新用户 → 填写相关信息保存即可<br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/1b93599c-a2d2-4ce2-91fa-8e28e836e673.png"><br>    <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/7f209108-a278-4e97-b219-3246022540e2.png"></p>
+<blockquote>
+<p>由于我已经创建好了收费、护士、医生、药房的账号，分别是sf01、hs01、ys01和yf01，可以直接登陆使用</p>
+</blockquote>
 <h3 id="5-2-2-添加其他科室登录权限"><a href="#5-2-2-添加其他科室登录权限" class="headerlink" title="5.2.2 添加其他科室登录权限"></a>5.2.2 添加其他科室登录权限</h3><ul>
 <li><p>HIS 系统给自己添加其他科室登录权限含义</p>
 <ul>
@@ -1421,7 +1424,7 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 </li>
 <li><p><strong>常见坑</strong><br>  1. 不读卡、手动新建档案，同一患者重复建多张卡，造成<strong>一人多卡</strong>，病历割裂，医生只能看到单张卡就诊记录。<br>  2. 儿童无身份证，只填姓名生日，容易出现重名重复档案。<br>  3. 建卡≠挂号，建卡只是建立患者档案，还需要单独挂号。</p>
 </li>
-<li><p><strong>测试库操作</strong>：登陆门诊挂号收费安全组 → 点击建卡 → 填写相关信息即可<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/1b0cb926-7a81-49c5-b5d6-255658838629.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/24c95ce4-5824-4fdf-bf0f-9ebce4f01b7c.png"></p>
+<li><p><strong>测试库操作</strong>：登陆sf01账号 → 选择门诊挂号收费安全组 → 点击建卡 → 填写相关信息即可<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/1b0cb926-7a81-49c5-b5d6-255658838629.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/24c95ce4-5824-4fdf-bf0f-9ebce4f01b7c.png"></p>
 <blockquote>
 <p>按照培训视频流程填写即可，然后发卡</p>
 </blockquote>
@@ -1477,9 +1480,11 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <li>预约号过期未取号，号源自动释放；</li>
 </ol>
 </li>
-<li><strong>测试库操作</strong>：在主界面点击挂号 → 输入卡号 → 选择科室和医生等信息 → 选择号进行挂号即可<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/8692cd37-de3b-4dcb-923a-0d9d0401d9be.png"><ul>
-<li>测试库没有挂号信息，要自己去配置：登入demo管理员账号 → 在搜索框搜医生坐诊 → 新增排班<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/04cb77f5-9db4-4676-bfdd-183a53425da9.png"></li>
-</ul>
+<li><strong>测试库操作</strong>：在主界面点击挂号 → 输入卡号 → 选择科室和医生等信息 → 选择号进行挂号即可<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/8692cd37-de3b-4dcb-923a-0d9d0401d9be.png"></li>
+<li><strong>测试库中会遇到的问题</strong>：<ol>
+<li>测试库没有挂号信息，要自己去配置：登入<code>demo</code>账号 → 在搜索框搜医生坐诊 → 新增排班<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/04cb77f5-9db4-4676-bfdd-183a53425da9.png"></li>
+<li>新增排班中没有相应的医生：点击医护人员 → 查找用户 → 点击指定科室 → 在对应的科室中设置需要排班<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/2c33e2a9-e13e-495c-b3f8-b2d22f53c2de.png"></li>
+</ol>
 </li>
 </ul>
 </li>
@@ -1515,7 +1520,7 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <li>排序规则：一般优先按报到时间，也会兼顾预约优先、急诊优先、过号重排、特殊患者优先<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/6edc559f-7612-42e6-9cc1-2bdff1e0321b.png"></li>
 </ol>
 </li>
-<li><p>只有在系统配置了<code>报到</code>才会触发分诊排号，没有配置则直接到门诊医生那</p>
+<li><p>只有在系统配置了<code>报到</code>才会触发分诊排号，这时候需要在分诊护士那里进行报到，没有配置则直接到门诊医生那</p>
 <ul>
 <li>大类配置，优先级高于小类配置<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/507ebea6-5323-4987-9407-541b3e17b3ab.png"></li>
 <li>小类配置<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/66fb3028-b0ba-4e8d-b735-65acafcc9933.png"></li>
@@ -1525,28 +1530,35 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <h3 id="5-3-4-门诊医生问诊"><a href="#5-3-4-门诊医生问诊" class="headerlink" title="5.3.4 门诊医生问诊"></a>5.3.4 门诊医生问诊</h3><ul>
 <li><p>按照视频流程操作即可<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/667601f1-2754-4690-8734-40eff4e136bf.png"></p>
 </li>
-<li><p>测试库操作要点：</p>
+<li><p>诊断录入时要注意：</p>
 <ol>
-<li>要在系统配置上增加<code>doctor</code>这个医生的号源<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/image-8.png"></li>
+<li>主诊断只能有一个</li>
+<li>有中医诊断时，一定要填证型<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/b03ebb96-2649-4ae3-b5cb-434809d91da6.png"></li>
+</ol>
+</li>
+<li><p>测试库操作遇到的问题：登陆ys01账号看不到患者信息</p>
+<ol>
+<li>先确定给ys01排班的科室和ys01登陆的科室是否对应</li>
+<li>如果上面没有出现问题，则需要给ys01添加号别才会显示患者信息：医生号别对照 → 添加号别(注意这里号别和医生一定要一样)<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/3d6a6748-e014-45c2-90e8-7bab7ab0e95d.png"></li>
 </ol>
 </li>
 </ul>
-<ol start="2">
-<li>必须登陆<code>doctor</code>这个账号才能看到患者信息</li>
-</ol>
 <h3 id="5-3-5-门诊收费"><a href="#5-3-5-门诊收费" class="headerlink" title="5.3.5 门诊收费"></a>5.3.5 门诊收费</h3><ul>
-<li>医生接诊完成之后可以登陆挂号收费这个安全组去结算<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/57cd7e12-3ee4-4c8c-9f4a-8db2282f0445.png"></li>
+<li>医生接诊完成之后可以登陆sf01，选择门诊挂号收费这个安全组去结算<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/57cd7e12-3ee4-4c8c-9f4a-8db2282f0445.png"></li>
 </ul>
 <h3 id="5-3-6-配药、发药、退药"><a href="#5-3-6-配药、发药、退药" class="headerlink" title="5.3.6 配药、发药、退药"></a>5.3.6 配药、发药、退药</h3><ul>
-<li><p>登陆<code>demo</code>这个账号，然后科室切换到<strong>门诊西药房</strong>，安全组切换到<strong>门诊药房组长</strong></p>
+<li><p>登陆<code>yf01</code>这个账号，然后科室切换到<strong>门诊西药房</strong></p>
+<ul>
+<li>登陆账号弹出没有权限：药房人员代码维护 → 选择药房名称和人员 → 勾选<code>审核、发药和配药</code> → 点击添加<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/4914b81d-1092-4163-a96b-3ab25b96382d.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/0eac0dbc-c052-44e7-ad0e-32ab22c16d8f.png"></li>
+</ul>
 </li>
-<li><p>按照视频流程操作即可</p>
+<li><p>配药 → 发药<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/9875381b-901d-43e0-8610-b14f1d125f8e.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/860d7f59-659f-4113-851e-94c41a93e73b.png"></p>
 </li>
-<li><p>退药必须先在门诊医生点击退费申请才能退</p>
+<li><p>退药必须先在门诊医生点击退费申请才能退<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/24bf6faf-b496-44e6-8850-1c51344e000d.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/bdbff365-a63d-42cc-ba0b-896c22c3bd48.png"></p>
 </li>
 </ul>
 <h3 id="5-3-7-退费"><a href="#5-3-7-退费" class="headerlink" title="5.3.7 退费"></a>5.3.7 退费</h3><ul>
-<li><p>退药退费后可以登陆挂号收费这个安全组去执行退费</p>
+<li><p>退药退费后可以登陆sf01，选择门诊挂号收费这个安全组去执行退费</p>
 <ul>
 <li>作废：仅限当天、未日结、项目未执行、未发药、医保未上传清算的结算单。逻辑：标记原单据无效，不新增负数记录，原始单据状态改为作废，财务报表不计这笔收入；相当于这笔收费 “从来没发生过”，原始记录还在数据库，不是物理删除，但是不再参与日结统计<blockquote>
 <p>A收费员对自己未结算的单子是作废</p>
@@ -1560,7 +1572,59 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <p><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/f9b3e70f-1852-4bbb-a38a-0a03858539b5.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/5020e201-37d0-42e1-bf6b-11c4aaf9d8f3.png"></p>
 <h2 id="5-4-住院业务流程"><a href="#5-4-住院业务流程" class="headerlink" title="5.4 住院业务流程"></a>5.4 住院业务流程</h2></li>
 </ul>
-]]></content>
+<p><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/1787445347448.png"></p>
+<h3 id="5-4-1-入院流程"><a href="#5-4-1-入院流程" class="headerlink" title="5.4.1 入院流程"></a>5.4.1 入院流程</h3><ol>
+<li><p>门诊医生开住院证<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/ab0d6f7e-8a31-432b-9f87-66efd337cece.png"><br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/5655fc72-4c75-4a87-80e7-ae5fc4e92f36.png"></p>
+</li>
+<li><p>入出院结算办理入院登记<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/bc3e102c-6804-4003-8860-6733987eb89a.png"><br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/2cc42dd3-fa57-43c7-bcc6-fddc8b960d12.png"><br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/8db1a17c-e823-4252-97de-64ccf95fd726.png"></p>
+</li>
+<li><p>住院护士分配床位和医生 </p>
+<ul>
+<li>注意：住院护士一定要在某个科的病区下，例如患者在登记时被安排在神经内科病区，则住院护士所在科室也要在神经内科病区，不能是神经内科，要不然看不到数据</li>
+<li>注意：住院医生所在科室一定要在某个科下，例如患者在登记时被安排在神经内科病区，则住院医生所在科室要在神经内科，不能是神经内科病区，要不然选择主管医生时看不到该医生</li>
+<li>分配床位直接点击患者，然后再点击空床位分床即可</li>
+</ul>
+</li>
+</ol>
+<p>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/f2a66e30-2c5d-4a68-b2c5-f500ee85e51d.png"></p>
+<ol start="4">
+<li>住院医生先开入院诊断→ 开医嘱 → 护士执行医嘱</li>
+</ol>
+<h3 id="5-4-2-特殊流程"><a href="#5-4-2-特殊流程" class="headerlink" title="5.4.2 特殊流程"></a>5.4.2 特殊流程</h3><ol>
+<li><p>会诊申请：本科遇到跨专业问题，申请其他专科医生过来给出诊疗参考意见</p>
+<ul>
+<li>发起申请（申请科室主管医生）：HIS 住院医生站→会诊→新增会诊申请，选择受邀科室 &#x2F; 指定会诊医生，填写简要病史、申请目的、问题诉求，勾选普通 &#x2F; 急会诊；提交后系统自动生成会诊医嘱<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/60f311dc-0bbf-4d59-ae0f-cd9138d819a3.png"><br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/e6712c39-891b-46ca-a0d8-28336e39cc8f.png"></li>
+<li>接收任务（受邀科室医生）：受邀医生工作站出现待会诊提醒弹窗，打开会诊处理，调阅患者病历、检验检查结果，接收任务，状态变为【已接收】</li>
+<li>现场会诊、书写会诊意见：受邀医生到病房查看病人，在 HIS 会诊模块填写会诊意见、电子签名提交；提交后记录写入电子病历，状态变为【已完成】</li>
+<li>申请科室接收意见、闭环：主管医生查看会诊意见，结合患者情况决定是否采纳，执行对应诊疗；确认后执行【结束会诊】，会诊流程闭环，会诊记录打印归入病历归档。</li>
+<li>注意：如果要取消会诊，则需要逆流程，即从下往上依次取消<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/76b57099-7568-4a0f-b48e-50343e1c0244.png"></li>
+</ul>
+</li>
+<li><p>手术申请：临床科室医生在 HIS 填写手术申请单，提交给手术室、麻醉科，用于预约手术间、麻醉医生、手术护士<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/304a2f2e-47e0-4f69-b218-d6cad7f148b4.png"></p>
+<ul>
+<li>HIS 提交手术申请：住院医生工作站→手术申请模块，填写术前诊断、拟行手术名称、手术级别、主刀医生、助手、预估时长、计划手术日期、麻醉方式、特殊器械耗材需求，普通 &#x2F; 急诊标记，保存提交<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/1fe6fe49-eb2c-4c38-95db-24618dec47e2.png"></li>
+<li>手术室 &#x2F; 麻醉科接收、排程：手麻系统收到申请，麻醉科做术前访视评估，手术室分配手术间、麻醉医师、巡回护士、器械护士，确定具体手术时点，生成手术通知单，回写状态到 HIS<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/bc1dcff3-673a-4785-b9f1-579fba53f2bd.png"><br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/a5a0f653-f22a-4dba-8c2d-41941b66ed3c.png"></li>
+<li>手术执行：患者送入手术室；手麻系统记录麻醉、术中用药、手术耗材；手术结束后手术记录、麻醉记录回传 HIS&#x2F;EMR</li>
+<li>取消手术：护士拒绝手术 → 医生取消手术<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/636957fb-f078-4431-8154-b8aa17f36e92.png"><br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/d3c855d1-d869-4f69-890c-d18f9682ade6.png"></li>
+</ul>
+</li>
+</ol>
+<h3 id="5-4-3-出院流程"><a href="#5-4-3-出院流程" class="headerlink" title="5.4.3 出院流程"></a>5.4.3 出院流程</h3><ol>
+<li><p>医生开立出院相关：填写出院诊断 → 开具今日出院临时医嘱 → 停掉之前的医嘱<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/0b95eb8b-512b-41d3-97b4-6f40651a10a6.png"><br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/c80c9896-bc35-4de3-b7db-1467f566aab4.png"><br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/be47dd24-fbb5-4b76-bab5-da16edf08475.png"></p>
+</li>
+<li><p>护士站处理出院医嘱：<br>  ① 点击护士执行，核对出院医嘱，执行出院医嘱；系统自动停止全部长期医嘱，未执行的检查检验、治疗医嘱做作废处理；<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/cb4fbb07-5c06-49b8-9db4-c7aa1f70b913.png"><br>  ② 点击费用管理，选择患者住院费用核查，核对全部费用，确认检查、检验、手术、耗材全部计费完成，无漏记账<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/4cd42ba1-b7be-487b-a6a4-758edd9160bd.png"><br>  ③ 选中患者，执行出院，患者状态变为<strong>待结算</strong>，床位标记待出院，消息推送住院收费处，打印出院通知单交给患者家属去收费窗口结算<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/976cec4d-50ef-46b4-91e2-2bf492dba292.png"></p>
+</li>
+<li><p>住院收费处结算：收费人员调取待结算患者，系统汇总全部住院费用<br>  <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/ee2569e8-ee79-4758-904a-8aa90a059c53.png"></p>
+</li>
+</ol>
+<h3 id="5-4-4-召回业务"><a href="#5-4-4-召回业务" class="headerlink" title="5.4.4 召回业务"></a>5.4.4 召回业务</h3><ul>
+<li><p>已经做预出院但<strong>还没有正式结算</strong>：护士站执行【出院召回】，患者回到在院状态，可修改医嘱、补费用<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/10bb6d50-b28f-4e08-a5c1-8d3f74f7c2d9.png"></p>
+</li>
+<li><p><strong>已经财务正式结算</strong>：不能直接召回，收费员需要做【取消结算 &#x2F; 红冲结算单】，撤销结算后再召回，财务需要留痕，禁止随意操作</p>
+</li>
+</ul>
+<h3 id="5-4-5-转院流程"><a href="#5-4-5-转院流程" class="headerlink" title="5.4.5 转院流程"></a>5.4.5 转院流程</h3><p>医生开转院医嘱，填写转入医院，护士预出院，收费处结算，和普通出院流程一致</p>
+<h2 id="5-5-药库业务流程"><a href="#5-5-药库业务流程" class="headerlink" title="5.5 药库业务流程"></a>5.5 药库业务流程</h2>]]></content>
       <categories>
         <category>工作</category>
       </categories>
@@ -1584,7 +1648,10 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <li>问题：病人自己查不到检验报告，向你查询<br>解决：登陆LIS检验系统 → 点击报告查询 → 选择时间、填入病人相关信息即可查询<br><img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/f5a5753d-6c10-42f2-86f8-8cd594946d51.png"></li>
 </ol>
 <h2 id="HIS系统相关"><a href="#HIS系统相关" class="headerlink" title="HIS系统相关"></a>HIS系统相关</h2><ol>
-<li><strong>问题</strong>：超声科在 PACS 对医嘱撤销执行，超声本地界面状态变了，但在 HIS 上这条医嘱依旧显示 “已执行”<br><strong>原因</strong>：PACS 本地把这条任务标记撤销，接口没有把 “撤销执行” 消息推送回 HIS 医嘱执行表 OE_OrdExec。HIS 的医嘱主表还是保留旧的 “已执行” 状态，两边状态割裂<br><strong>解决</strong>：登陆HIS系统 → 点击执行医嘱 → 搜索患者信息 → 勾选已执行 → 撤销执行(撤销前要问清楚是哪条，不要撤销错了)<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/23c8f515-767e-4f63-84b3-a2c4019a8ecc.png"></li>
+<li><p><strong>问题</strong>：超声科在 PACS 对医嘱撤销执行，超声本地界面状态变了，但在 HIS 上这条医嘱依旧显示 “已执行”<br><strong>原因</strong>：PACS 本地把这条任务标记撤销，接口没有把 “撤销执行” 消息推送回 HIS 医嘱执行表 OE_OrdExec。HIS 的医嘱主表还是保留旧的 “已执行” 状态，两边状态割裂<br><strong>解决</strong>：登陆HIS系统 → 点击执行医嘱 → 搜索患者信息 → 勾选已执行 → 撤销执行(撤销前要问清楚是哪条，不要撤销错了)<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E8%BF%90%E7%BB%B4%E8%AE%B0%E5%BD%95/23c8f515-767e-4f63-84b3-a2c4019a8ecc.png"></p>
+</li>
+<li><p>问题：新增排班中没有相应的医生<br>解决：登陆HIS系统 → 点击医护人员 → 查找用户 → 点击指定科室 → 在对应的科室中设置需要排班<br> <img src="/../../images/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91%E6%96%B0%E4%BA%BA/2c33e2a9-e13e-495c-b3f8-b2d22f53c2de.png"></p>
+</li>
 </ol>
 <h1 id="硬件问题"><a href="#硬件问题" class="headerlink" title="硬件问题"></a>硬件问题</h1><ol>
 <li><p>问题：无线鼠标动不了<br>解决：可能电池没电，需要换电池</p>

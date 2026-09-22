@@ -933,12 +933,30 @@ git config --global user.email“your@email.com&quot;<span aria-hidden="true" cl
 <li>点击使用秘钥 → 按 <code>Win+R</code>，输入 <code>%userprofile%\.codex</code> 打开配置目录 → 将相应信息配置到相应文件 → 退出重启 → 新建对话看能否正常使用<br> <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-1.png"><br> <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-2.png"></li>
 </ol>
 <h2 id="2-2-CC-Switch配置"><a href="#2-2-CC-Switch配置" class="headerlink" title="2.2 CC Switch配置"></a>2.2 CC Switch配置</h2><ul>
-<li>下载：<a href="https://ccswitch.lovable.app/">https://ccswitch.lovable.app/</a></li>
-<li>配置：<ul>
+<li><p>下载：<a href="https://ccswitch.lovable.app/">https://ccswitch.lovable.app/</a></p>
+</li>
+<li><p>配置：</p>
+<ul>
 <li>打开路由总开关<br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-9.png"></li>
 <li>找到自己使用的桌面体<br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-10.png"></li>
 <li>添加新的配置<br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-11.png"></li>
 <li>填写相关信息，主要就是<code>API Key</code>和<code>API 请求地址</code><br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-12.png"></li>
+</ul>
+</li>
+<li><p>遇到的问题：loveapi 无法连通: Connection failed: errorsending request for url(<a href="https://api.loveapi.top/v1)%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5(DNS/%E8%BF%9E%E6%8E%A5/TLS/%E8%B6%85%E6%97%B6)%E3%80%82%E8%AF%B7%E6%A3%80%E6%9F%BB">https://api.loveapi.top/v1)无法建立连接(DNS/连接/TLS/超时)。请检査</a> base ur 与网络。<br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-13.png"></p>
+<ul>
+<li>原因：cc-switch启用的本地路由，和clash的代理冲突了</li>
+<li>解决：<ol>
+<li><p>Clash的规则文件： 添加下面这几行</p>
+<pre class="line-numbers language-none"><code class="language-none"># 强制 localhost 和 127.0.0.1 走直连模式（必须放在最靠前的位置）
+- DOMAIN-SUFFIX,localhost,DIRECT
+- IP-CIDR,127.0.0.0&#x2F;8,DIRECT<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>  <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-14.png"><br>  <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-15.png"></p>
+</li>
+<li><p>将Clash的TUN模式打开并关闭系统代理<br>  <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-16.png"></p>
+</li>
+</ol>
+</li>
 </ul>
 </li>
 </ul>
@@ -1784,6 +1802,791 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
       </categories>
       <tags>
         <tag>医院信息科</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软考中级</title>
+    <url>/2026/08/30/%E5%B7%A5%E4%BD%9C/%E8%BD%AF%E8%80%83/</url>
+    <content><![CDATA[<h1 id="一、导学"><a href="#一、导学" class="headerlink" title="一、导学"></a>一、导学</h1><h2 id="1-1-考试说明"><a href="#1-1-考试说明" class="headerlink" title="1.1 考试说明"></a>1.1 考试说明</h2><ul>
+<li><p><strong>考试概况</strong>：计算机技术与软件专业技术资格（⽔平）考试，简称”软考”，是由国家人力资源和社会保障部、工业和信息化部领导下的国家级考试。计算机软件资格考试设置了27个专业资格，涵盖5个专业领域，3个级别层次（初级、中级、高级）<br><img src="/../../images/%E8%BD%AF%E8%80%83/image.png"></p>
+</li>
+<li><p><strong>报考相关</strong>：</p>
+<ul>
+<li>官方网站：<a href="https://bm.ruankao.org.cn/sign/welcome">https://bm.ruankao.org.cn/sign/welcome</a> （报名、成绩查询、准考证打印）</li>
+<li>报考时间：上半年 3‑4 月报名，5-6 月考试；下半年 8‑9 月报名，10-11 月考试</li>
+<li>报名费⽤: 约100-150元，各省份标准不同</li>
+</ul>
+</li>
+<li><p><strong>考试科目</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">科目</th>
+<th align="left">题型</th>
+<th align="left">题量</th>
+<th align="left">分值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">基础知识</td>
+<td align="left">选择题</td>
+<td align="left">75 道单选</td>
+<td align="left">每题 1 分，共 75 分</td>
+</tr>
+<tr>
+<td align="left">应用技术</td>
+<td align="left">案例分析</td>
+<td align="left">4 道大题</td>
+<td align="left">每题 15-20 分，共 75 分</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>考试形式与时间</strong></p>
+<ul>
+<li>方式：机考</li>
+<li>时间安排 ：两科连续考试，共 4 小时（8:30-12:30 或 14:30-18:30）</li>
+<li>机考界面：显示试题编号和小问序号，包含案例背景描述；<strong>可使用计算器</strong>（截至 2025 年 5 月考试仍可用），注意时间分配，合理使用标记功能<br><img src="/../../images/%E8%BD%AF%E8%80%83/Image_032.jpg"><br><img src="/../../images/%E8%BD%AF%E8%80%83/Image_034.jpg"></li>
+</ul>
+</li>
+<li><p><strong>合格标准</strong></p>
+<ul>
+<li>每科 <strong>45 分及以上</strong>（总分的 60%）即合格</li>
+<li><strong>两科必须同时达标</strong>；成绩不保留，不合格科目下次需全部重考（不实行单科成绩保留制度）</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-证书作用"><a href="#1-2-证书作用" class="headerlink" title="1.2 证书作用"></a>1.2 证书作用</h2><table>
+<thead>
+<tr>
+<th align="left">作用</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">国家级认证</td>
+<td align="left">人社部 + 工信部联合颁发，IT 行业权威性高、认可度广</td>
+</tr>
+<tr>
+<td align="left">职称以考代评</td>
+<td align="left">中级通过获中级职称资格，高级通过获副高级职称资格；具体聘任由用人单位决定</td>
+</tr>
+<tr>
+<td align="left">积分落户</td>
+<td align="left">一线城市（如广州）可享受落户加分，部分省市”中级证书 + 学历”可直接入户；以当地最新政策为准</td>
+</tr>
+<tr>
+<td align="left">企业投标加分</td>
+<td align="left">依据《政府采购法》及招标文件要求，持证可增加中标几率（PMP 等证书部分项目也被认可）</td>
+</tr>
+<tr>
+<td align="left">个税抵扣</td>
+<td align="left">持证当年可申报个税专项附加扣除 3600 元；部分城市有人才计划、职称补贴</td>
+</tr>
+<tr>
+<td align="left">报考无限制</td>
+<td align="left">无学历、资历、年龄、专业限制（政策截至 2025 年 5 月有效）</td>
+</tr>
+</tbody></table>
+<h2 id="1-3-教材章节考情分析"><a href="#1-3-教材章节考情分析" class="headerlink" title="1.3 教材章节考情分析"></a>1.3 教材章节考情分析</h2><ul>
+<li><p><strong>章节重要性分级</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">章节</th>
+<th align="left">内容</th>
+<th align="left">重要性</th>
+<th align="left">题型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">第 1-2 章</td>
+<td align="left">信息化发展、信息技术发展</td>
+<td align="left">★★</td>
+<td align="left">选择题</td>
+</tr>
+<tr>
+<td align="left">第 3 章</td>
+<td align="left">信息技术服务</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 4 章</td>
+<td align="left">信息系统架构</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 5 章</td>
+<td align="left">软件工程</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 6 章</td>
+<td align="left">数据工程</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 7 章</td>
+<td align="left">软硬件系统集成</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 8 章</td>
+<td align="left">信息安全工程</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 9 章</td>
+<td align="left">项目管理概论</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 10 章</td>
+<td align="left">启动过程组</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 11 章</td>
+<td align="left">规划过程组</td>
+<td align="left">★★★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 12 章</td>
+<td align="left">执行过程组</td>
+<td align="left">★★★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 13 章</td>
+<td align="left">监控过程组</td>
+<td align="left">★★★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 14 章</td>
+<td align="left">收尾过程组</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 15 章</td>
+<td align="left">组织保障</td>
+<td align="left">★★★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 16 章</td>
+<td align="left">监理基础知识</td>
+<td align="left">★</td>
+<td align="left">选择题</td>
+</tr>
+<tr>
+<td align="left">第 17 章</td>
+<td align="left">法律法规和标准规范</td>
+<td align="left">★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+<tr>
+<td align="left">第 18 章</td>
+<td align="left">职业道德规范</td>
+<td align="left">★</td>
+<td align="left">选择题、案例分析</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>低星章节不能完全放弃：近年出现第 16 章（监理基础）案例分析题，高级考试已有偏题现象</p>
+</blockquote>
+</li>
+<li><p><strong>考情分析</strong></p>
+<blockquote>
+<p>教材共 18 章，分为三大模块</p>
+</blockquote>
+<ol>
+<li><strong>计算机专业知识：第 1‑8 章</strong>（信息化、信息技术、IT 服务、架构、软件工程、数据工程、软硬件集成、信息安全）<ul>
+<li>特点：<strong>广而不深</strong>，以选择题为主；3‑8 章也可能出案例分析</li>
+</ul>
+</li>
+<li><strong>项目管理专业知识：第 9‑14 章（核心重点）</strong><ul>
+<li>包含五大过程组：启动、规划、执行、监控、收尾；十大知识领域、49 个过程、12 原则、8 大绩效域</li>
+<li>分值：选择题占 <strong>46.4&#x2F;75 分</strong>；案例分析占 <strong>60‑75 分</strong></li>
+</ul>
+</li>
+<li><strong>项目保障知识：第 15‑18 章</strong><ul>
+<li>15 章组织保障（重点）；16 章监理基础；17 章法律法规标准；18 章职业道德。16‑18 章分值低，不能完全放弃</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>案例分析题型与策略</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">题型</th>
+<th align="left">策略</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">找错改错</td>
+<td align="left">必须拿下，多写多得</td>
+</tr>
+<tr>
+<td align="left">计算题（约 18-20 分）</td>
+<td align="left">必须掌握，主要涉及成本类和进度类；掌握后案例分析及格一半；刷《真题集锦》历年真题（含中高级）</td>
+</tr>
+<tr>
+<td align="left">选择、填空、判断</td>
+<td align="left">难度一般，争取高分</td>
+</tr>
+<tr>
+<td align="left">默写题</td>
+<td align="left">最难，丢分重灾区；尽量准备，不要留空，可合理编答</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="1-4-学习安排"><a href="#1-4-学习安排" class="headerlink" title="1.4 学习安排"></a>1.4 学习安排</h2><ul>
+<li><p><strong>第一阶段：基础知识精讲</strong></p>
+<ul>
+<li>按教材第三版顺序精讲</li>
+<li>配套资料：《考点集锦（客观题篇）-2511》《考题集锦（客观题篇）-2511》</li>
+</ul>
+</li>
+<li><p><strong>第二阶段：计算题专题</strong></p>
+<ul>
+<li>三大模块：一般计算题（选择题）、成本类计算题、进度类计算题（选择 + 案例）</li>
+<li>新增 24 年 11 月新考法（如合同计算）</li>
+<li>配套：《考点集锦（计算案例篇）-2511》</li>
+</ul>
+</li>
+<li><p><strong>第三阶段：案例分析专题</strong></p>
+<ul>
+<li>案例基础、找错改错专题、历年真题讲解</li>
+</ul>
+</li>
+<li><p><strong>第四阶段：冲刺速成</strong></p>
+<ul>
+<li>按十大知识领域维度讲解，”考点 + 必做题”形式</li>
+<li>配套：《冲刺速成班-知识点》《冲刺速成班-必做题》</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-5-刷题与学习方法"><a href="#1-5-刷题与学习方法" class="headerlink" title="1.5 刷题与学习方法"></a>1.5 刷题与学习方法</h2><ul>
+<li><strong>章节练习</strong>：每学完一章立即做对应章节题，学练结合；小程序 + 电子版习题册内容同步</li>
+<li><strong>真题覆盖</strong>：2016 年至今真题均有参考价值</li>
+<li><strong>错题本</strong>：错题自动归集，定期回顾，针对性强化薄弱环节</li>
+<li><strong>纠错与笔记</strong>：可对题目纠错、添加个人笔记</li>
+<li><strong>看视频</strong>：第一遍认真听、<strong>不记笔记</strong>；第二遍再记笔记</li>
+<li><strong>笔记</strong>：准备专用笔记本（电子&#x2F;纸质），记录老师强调的知识点、作业及解答，后期复习的重要资料；可直接在教材上记</li>
+<li><strong>英文题</strong>：积累项目管理英文词汇 + 做历年英文真题</li>
+</ul>
+<h1 id="二、信息化发展"><a href="#二、信息化发展" class="headerlink" title="二、信息化发展"></a>二、信息化发展</h1><h2 id="2-1-信息与信息化"><a href="#2-1-信息与信息化" class="headerlink" title="2.1 信息与信息化"></a>2.1 信息与信息化</h2><h3 id="2-1-1-信息基础"><a href="#2-1-1-信息基础" class="headerlink" title="2.1.1 信息基础"></a>2.1.1 信息基础</h3><ul>
+<li><p><strong>信息的定义</strong></p>
+<ul>
+<li>泛指定义<ul>
+<li>基本概念：信息是指⾳讯、消息、信息系统传输和处理的对象，<strong>泛指⼈类社会传播的⼀切内容</strong></li>
+<li>载体特性：以<strong>物质介质</strong>为载体，传递和反映世界各种事物存在⽅式、运动状态等的表征</li>
+<li>本质属性：信息<strong>不是物质，也不是能量</strong>，它以普遍形式表达物质运动规律，在客观世界中⼤量存在、产⽣和传递</li>
+</ul>
+</li>
+<li>基础定义<ul>
+<li>物质属性：信息是物质、能量及其属性的标示的集合，是<strong>确定性的增加</strong></li>
+<li>认知作⽤：随着信息量增加，⼈们对客观世界的确定性认知也随之增强（如天⽓预报信息减少出⾏不确定性）</li>
+</ul>
+</li>
+<li>香农定义<ul>
+<li>核⼼观点：”信息是⽤来消除随机<strong>不定性的东⻄</strong>“，信息量单位为⽐特(bit)</li>
+<li>熵理论应⽤：将热⼒学熵引⼊信息论，<strong>信息与熵相反</strong><ul>
+<li>熵：系统⽆序程度的度量</li>
+<li>信息：系统<strong>有序程度</strong>的度量，表现为<strong>负熵</strong></li>
+</ul>
+</li>
+<li>考试重点：该概念在⾼校考试中曾以选择题形式出现，需重点掌握信息与熵的对⽴关系</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>信息的特征与质量</strong></p>
+<ul>
+<li><p>信息的特征</p>
+<table>
+<thead>
+<tr>
+<th>信息特征</th>
+<th>简单解释</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>客观性</td>
+<td>信息是客观事物的反映，不以人的意志转移；分客观信息、主观信息（决策计划）</td>
+<td>设备故障告警客观存在；项目计划属于主观信息，最终要落地为客观行动</td>
+</tr>
+<tr>
+<td>普遍性</td>
+<td>物质无处不在，信息就无处不在，自然、社会各个领域都产生信息</td>
+<td>一年四季节气信息；企业日常业务源源不断产生各类单据信息</td>
+</tr>
+<tr>
+<td>无限性</td>
+<td>客观世界无限，信息总量无限；同一个事物也可以产生无穷多角度信息</td>
+<td>互联网每天产生海量日志新闻；同一个项目，可以从成本、进度、质量无数角度产生信息</td>
+</tr>
+<tr>
+<td><strong>动态性</strong></td>
+<td>信息随时间发生变化，内容、价值都会改变，和时效性紧密相关</td>
+<td>股票实时行情、实时路况导航；昨天的项目进度数据今天就发生变化</td>
+</tr>
+<tr>
+<td>相对性</td>
+<td>同一信息，不同人获取、理解、价值不一样（价值相对性）</td>
+<td>同样一份市场调研报告，对销售很有用，对行政人员参考价值很小</td>
+</tr>
+<tr>
+<td>依附性</td>
+<td>信息<strong>不能脱离载体独立存在</strong>，载体可以更换，信息本身不变</td>
+<td>项目分数，可以写在试卷、存数据库、打印 PDF；载体变分数不变</td>
+</tr>
+<tr>
+<td>变换性</td>
+<td>信息经过加工处理，可以改变表现形式，核心内容不变</td>
+<td>原始业务数据，加工统计后生成图表报表；文字转语音</td>
+</tr>
+<tr>
+<td>传递性</td>
+<td>空间上扩散、时间上存储；信息可以传播转移</td>
+<td>开会同步项目状态；把文档保存到硬盘（时间传递），微信发文件（空间传递）</td>
+</tr>
+<tr>
+<td>层次性</td>
+<td>信息分为战略、战术、作业不同层级，粒度不一样</td>
+<td>总经理看年度战略报表；部门经理看季度报表；一线员工看每日工作单据</td>
+</tr>
+<tr>
+<td><strong>系统性</strong></td>
+<td>各类信息可以集合，形成完整整体 &#x2F; 信息系统；信息集合具备整体效应</td>
+<td>企业 ERP 系统，集合采购、销售、财务多类信息，形成完整企业信息集合；项目管理平台整合进度、成本、风险各类信息</td>
+</tr>
+<tr>
+<td><strong>转化性</strong></td>
+<td>在有效利用条件下，信息可以转化为物质、能量；信息产生离不开物质，传递离不开能量</td>
+<td>根据市场情报（信息），调整生产、制造出产品（物质）；项目方案信息落地，建成实际信息系统</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>信息质量属性：获取信息可以满足人们消除不确定性的需求，因此信息具有价值，而价值的大小决定于信息的质量，这就要求信息满足一定的质量属性，主要包括精确性、完整性、可靠性、及时性、经济性、可验证性和安全性等<br><img src="/../../images/%E8%BD%AF%E8%80%83/image-1.png"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>信息传输模型</strong><br><img src="/../../images/%E8%BD%AF%E8%80%83/image-2.png"></p>
+<ul>
+<li>核⼼要素：由信源、编码器、信道、解码器、信宿和噪声六部分组成，信息通过流动实现价值</li>
+<li>信源作⽤：产⽣信息的实体（如发送”ABC”字⺟的发送者），是信息的原始发出⽅</li>
+<li>编码必要性：将信源信息（如ABC）转换为信道可识别的形式（如⼆进制），类似翻译过程</li>
+<li>信道示例：TCP&#x2F;IP⽹络等传输媒介，只识别编码后的信号形式</li>
+<li>解码功能：将信道信号还原为信宿可理解的形式（如⼆进制转回ABC）</li>
+<li>噪声特性：⼲扰可来⾃信息系统任何层级，影响传输准确性</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-2-信息系统基础"><a href="#2-1-2-信息系统基础" class="headerlink" title="2.1.2 信息系统基础"></a>2.1.2 信息系统基础</h3><ul>
+<li><p><strong>系统及其特性</strong></p>
+<ul>
+<li><p>定义：是由相互联系、相互依赖、相互作⽤的事物或过程组成的具有整体功能和综合⾏为的统⼀体</p>
+</li>
+<li><p>特性：</p>
+<table>
+<thead>
+<tr>
+<th>系统特性</th>
+<th>简要解释</th>
+<th>考试举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>目的性</td>
+<td>任何系统都具备明确目标；<strong>目标决定系统功能</strong>，人为构建的系统都是为达成特定目的而建立</td>
+<td>企业 ERP 系统，目的是实现企业进销存、财务一体化管理；项目管理系统目的管控项目进度成本</td>
+</tr>
+<tr>
+<td>整体性</td>
+<td>系统是有机整体，<strong>整体功能不等于各要素简单相加，整体大于部分之和</strong>；要素服从整体目标，单个部件无法实现系统完整功能</td>
+<td>计算机由 CPU、内存、硬盘组成；单独 CPU 不能完成计算，组合在一起才具备完整计算机能力</td>
+</tr>
+<tr>
+<td>层次性</td>
+<td>系统是相对概念；大系统包含若干子系统，子系统又可拆分为更小单元；一个系统也可以是更大系统的组成部分</td>
+<td>企业系统：集团系统→分子公司系统→部门系统→班组子系统，一层套一层</td>
+</tr>
+<tr>
+<td>稳定性</td>
+<td>受到外界干扰时，系统仍可维持内部结构、秩序；状态、演化路径可预测；抗扰动，保持原有工作状态</td>
+<td>服务器集群，少量节点故障，整体业务仍然可以正常对外提供服务</td>
+</tr>
+<tr>
+<td>突变性</td>
+<td>系统失稳，从一种状态<strong>剧烈跳跃转变到另一种状态</strong>，属于系统的<strong>质变</strong>形式</td>
+<td>系统遭遇大规模网络攻击，从正常运行直接全面瘫痪；项目发生重大风险，项目状态直接从执行变为终止</td>
+</tr>
+<tr>
+<td>自组织性</td>
+<td>开放系统，依靠内外因素，<strong>自发从无序走向有序、低级有序走向高级有序，不需要外部强制干预</strong></td>
+<td>团队成员自发协作，逐步形成规范工作流程；市场自发形成供需平衡机制</td>
+</tr>
+<tr>
+<td>相似性</td>
+<td>不同系统存在<strong>同构、同态</strong>，结构、演化规律存在相似之处</td>
+<td>企业管理系统和项目管理系统，都具备计划、执行、监控的闭环逻辑；不同行业的 ERP 架构逻辑相似</td>
+</tr>
+<tr>
+<td>相关性</td>
+<td>系统内部各个要素之间<strong>相互作用、相互依赖</strong>；一个要素发生变化，会影响其他要素（城门失火殃及池鱼）</td>
+<td>项目管理系统，成本模块改动，会联动影响进度、资源模块的数据</td>
+</tr>
+<tr>
+<td>环境适应性</td>
+<td>系统存在于外部环境之中，系统与环境相互作用，能够调整自身去适应外部环境变化；不能适应环境则系统会消亡</td>
+<td>企业业务系统根据政策变化迭代升级；软件版本更新适配新的操作系统环境</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p><strong>信息系统及其特性</strong></p>
+<ul>
+<li>定义：通过输⼊数据，进⾏加⼯处理，最后产⽣信息的系统</li>
+<li>核⼼组件：<ul>
+<li>硬件：物理设备基础</li>
+<li>软件：程序指令集合</li>
+<li>数据库：数据存储中⼼</li>
+<li>⽹络：连接传输通道</li>
+<li>存储设备：数据持久化介质</li>
+<li>感知设备：数据采集终端</li>
+<li>外设：辅助输⼊输出设备</li>
+<li>⼈员：系统操作者和维护者（常被误认为不属于系统组成部分）</li>
+<li>规程：数据处理的标准流程和规则（常被误认为不属于系统组成部分）</li>
+</ul>
+</li>
+<li>从用途类型来划分，信息系统一般包括<strong>事务处理系统、管理信息系统、决策支持系统、电子商务系统、生产制造系统、电子政务系统</strong>等<br><img src="/../../images/%E8%BD%AF%E8%80%83/image-3.png"></li>
+<li>特点：<strong>面向管理</strong>和<strong>支持生产</strong>是信息系统的显著特点</li>
+<li>特性：<ul>
+<li>开放性：系统可访问性，体现为标准化接⼝（如电商系统与物流系统对接）</li>
+<li>脆弱性：潜在失效⻛险（如特定操作导致系统崩溃的隐蔽缺陷）</li>
+<li>健壮性(鲁棒性)：抗⼲扰能⼒（采⽤冗余&#x2F;容错技术保障系统稳定性）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>信息系统的生命周期</strong></p>
+<ul>
+<li><p>完整阶段：</p>
+<ul>
+<li>系统规划：可⾏性研究→形成系统设计任务书</li>
+<li>系统分析：需求调研→建⽴<strong>逻辑</strong>模型（回答”做什么”）</li>
+<li>系统设计：技术⽅案→<strong>物理</strong>模型（回答”怎么做”）</li>
+<li>系统实施：编码测试→形成测试报告</li>
+<li>运⾏维护：系统优化→产出维护报告</li>
+</ul>
+</li>
+<li><p>简化划分：立项（系统规划） → 开发（分析+设计+实施+验收）→ 运维 → 消亡<br><img src="/../../images/%E8%BD%AF%E8%80%83/image-4.png"></p>
+</li>
+<li><p>关键区别：</p>
+<ul>
+<li>逻辑设计阶段关注系统功能需求</li>
+<li>物理设计阶段解决技术实现⽅案</li>
+</ul>
+</li>
+<li><p>项⽬管理视⻆：启动→计划→执⾏→收尾四阶段模型</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-1-3-信息化基础"><a href="#2-1-3-信息化基础" class="headerlink" title="2.1.3 信息化基础"></a>2.1.3 信息化基础</h3><ul>
+<li><p>信息化内涵</p>
+<ul>
+<li><p>核⼼本质：通过<strong>全体社会成员</strong>应⽤信息技术⼯具，改⾰⽣产关系与上层建筑，最终实现<strong>国家综合实⼒</strong>、<strong>社会⽂明</strong>和<strong>⼈⺠⽣活质量</strong>的三重提升</p>
+</li>
+<li><p>四⼤组成部分：</p>
+<ul>
+<li>信息⽹络体系：包含信息资源库、信息系统集群和公共通信⽹络平台</li>
+<li>信息产业基础：涵盖信息技术研发、信息设备制造和信息咨询服务三⼤⽀柱</li>
+<li>社会运⾏环境：涉及现代⼯农业体系、政策法规、⽂化教育等上层建筑要素</li>
+<li>效⽤积累过程：表现为劳动者素质、现代化⽔平、⽣活质量等指标的持续进</li>
+</ul>
+</li>
+<li><p>关键启示：</p>
+<ul>
+<li>主体：强调<strong>全体社会成员</strong>（易错点：⾮仅IT从业者）</li>
+<li>时空维度：⻓期过程（时域）+ 全领域覆盖（空域）</li>
+<li>实施路径：以信息技术⼯具为⼿段，通过<strong>⽣产⼒变⾰推动⽣产关系改⾰</strong></li>
+<li>终极⽬标：三位⼀体提升（国家实⼒+社会⽂明+人民⽣活质量）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>信息化体系</strong></p>
+<ul>
+<li>国家信息化体系包括信息技术应用、信息资源、信息网络、信息技术和产业、信息化人才、信息化政策法规和标准规范6个要素，这6个要素的关系构成了一个有机的整体，如图所示<br><img src="/../../images/%E8%BD%AF%E8%80%83/image-5.png"></li>
+<li>结构记忆⼝诀：”上应下基，左⼈右规，中存资源云为⽹”<ul>
+<li>上：信息技术应⽤（⻰头&#x2F;主阵地）</li>
+<li>下：信息技术产业（物质基础）</li>
+<li>左：信息化⼈才（成功之本）</li>
+<li>右：政策法规（发展保障）</li>
+<li>中：信息资源（核⼼任务）+信息⽹络（基础设施）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>信息化趋势</strong></p>
+<ul>
+<li><p>组织信息化：</p>
+<ul>
+<li>演进路径：产品→产业→社会⽣活→国⺠经济（范围逐级扩⼤）<ul>
+<li>产品信息化：智能元器件嵌⼊（如智能家居），信息⽐重提升</li>
+<li>产业信息化：传统产业+信息技术&#x3D;产业升级（如智慧农业）</li>
+<li>社会⽣活信息化：政务&#x2F;教育&#x2F;医疗等领域的数字化改造</li>
+<li>国⺠经济信息化：经济⼤系统信息流动（⽣产-流通-分配-消费闭环）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>国家信息化：</p>
+<ul>
+<li>三阶段战略：<ul>
+<li>2020年：关键技术突破，信息产业竞争⼒提升</li>
+<li>2025年：建成国际领先通信⽹络，解决技术”卡脖⼦”问题</li>
+<li>2050年：全⾯⽀撑现代化强国建设，引领全球信息化发展</li>
+</ul>
+</li>
+<li>当前重点：产业数字化转型发展体系建设</li>
+</ul>
+</li>
+<li><p>国家信息化规划<br><img src="/../../images/%E8%BD%AF%E8%80%83/image-6.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-现代化基础设施"><a href="#2-2-现代化基础设施" class="headerlink" title="2.2 现代化基础设施"></a>2.2 现代化基础设施</h2><h3 id="2-2-1-新型基础设施建设"><a href="#2-2-1-新型基础设施建设" class="headerlink" title="2.2.1 新型基础设施建设"></a>2.2.1 新型基础设施建设</h3><h3 id="2-2-2-工业互联网"><a href="#2-2-2-工业互联网" class="headerlink" title="2.2.2 工业互联网"></a>2.2.2 工业互联网</h3><h3 id="2-2-3-城市物联网"><a href="#2-2-3-城市物联网" class="headerlink" title="2.2.3 城市物联网"></a>2.2.3 城市物联网</h3>]]></content>
+      <categories>
+        <category>工作</category>
+      </categories>
+      <tags>
+        <tag>软考</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI办公学习</title>
+    <url>/2026/09/22/2026/AI%E5%8A%9E%E5%85%AC%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="分阶段制作-PPT-的提示词模板"><a href="#分阶段制作-PPT-的提示词模板" class="headerlink" title="分阶段制作 PPT 的提示词模板"></a>分阶段制作 PPT 的提示词模板</h1><p>这是一套可以直接复制使用的“分阶段制作 PPT”提示词模板。建议每完成一个阶段后，先检查结果，再进入下一阶段。</p>
+<h2 id="第一阶段：明确需求"><a href="#第一阶段：明确需求" class="headerlink" title="第一阶段：明确需求"></a>第一阶段：明确需求</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">我想制作一份关于【主题】的 PPT。
+
+请先不要制作完整内容，而是通过提问帮我明确需求。请重点询问：
+
+1. 使用场景
+2. 目标受众
+3. 演讲目的
+4. 演讲时长
+5. 页面数量
+6. 必须包含的内容
+7. 可使用的数据和素材
+8. 期望的视觉风格
+9. 输出形式
+10. 其他限制条件
+
+一次最多提问 5 个最重要的问题，并根据我的回答继续追问。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第二阶段：设计整体结构"><a href="#第二阶段：设计整体结构" class="headerlink" title="第二阶段：设计整体结构"></a>第二阶段：设计整体结构</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">请根据以下需求，设计这份 PPT 的整体结构：
+
+【粘贴第一阶段确认后的需求】
+
+请输出：
+
+1. PPT 总标题
+2. 整体叙事逻辑
+3. 页面数量
+4. 每页的标题
+5. 每页要表达的核心观点
+6. 页面之间的衔接关系
+7. 结尾希望观众记住的三件事
+
+要求：
+
+- 结构清晰，符合【汇报/培训/答辩/路演】场景
+- 每页只表达一个核心观点
+- 内容顺序要有逻辑
+- 标出哪些页面是重点页面
+- 如果结构存在问题，请先指出并提出修改建议<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第三阶段：确认并优化大纲"><a href="#第三阶段：确认并优化大纲" class="headerlink" title="第三阶段：确认并优化大纲"></a>第三阶段：确认并优化大纲</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">请以【目标受众】的视角审阅这份 PPT 大纲：
+
+【粘贴第二阶段生成的大纲】
+
+请检查：
+
+1. 是否能快速理解主题
+2. 逻辑是否连贯
+3. 是否存在内容重复
+4. 是否缺少关键内容
+5. 是否有页面信息过多
+6. 是否符合【演讲时长】的限制
+7. 是否能支持【演讲目的】
+
+请输出：
+
+- 发现的问题
+- 修改建议
+- 修改后的完整大纲
+
+不要扩展成完整页面文案。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第四阶段：撰写逐页内容"><a href="#第四阶段：撰写逐页内容" class="headerlink" title="第四阶段：撰写逐页内容"></a>第四阶段：撰写逐页内容</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">请根据以下确认后的 PPT 大纲，撰写逐页内容：
+
+【粘贴确认后的大纲】
+
+请为每一页提供：
+
+1. 页面标题
+2. 一句话核心结论
+3. 页面正文
+4. 推荐的图表、图片或示意图
+5. 页面排版建议
+6. 演讲者备注
+7. 与上一页的衔接句
+
+要求：
+
+- 每页只保留一个核心观点
+- 页面文字简洁，适合直接放入 PPT
+- 标题要有结论性，避免使用空泛标题
+- 优先使用短句、数字和关键词
+- 不要虚构数据
+- 缺少数据时请标注【待补充数据】
+- 每页正文不超过【字数限制】字<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第五阶段：设计视觉风格"><a href="#第五阶段：设计视觉风格" class="headerlink" title="第五阶段：设计视觉风格"></a>第五阶段：设计视觉风格</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">请为这份 PPT 制定完整的视觉设计方案：
+
+【粘贴 PPT 主题和逐页内容】
+
+使用场景：【场景】
+目标受众：【受众】
+期望风格：【商务/科技/简约/高级/活泼等】
+
+请提供：
+
+1. 整体设计主题
+2. 主色、辅助色和强调色
+3. 字体建议
+4. 标题和正文的字号层级
+5. 封面设计
+6. 目录页设计
+7. 普通内容页设计
+8. 数据页设计
+9. 对比页设计
+10. 结论页设计
+11. 图片和图标风格
+12. 动画和转场建议
+
+要求视觉风格统一、专业，适合【演讲时长】分钟的展示。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第六阶段：制作图表和视觉素材"><a href="#第六阶段：制作图表和视觉素材" class="headerlink" title="第六阶段：制作图表和视觉素材"></a>第六阶段：制作图表和视觉素材</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">请根据以下页面内容，判断哪些页面适合使用图表、流程图、时间线或示意图：
+
+【粘贴逐页内容】
+
+请为每个适合视觉化的页面提供：
+
+1. 推荐的图表类型
+2. 图表标题
+3. 图表中的数据或节点
+4. 横轴和纵轴含义
+5. 视觉重点
+6. 页面布局建议
+
+如果没有可靠数据，请使用“结构示意图”或“待补充数据”，不要自行编造数据。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第七阶段：检查和修改"><a href="#第七阶段：检查和修改" class="headerlink" title="第七阶段：检查和修改"></a>第七阶段：检查和修改</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">请对以下 PPT 进行专业审阅：
+
+【粘贴完整 PPT 内容】
+
+请从以下方面评分，满分 10 分：
+
+1. 逻辑结构
+2. 内容准确性
+3. 信息密度
+4. 说服力
+5. 视觉一致性
+6. 受众适配度
+7. 演讲流畅度
+
+请输出：
+
+- 总体评分
+- 最需要修改的 5 个问题
+- 具体修改建议
+- 修改前后的示例
+- 最终修改优先级
+
+检查过程中不得虚构事实或数据。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="第八阶段：生成最终版本"><a href="#第八阶段：生成最终版本" class="headerlink" title="第八阶段：生成最终版本"></a>第八阶段：生成最终版本</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">请根据以下所有确认内容，生成最终版 PPT 制作稿：
+
+【粘贴已确认的内容】
+
+请按照以下格式输出：
+
+第 1 页｜【页面标题】
+- 页面目的：
+- 页面正文：
+- 图表或图片：
+- 排版方式：
+- 演讲备注：
+
+第 2 页｜【页面标题】
+- 页面目的：
+- 页面正文：
+- 图表或图片：
+- 排版方式：
+- 演讲备注：
+
+请确保：
+
+- 页码和结构完整
+- 标题风格统一
+- 每页只有一个核心观点
+- 文案适合直接放入 PPT
+- 数据来源清楚
+- 未确认的数据标注为【待补充】
+- 最后一页有明确结论或行动建议<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="生成-PPT-文件时使用"><a href="#生成-PPT-文件时使用" class="headerlink" title="生成 PPT 文件时使用"></a>生成 PPT 文件时使用</h2><p>如果希望 AI 直接生成 PPT 文件，可以在最后补充：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">请根据最终版 PPT 制作稿生成一份 16:9 的 PowerPoint 文件。
+
+要求：
+
+- 使用统一的版式和配色
+- 每页保留适量留白
+- 图表清晰可编辑
+- 图片和图标风格统一
+- 不要把大段文字直接堆在页面上
+- 文件生成后，请检查是否存在文字溢出、元素重叠、字体过小和配色不一致的问题
+- 同时提供 PPT 文件和逐页演讲稿<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="使用建议"><a href="#使用建议" class="headerlink" title="使用建议"></a>使用建议</h2><p>使用时，最好把每个阶段的结果复制到下一阶段，并明确告诉 AI：</p>
+<blockquote>
+<p>以下内容已经确认，请不要擅自改变结构。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>AI办公</tag>
       </tags>
   </entry>
 </search>

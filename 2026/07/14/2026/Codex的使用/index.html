@@ -288,7 +288,7 @@ python下载：https://www.python.org/">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpeg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -317,7 +317,7 @@ python下载：https://www.python.org/">
                     <div class="article-tag">
                         
                             <a href="/tags/Codex/">
-                                <span class="chip colored-tag" style="background-color: #8b5cf6;">Codex</span>
+                                <span class="chip colored-tag" style="background-color: #14b8a6;">Codex</span>
                             </a>
                         
                     </div>
@@ -348,14 +348,14 @@ python下载：https://www.python.org/">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-08-16
+                    2026-09-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    221
+                    346
                 </div>
                 
 
@@ -410,12 +410,30 @@ python下载：https://www.python.org/">
 <li>点击使用秘钥 → 按 <code>Win+R</code>，输入 <code>%userprofile%\.codex</code> 打开配置目录 → 将相应信息配置到相应文件 → 退出重启 → 新建对话看能否正常使用<br> <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-1.png"><br> <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-2.png"></li>
 </ol>
 <h2 id="2-2-CC-Switch配置"><a href="#2-2-CC-Switch配置" class="headerlink" title="2.2 CC Switch配置"></a>2.2 CC Switch配置</h2><ul>
-<li>下载：<a target="_blank" rel="noopener" href="https://ccswitch.lovable.app/">https://ccswitch.lovable.app/</a></li>
-<li>配置：<ul>
+<li><p>下载：<a target="_blank" rel="noopener" href="https://ccswitch.lovable.app/">https://ccswitch.lovable.app/</a></p>
+</li>
+<li><p>配置：</p>
+<ul>
 <li>打开路由总开关<br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-9.png"></li>
 <li>找到自己使用的桌面体<br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-10.png"></li>
 <li>添加新的配置<br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-11.png"></li>
 <li>填写相关信息，主要就是<code>API Key</code>和<code>API 请求地址</code><br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-12.png"></li>
+</ul>
+</li>
+<li><p>遇到的问题：loveapi 无法连通: Connection failed: errorsending request for url(<a target="_blank" rel="noopener" href="https://api.loveapi.top/v1)%E6%97%A0%E6%B3%95%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5(DNS/%E8%BF%9E%E6%8E%A5/TLS/%E8%B6%85%E6%97%B6)%E3%80%82%E8%AF%B7%E6%A3%80%E6%9F%BB">https://api.loveapi.top/v1)无法建立连接(DNS/连接/TLS/超时)。请检査</a> base ur 与网络。<br><img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-13.png"></p>
+<ul>
+<li>原因：cc-switch启用的本地路由，和clash的代理冲突了</li>
+<li>解决：<ol>
+<li><p>Clash的规则文件： 添加下面这几行</p>
+<pre class="line-numbers language-none"><code class="language-none"># 强制 localhost 和 127.0.0.1 走直连模式（必须放在最靠前的位置）
+- DOMAIN-SUFFIX,localhost,DIRECT
+- IP-CIDR,127.0.0.0&#x2F;8,DIRECT<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>  <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-14.png"><br>  <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-15.png"></p>
+</li>
+<li><p>将Clash的TUN模式打开并关闭系统代理<br>  <img src="/../../images/Codex%E7%9A%84%E4%BD%BF%E7%94%A8/image-16.png"></p>
+</li>
+</ol>
+</li>
 </ul>
 </li>
 </ul>
@@ -442,7 +460,7 @@ python下载：https://www.python.org/">
                         <div class="article-tag">
                             
                                 <a href="/tags/Codex/">
-                                    <span class="chip colored-tag" style="background-color: #8b5cf6;">Codex</span>
+                                    <span class="chip colored-tag" style="background-color: #14b8a6;">Codex</span>
                                 </a>
                             
                         </div>
@@ -521,7 +539,7 @@ python下载：https://www.python.org/">
     <div class="card-action article-tags">
         
         <a href="/tags/%E5%8C%BB%E9%99%A2%E4%BF%A1%E6%81%AF%E7%A7%91/">
-            <span class="chip colored-tag" style="background-color: #f97316;">医院信息科</span>
+            <span class="chip colored-tag" style="background-color: #8b5cf6;">医院信息科</span>
         </a>
         
     </div>
@@ -565,7 +583,7 @@ python下载：https://www.python.org/">
     <div class="card-action article-tags">
         
         <a href="/tags/Github/">
-            <span class="chip colored-tag" style="background-color: #ec4899;">Github</span>
+            <span class="chip colored-tag" style="background-color: #84cc16;">Github</span>
         </a>
         
     </div>

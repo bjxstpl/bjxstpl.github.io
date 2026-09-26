@@ -2993,6 +2993,14 @@ ssh -T git@github-lvchungui<span aria-hidden="true" class="line-numbers-rows"><s
 <li>基于 Claude Code 的长篇网文辅助创作系统，解决 AI 写作中的「遗忘」和「幻觉」问题，支持 200 万字量级 连载创作</li>
 </ul>
 </li>
+<li><a href="https://github.com/kaomei/stickman-video-director">https://github.com/kaomei/stickman-video-director</a><ul>
+<li>把任何想法，变成一支真正“动起来”的高品质火柴人视频</li>
+</ul>
+</li>
+<li><a href="https://github.com/geeklee/srt-whiteboard-animation">https://github.com/geeklee/srt-whiteboard-animation</a><ul>
+<li>将 SRT 字幕做成暖米黄纸张底的流式笔迹白板手绘动画 skill</li>
+</ul>
+</li>
 </ul>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><table>
 <thead>

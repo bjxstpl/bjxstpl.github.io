@@ -71,7 +71,12 @@ $(function () {
     AOS.init({
         easing: 'ease-in-out-sine',
         duration: 700,
-        delay: 100
+        delay: 100,
+        // once:false（默认）会在卡片滚出视口顶部时移除 aos-animate，
+        // 滚回来全靠滚动事件重新触发；一旦时序错开（如筛选后脚本自动滚动、
+        // 滚动事件被防抖吞掉），卡片就永远卡在 opacity:0 + scale(.6) 的
+        // 初始态——占着格子却看不见，看起来就是卡片错位/空洞。
+        once: true
     });
 
     /*文章内容详情的一些初始化特性*/

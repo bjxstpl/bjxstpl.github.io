@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Github加速访问</title>
-    <url>/2022/08/17/2022/Github%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE/</url>
-    <content><![CDATA[<h2 id="1-软件介绍"><a href="#1-软件介绍" class="headerlink" title="1 软件介绍"></a>1 软件介绍</h2><ul>
-<li>github加速神器：FastGithub</li>
-<li>开源项目地址：<a href="https://github.com/dotnetcore/FastGithub">https://github.com/dotnetcore/FastGithub</a></li>
-</ul>
-<h2 id="2-软件功能"><a href="#2-软件功能" class="headerlink" title="2 软件功能"></a>2 软件功能</h2><ul>
-<li>解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题</li>
-<li>提供域名的纯净IP解析</li>
-<li>提供IP测速并选择最快的IP</li>
-<li>提供域名的tls连接自定义配置</li>
-<li>google的CDN资源替换，解决大量国外网站无法加载js和css的问题</li>
-</ul>
-<h2 id="3-软件下载"><a href="#3-软件下载" class="headerlink" title="3 软件下载"></a>3 软件下载</h2><ul>
-<li>主链接：<a href="https://github.com/dotnetcore/fastgithub/releases">https://github.com/dotnetcore/fastgithub/releases</a></li>
-<li>备用链接：<a href="https://pan.baidu.com/s/1ewHysiOaGsPH0yttFEVrvA?pwd=4qrh">https://pan.baidu.com/s/1ewHysiOaGsPH0yttFEVrvA?pwd=4qrh</a></li>
-</ul>
-<h2 id="4-软件的使用"><a href="#4-软件的使用" class="headerlink" title="4 软件的使用"></a>4 软件的使用</h2><ul>
-<li>Windows-x64桌面：双击运行FastGithub.UI.exe</li>
-</ul>
-<h2 id="5-证书验证问题"><a href="#5-证书验证问题" class="headerlink" title="5 证书验证问题"></a>5 证书验证问题</h2><h3 id="5-1-Git"><a href="#5-1-Git" class="headerlink" title="5.1 Git"></a>5.1 Git</h3><ul>
-<li>相关问题：git操作提示<code>SSL certificate problem</code></li>
-<li>解决方法：需要关闭git的证书验证，在git的命令框中输入：<code>git config --global http.sslverify false</code></li>
-</ul>
-<h3 id="5-2-火狐浏览器"><a href="#5-2-火狐浏览器" class="headerlink" title="5.2 火狐浏览器"></a>5.2 火狐浏览器</h3><ul>
-<li>相关问题：firefox提示连接有潜在的安全问题</li>
-<li>解决方法：设置→隐私与安全→证书→查看证书→证书颁发机构，导入<code>fastgithub.cer</code>文件（这个文件在cacert文件夹下），然后勾选“信任由此证书颁发机构来标识网站”</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Gitbook搭建个人笔记</title>
     <url>/2022/08/20/2022/Gitbook%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1 环境准备"></a>1 环境准备</h2><h3 id="配置-Node-js-环境"><a href="#配置-Node-js-环境" class="headerlink" title="配置 Node.js 环境"></a>配置 Node.js 环境</h3><ul>
@@ -260,27 +223,40 @@
       </tags>
   </entry>
   <entry>
-    <title>Git同时上传代码至Github和Gitee</title>
-    <url>/2022/10/05/2022/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/</url>
-    <content><![CDATA[<ol>
-<li><p>先克隆一个Gitee上的仓库到本地</p>
-</li>
-<li><p>然后修改项目<code>.git</code>目录下的<code>config</code>文件，把GitHub的仓库地址增加到如下图位置保存即可</p>
-<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/10.png"></p>
-<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/11.png"></p>
-</li>
-<li><p>看不到.git文件打开显示隐藏项目即可</p>
-<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/8f8037b8966594e1061a3a9b0905b7c5fe19c6148a84110c903ea4196850c60d.png"></p>
-</li>
-</ol>
+    <title>Github加速访问</title>
+    <url>/2022/08/17/2022/Github%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE/</url>
+    <content><![CDATA[<h2 id="1-软件介绍"><a href="#1-软件介绍" class="headerlink" title="1 软件介绍"></a>1 软件介绍</h2><ul>
+<li>github加速神器：FastGithub</li>
+<li>开源项目地址：<a href="https://github.com/dotnetcore/FastGithub">https://github.com/dotnetcore/FastGithub</a></li>
+</ul>
+<h2 id="2-软件功能"><a href="#2-软件功能" class="headerlink" title="2 软件功能"></a>2 软件功能</h2><ul>
+<li>解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题</li>
+<li>提供域名的纯净IP解析</li>
+<li>提供IP测速并选择最快的IP</li>
+<li>提供域名的tls连接自定义配置</li>
+<li>google的CDN资源替换，解决大量国外网站无法加载js和css的问题</li>
+</ul>
+<h2 id="3-软件下载"><a href="#3-软件下载" class="headerlink" title="3 软件下载"></a>3 软件下载</h2><ul>
+<li>主链接：<a href="https://github.com/dotnetcore/fastgithub/releases">https://github.com/dotnetcore/fastgithub/releases</a></li>
+<li>备用链接：<a href="https://pan.baidu.com/s/1ewHysiOaGsPH0yttFEVrvA?pwd=4qrh">https://pan.baidu.com/s/1ewHysiOaGsPH0yttFEVrvA?pwd=4qrh</a></li>
+</ul>
+<h2 id="4-软件的使用"><a href="#4-软件的使用" class="headerlink" title="4 软件的使用"></a>4 软件的使用</h2><ul>
+<li>Windows-x64桌面：双击运行FastGithub.UI.exe</li>
+</ul>
+<h2 id="5-证书验证问题"><a href="#5-证书验证问题" class="headerlink" title="5 证书验证问题"></a>5 证书验证问题</h2><h3 id="5-1-Git"><a href="#5-1-Git" class="headerlink" title="5.1 Git"></a>5.1 Git</h3><ul>
+<li>相关问题：git操作提示<code>SSL certificate problem</code></li>
+<li>解决方法：需要关闭git的证书验证，在git的命令框中输入：<code>git config --global http.sslverify false</code></li>
+</ul>
+<h3 id="5-2-火狐浏览器"><a href="#5-2-火狐浏览器" class="headerlink" title="5.2 火狐浏览器"></a>5.2 火狐浏览器</h3><ul>
+<li>相关问题：firefox提示连接有潜在的安全问题</li>
+<li>解决方法：设置→隐私与安全→证书→查看证书→证书颁发机构，导入<code>fastgithub.cer</code>文件（这个文件在cacert文件夹下），然后勾选“信任由此证书颁发机构来标识网站”</li>
+</ul>
 ]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
         <tag>Github</tag>
-        <tag>Git</tag>
-        <tag>Gitee</tag>
       </tags>
   </entry>
   <entry>
@@ -342,6 +318,30 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git同时上传代码至Github和Gitee</title>
+    <url>/2022/10/05/2022/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/</url>
+    <content><![CDATA[<ol>
+<li><p>先克隆一个Gitee上的仓库到本地</p>
+</li>
+<li><p>然后修改项目<code>.git</code>目录下的<code>config</code>文件，把GitHub的仓库地址增加到如下图位置保存即可</p>
+<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/10.png"></p>
+<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/11.png"></p>
+</li>
+<li><p>看不到.git文件打开显示隐藏项目即可</p>
+<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/8f8037b8966594e1061a3a9b0905b7c5fe19c6148a84110c903ea4196850c60d.png"></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Git</tag>
+        <tag>Gitee</tag>
       </tags>
   </entry>
   <entry>
@@ -836,37 +836,6 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
       </tags>
   </entry>
   <entry>
-    <title>深度学习环境常用命令</title>
-    <url>/2022/10/10/2022/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<ol>
-<li><p>创建虚拟环境</p>
- <pre class="line-numbers language-none"><code class="language-none">conda create –n name python&#x3D;3.7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>激活环境</p>
- <pre class="line-numbers language-none"><code class="language-none">activate name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>安装虚拟环境所需配置</p>
-<ul>
-<li>有<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install -r requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>无<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install name&#x3D;&#x3D;version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-</li>
-<li><p>查看现有虚拟环境</p>
- <pre class="line-numbers language-none"><code class="language-none">    conda env list
-    ~~~     
-      
-5. 删除虚拟环境<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p> conda remove -n  name –all<br> ~~~</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>生成ssh公共秘钥</title>
     <url>/2022/10/03/2022/%E7%94%9F%E6%88%90ssh%E5%85%AC%E5%85%B1%E7%A7%98%E9%92%A5/</url>
     <content><![CDATA[<h2 id="1-设置用户名和邮箱"><a href="#1-设置用户名和邮箱" class="headerlink" title="1 设置用户名和邮箱"></a>1 设置用户名和邮箱</h2><ul>
@@ -904,6 +873,37 @@ git config --global user.email“your@email.com&quot;<span aria-hidden="true" cl
       </categories>
       <tags>
         <tag>ssh公共秘钥</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习环境常用命令</title>
+    <url>/2022/10/10/2022/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<ol>
+<li><p>创建虚拟环境</p>
+ <pre class="line-numbers language-none"><code class="language-none">conda create –n name python&#x3D;3.7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>激活环境</p>
+ <pre class="line-numbers language-none"><code class="language-none">activate name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>安装虚拟环境所需配置</p>
+<ul>
+<li>有<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install -r requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>无<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install name&#x3D;&#x3D;version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+</li>
+<li><p>查看现有虚拟环境</p>
+ <pre class="line-numbers language-none"><code class="language-none">    conda env list
+    ~~~     
+      
+5. 删除虚拟环境<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p> conda remove -n  name –all<br> ~~~</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>

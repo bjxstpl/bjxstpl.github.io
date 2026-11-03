@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>zz 引用检查</title>
+    <url>/2026/11/03/zz%20%E5%BC%95%E7%94%A8%E6%A3%80%E6%9F%A5/</url>
+    <content><![CDATA[<p>![](&#x2F;images&#x2F;zz 已引用目录&#x2F;used.png)</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>zz 日期与标签测试</title>
+    <url>/2020/05/06/zz%20%E6%97%A5%E6%9C%9F%E4%B8%8E%E6%A0%87%E7%AD%BE%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>正文</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>zz 目录里的文章</title>
+    <url>/2026/11/03/zz%20%E7%9B%AE%E5%BD%95%E9%87%8C%E7%9A%84%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<p>正文</p>
+]]></content>
+  </entry>
+  <entry>
     <title>Gitbook搭建个人笔记</title>
     <url>/2022/08/20/2022/Gitbook%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1 环境准备"></a>1 环境准备</h2><h3 id="配置-Node-js-环境"><a href="#配置-Node-js-环境" class="headerlink" title="配置 Node.js 环境"></a>配置 Node.js 环境</h3><ul>

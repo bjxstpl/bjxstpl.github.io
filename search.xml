@@ -1,6 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Github加速访问</title>
+    <url>/2022/08/17/2022/Github%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE/</url>
+    <content><![CDATA[<h2 id="1-软件介绍"><a href="#1-软件介绍" class="headerlink" title="1 软件介绍"></a>1 软件介绍</h2><ul>
+<li>github加速神器：FastGithub</li>
+<li>开源项目地址：<a href="https://github.com/dotnetcore/FastGithub">https://github.com/dotnetcore/FastGithub</a></li>
+</ul>
+<h2 id="2-软件功能"><a href="#2-软件功能" class="headerlink" title="2 软件功能"></a>2 软件功能</h2><ul>
+<li>解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题</li>
+<li>提供域名的纯净IP解析</li>
+<li>提供IP测速并选择最快的IP</li>
+<li>提供域名的tls连接自定义配置</li>
+<li>google的CDN资源替换，解决大量国外网站无法加载js和css的问题</li>
+</ul>
+<h2 id="3-软件下载"><a href="#3-软件下载" class="headerlink" title="3 软件下载"></a>3 软件下载</h2><ul>
+<li>主链接：<a href="https://github.com/dotnetcore/fastgithub/releases">https://github.com/dotnetcore/fastgithub/releases</a></li>
+<li>备用链接：<a href="https://pan.baidu.com/s/1ewHysiOaGsPH0yttFEVrvA?pwd=4qrh">https://pan.baidu.com/s/1ewHysiOaGsPH0yttFEVrvA?pwd=4qrh</a></li>
+</ul>
+<h2 id="4-软件的使用"><a href="#4-软件的使用" class="headerlink" title="4 软件的使用"></a>4 软件的使用</h2><ul>
+<li>Windows-x64桌面：双击运行FastGithub.UI.exe</li>
+</ul>
+<h2 id="5-证书验证问题"><a href="#5-证书验证问题" class="headerlink" title="5 证书验证问题"></a>5 证书验证问题</h2><h3 id="5-1-Git"><a href="#5-1-Git" class="headerlink" title="5.1 Git"></a>5.1 Git</h3><ul>
+<li>相关问题：git操作提示<code>SSL certificate problem</code></li>
+<li>解决方法：需要关闭git的证书验证，在git的命令框中输入：<code>git config --global http.sslverify false</code></li>
+</ul>
+<h3 id="5-2-火狐浏览器"><a href="#5-2-火狐浏览器" class="headerlink" title="5.2 火狐浏览器"></a>5.2 火狐浏览器</h3><ul>
+<li>相关问题：firefox提示连接有潜在的安全问题</li>
+<li>解决方法：设置→隐私与安全→证书→查看证书→证书颁发机构，导入<code>fastgithub.cer</code>文件（这个文件在cacert文件夹下），然后勾选“信任由此证书颁发机构来标识网站”</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git同时上传代码至Github和Gitee</title>
+    <url>/2022/10/05/2022/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/</url>
+    <content><![CDATA[<ol>
+<li><p>先克隆一个Gitee上的仓库到本地</p>
+</li>
+<li><p>然后修改项目<code>.git</code>目录下的<code>config</code>文件，把GitHub的仓库地址增加到如下图位置保存即可</p>
+<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/10.png"></p>
+<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/11.png"></p>
+</li>
+<li><p>看不到.git文件打开显示隐藏项目即可</p>
+<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/8f8037b8966594e1061a3a9b0905b7c5fe19c6148a84110c903ea4196850c60d.png"></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Git</tag>
+        <tag>Gitee</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git的使用</title>
+    <url>/2022/10/02/2022/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="1 下载安装"></a>1 下载安装</h2><ul>
+<li>这里介绍两种简单方法，一种是使用命令的方式，另一种是图形化的方式，这里推荐使用图形化方式上传。先下载安装 git 和 tortoise git，必须先安装 git 才能安装 tortoise git</li>
+<li>git 下载地址：<a href="https://git-scm.com/">https://git-scm.com/</a></li>
+<li>git 安装教程：<a href="https://blog.csdn.net/qq_46351233/article/details/124733661">https://blog.csdn.net/qq_46351233/article/details/124733661</a></li>
+<li>tortoise git 下载地址：<a href="https://tortoisegit.org/download/">https://tortoisegit.org/download/</a></li>
+<li>tortoise git 安装教程：<a href="http://t.zoukankan.com/jpfss-p-8027543.html">http://t.zoukankan.com/jpfss-p-8027543.html</a></li>
+</ul>
+<h2 id="2-以git命令方式上传代码"><a href="#2-以git命令方式上传代码" class="headerlink" title="2 以git命令方式上传代码"></a>2 以git命令方式上传代码</h2><ol>
+<li>复制仓库地址→右键选择<code>Git Bash Here</code>→在命令框中输入<code>git clone 仓库地址</code>即可把仓库克隆到本地</li>
+<li>把自己的代码放到刚克隆过来的文件夹里→右键选择<code>Git Bash Here</code>→输入<code>git add .</code>回车→输入<code>git commit -m&quot;提交日志&quot;</code>回车→最后输入<code>git push</code>回车即可上传成功</li>
+</ol>
+<h2 id="3-以图形化方式上传代码"><a href="#3-以图形化方式上传代码" class="headerlink" title="3 以图形化方式上传代码"></a>3 以图形化方式上传代码</h2><ol>
+<li><p>git add </p>
+<ul>
+<li><p>右击标记为 蓝色 ? (表示该文件未使用 git 管理) 的目录，弹出的对话框中勾选具体需要管理的文件，勾选完毕点击 ok 即可，此时图标变成红色感叹号(表示该文件被git管理，但是未提交内容)</p>
+<p>   <img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/12.png"></p>
+</li>
+</ul>
+</li>
+<li><p>git commit</p>
+<ul>
+<li><p>将修改内容提交到本地每提交一次，就是一个版本. 比如开发完某个功能模块，就可以提交一次了，后续进行版本回退都是以提交为准.注意: 此时只是提交到本地，Github 上还看不到代码变更，右键选择红色感叹号目录，选择 Git commit -&gt; master</p>
+</li>
+<li><p>此时弹出了一个对话框. 可以在此处看到都需要提交哪些文件, 以及每个文件的具体改动情况. 并且需要输入提交日志. 描述这次提交的具体改动原因是什么. 这个日志是后续进行版本回退的重要参考依据</p>
+<p>   <img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/13.png"></p>
+<p>   <img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/14.png"></p>
+</li>
+</ul>
+</li>
+<li><p>git push</p>
+<ul>
+<li>提交的内容需要同步到服务器上, 才能让其他人看到改动. 使用 push 即可，右键需要 push 的目录, 点击 push</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-出现问题及解决方法"><a href="#4-出现问题及解决方法" class="headerlink" title="4 出现问题及解决方法"></a>4 出现问题及解决方法</h2><ol>
+<li>问题：no supported authentication methods avaiable<ul>
+<li><p>找到TortoiseGit → Settings（设置） → Network（网络）</p>
+</li>
+<li><p>将SSH client指向E:\git\Git\usr\bin\ssh.exe （我的Git工具安装E盘）,这里更改ssh 路径的时候，要把上面的勾打上，点击应用，再确定</p>
+<p>   <img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/15.png"></p>
+</li>
+</ul>
+</li>
+<li>问题：Git push error: remote: Permission to xxx.git denied to xxx. fatal: unable to access<ul>
+<li>原因：你电脑上缓存的GitHub 凭据（用户名&#x2F;密码）与你提交仓库的用户不一样</li>
+<li>解决方法：打开“凭据管理器” → 找到<code>github.com</code>的条目，删除它 → 下次<code>git push</code> 时会重新要求你登陆github账号(最好在浏览器上提前切换好账号)<br><img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/image-1.png"></li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Gitbook搭建个人笔记</title>
     <url>/2022/08/20/2022/Gitbook%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1 环境准备"></a>1 环境准备</h2><h3 id="配置-Node-js-环境"><a href="#配置-Node-js-环境" class="headerlink" title="配置 Node.js 环境"></a>配置 Node.js 环境</h3><ul>
@@ -220,128 +342,6 @@
       </categories>
       <tags>
         <tag>Gitbook</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github加速访问</title>
-    <url>/2022/08/17/2022/Github%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE/</url>
-    <content><![CDATA[<h2 id="1-软件介绍"><a href="#1-软件介绍" class="headerlink" title="1 软件介绍"></a>1 软件介绍</h2><ul>
-<li>github加速神器：FastGithub</li>
-<li>开源项目地址：<a href="https://github.com/dotnetcore/FastGithub">https://github.com/dotnetcore/FastGithub</a></li>
-</ul>
-<h2 id="2-软件功能"><a href="#2-软件功能" class="headerlink" title="2 软件功能"></a>2 软件功能</h2><ul>
-<li>解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题</li>
-<li>提供域名的纯净IP解析</li>
-<li>提供IP测速并选择最快的IP</li>
-<li>提供域名的tls连接自定义配置</li>
-<li>google的CDN资源替换，解决大量国外网站无法加载js和css的问题</li>
-</ul>
-<h2 id="3-软件下载"><a href="#3-软件下载" class="headerlink" title="3 软件下载"></a>3 软件下载</h2><ul>
-<li>主链接：<a href="https://github.com/dotnetcore/fastgithub/releases">https://github.com/dotnetcore/fastgithub/releases</a></li>
-<li>备用链接：<a href="https://pan.baidu.com/s/1ewHysiOaGsPH0yttFEVrvA?pwd=4qrh">https://pan.baidu.com/s/1ewHysiOaGsPH0yttFEVrvA?pwd=4qrh</a></li>
-</ul>
-<h2 id="4-软件的使用"><a href="#4-软件的使用" class="headerlink" title="4 软件的使用"></a>4 软件的使用</h2><ul>
-<li>Windows-x64桌面：双击运行FastGithub.UI.exe</li>
-</ul>
-<h2 id="5-证书验证问题"><a href="#5-证书验证问题" class="headerlink" title="5 证书验证问题"></a>5 证书验证问题</h2><h3 id="5-1-Git"><a href="#5-1-Git" class="headerlink" title="5.1 Git"></a>5.1 Git</h3><ul>
-<li>相关问题：git操作提示<code>SSL certificate problem</code></li>
-<li>解决方法：需要关闭git的证书验证，在git的命令框中输入：<code>git config --global http.sslverify false</code></li>
-</ul>
-<h3 id="5-2-火狐浏览器"><a href="#5-2-火狐浏览器" class="headerlink" title="5.2 火狐浏览器"></a>5.2 火狐浏览器</h3><ul>
-<li>相关问题：firefox提示连接有潜在的安全问题</li>
-<li>解决方法：设置→隐私与安全→证书→查看证书→证书颁发机构，导入<code>fastgithub.cer</code>文件（这个文件在cacert文件夹下），然后勾选“信任由此证书颁发机构来标识网站”</li>
-</ul>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git同时上传代码至Github和Gitee</title>
-    <url>/2022/10/05/2022/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/</url>
-    <content><![CDATA[<ol>
-<li><p>先克隆一个Gitee上的仓库到本地</p>
-</li>
-<li><p>然后修改项目<code>.git</code>目录下的<code>config</code>文件，把GitHub的仓库地址增加到如下图位置保存即可</p>
-<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/10.png"></p>
-<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/11.png"></p>
-</li>
-<li><p>看不到.git文件打开显示隐藏项目即可</p>
-<p> <img src="/../../images/Git%E5%90%8C%E6%97%B6%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81%E8%87%B3Github%E5%92%8CGitee/8f8037b8966594e1061a3a9b0905b7c5fe19c6148a84110c903ea4196850c60d.png"></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Github</tag>
-        <tag>Git</tag>
-        <tag>Gitee</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git的使用</title>
-    <url>/2022/10/02/2022/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="1 下载安装"></a>1 下载安装</h2><ul>
-<li>这里介绍两种简单方法，一种是使用命令的方式，另一种是图形化的方式，这里推荐使用图形化方式上传。先下载安装 git 和 tortoise git，必须先安装 git 才能安装 tortoise git</li>
-<li>git 下载地址：<a href="https://git-scm.com/">https://git-scm.com/</a></li>
-<li>git 安装教程：<a href="https://blog.csdn.net/qq_46351233/article/details/124733661">https://blog.csdn.net/qq_46351233/article/details/124733661</a></li>
-<li>tortoise git 下载地址：<a href="https://tortoisegit.org/download/">https://tortoisegit.org/download/</a></li>
-<li>tortoise git 安装教程：<a href="http://t.zoukankan.com/jpfss-p-8027543.html">http://t.zoukankan.com/jpfss-p-8027543.html</a></li>
-</ul>
-<h2 id="2-以git命令方式上传代码"><a href="#2-以git命令方式上传代码" class="headerlink" title="2 以git命令方式上传代码"></a>2 以git命令方式上传代码</h2><ol>
-<li>复制仓库地址→右键选择<code>Git Bash Here</code>→在命令框中输入<code>git clone 仓库地址</code>即可把仓库克隆到本地</li>
-<li>把自己的代码放到刚克隆过来的文件夹里→右键选择<code>Git Bash Here</code>→输入<code>git add .</code>回车→输入<code>git commit -m&quot;提交日志&quot;</code>回车→最后输入<code>git push</code>回车即可上传成功</li>
-</ol>
-<h2 id="3-以图形化方式上传代码"><a href="#3-以图形化方式上传代码" class="headerlink" title="3 以图形化方式上传代码"></a>3 以图形化方式上传代码</h2><ol>
-<li><p>git add </p>
-<ul>
-<li><p>右击标记为 蓝色 ? (表示该文件未使用 git 管理) 的目录，弹出的对话框中勾选具体需要管理的文件，勾选完毕点击 ok 即可，此时图标变成红色感叹号(表示该文件被git管理，但是未提交内容)</p>
-<p>   <img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/12.png"></p>
-</li>
-</ul>
-</li>
-<li><p>git commit</p>
-<ul>
-<li><p>将修改内容提交到本地每提交一次，就是一个版本. 比如开发完某个功能模块，就可以提交一次了，后续进行版本回退都是以提交为准.注意: 此时只是提交到本地，Github 上还看不到代码变更，右键选择红色感叹号目录，选择 Git commit -&gt; master</p>
-</li>
-<li><p>此时弹出了一个对话框. 可以在此处看到都需要提交哪些文件, 以及每个文件的具体改动情况. 并且需要输入提交日志. 描述这次提交的具体改动原因是什么. 这个日志是后续进行版本回退的重要参考依据</p>
-<p>   <img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/13.png"></p>
-<p>   <img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/14.png"></p>
-</li>
-</ul>
-</li>
-<li><p>git push</p>
-<ul>
-<li>提交的内容需要同步到服务器上, 才能让其他人看到改动. 使用 push 即可，右键需要 push 的目录, 点击 push</li>
-</ul>
-</li>
-</ol>
-<h2 id="4-出现问题及解决方法"><a href="#4-出现问题及解决方法" class="headerlink" title="4 出现问题及解决方法"></a>4 出现问题及解决方法</h2><ol>
-<li>问题：no supported authentication methods avaiable<ul>
-<li><p>找到TortoiseGit → Settings（设置） → Network（网络）</p>
-</li>
-<li><p>将SSH client指向E:\git\Git\usr\bin\ssh.exe （我的Git工具安装E盘）,这里更改ssh 路径的时候，要把上面的勾打上，点击应用，再确定</p>
-<p>   <img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/15.png"></p>
-</li>
-</ul>
-</li>
-<li>问题：Git push error: remote: Permission to xxx.git denied to xxx. fatal: unable to access<ul>
-<li>原因：你电脑上缓存的GitHub 凭据（用户名&#x2F;密码）与你提交仓库的用户不一样</li>
-<li>解决方法：打开“凭据管理器” → 找到<code>github.com</code>的条目，删除它 → 下次<code>git push</code> 时会重新要求你登陆github账号(最好在浏览器上提前切换好账号)<br><img src="/../../images/Git%E7%9A%84%E4%BD%BF%E7%94%A8/image-1.png"></li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>

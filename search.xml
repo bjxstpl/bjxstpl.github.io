@@ -803,6 +803,37 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
       </tags>
   </entry>
   <entry>
+    <title>深度学习环境常用命令</title>
+    <url>/2022/10/10/2022/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<ol>
+<li><p>创建虚拟环境</p>
+ <pre class="line-numbers language-none"><code class="language-none">conda create –n name python&#x3D;3.7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>激活环境</p>
+ <pre class="line-numbers language-none"><code class="language-none">activate name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>安装虚拟环境所需配置</p>
+<ul>
+<li>有<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install -r requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>无<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install name&#x3D;&#x3D;version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+</li>
+<li><p>查看现有虚拟环境</p>
+ <pre class="line-numbers language-none"><code class="language-none">    conda env list
+    ~~~     
+      
+5. 删除虚拟环境<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p> conda remove -n  name –all<br> ~~~</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VScode中上传到Gitee或Github</title>
     <url>/2022/10/03/2022/VScode%E4%B8%AD%E4%B8%8A%E4%BC%A0%E5%88%B0Gitee%E6%88%96Github/</url>
     <content><![CDATA[<ol>
@@ -833,37 +864,6 @@ printf(&quot;%d\n&quot;,a);<span aria-hidden="true" class="line-numbers-rows"><s
         <tag>Github</tag>
         <tag>Gitee</tag>
         <tag>VScode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习环境常用命令</title>
-    <url>/2022/10/10/2022/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<ol>
-<li><p>创建虚拟环境</p>
- <pre class="line-numbers language-none"><code class="language-none">conda create –n name python&#x3D;3.7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>激活环境</p>
- <pre class="line-numbers language-none"><code class="language-none">activate name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>安装虚拟环境所需配置</p>
-<ul>
-<li>有<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install -r requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>无<code>requirements.txt</code>   <pre class="line-numbers language-none"><code class="language-none">pip install name&#x3D;&#x3D;version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
-</li>
-<li><p>查看现有虚拟环境</p>
- <pre class="line-numbers language-none"><code class="language-none">    conda env list
-    ~~~     
-      
-5. 删除虚拟环境<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p> conda remove -n  name –all<br> ~~~</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
